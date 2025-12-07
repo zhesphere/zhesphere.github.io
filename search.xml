@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>LUTS</title>
+      <link href="/2025/11/11/edit/da%20Vinci/LUTS/"/>
+      <url>/2025/11/11/edit/da%20Vinci/LUTS/</url>
+      
+        <content type="html"><![CDATA[<p>Look UpTable(颜色查找表)<br>文件尾缀——.CUBE<br>推荐网站——<a href="http://www.lutify.me/">www.lutify.me</a><br>文件-项目设置-色彩管理-打开LUT文件夹-导入-更新列表<br>LUT封面更改——将缩略图更新为时间线上的帧</p><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>矫正LUT<br>画面放到合理起始点<br>风格LUT<br>直出直接套风格LUT</p><p>Log画面<br>保留大量高光和画面暗部信息<br>具有宽广的色域<br>远远大于显示器所能正常显示的范围<br>RAW-数据<br>LOG-信息</p><p>降低LUT浓度——键-键输出-降低增益<br>画面出现奇怪断层或噪点(LUT精度不够)——文件-项目设置-色彩管理-三线性&gt;四面体</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剪辑 </category>
+          
+          <category> 达芬奇 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>帧率</title>
+      <link href="/2025/11/05/edit/da%20Vinci/%E5%B8%A7%E7%8E%87/"/>
+      <url>/2025/11/05/edit/da%20Vinci/%E5%B8%A7%E7%8E%87/</url>
+      
+        <content type="html"><![CDATA[<p>电影行业标准帧率-24帧(更容易被2&#x2F;3&#x2F;4&#x2F;6&#x2F;8整除)</p><h1 id="电子帧率"><a href="#电子帧率" class="headerlink" title="电子帧率"></a>电子帧率</h1><p><strong>逐行扫描P</strong><br>隔行扫描i<br>NTSC标准-60HZ(下降0.1%,为了避免颜色声音黑白画面干扰)<br>59.94<br>29.97<br>PAL-50HZ-每秒50场逐行扫描</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剪辑 </category>
+          
+          <category> 达芬奇 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>秘传技</title>
+      <link href="/2025/11/04/edit/da%20Vinci/%E7%A7%98%E4%BC%A0%E6%8A%80/"/>
+      <url>/2025/11/04/edit/da%20Vinci/%E7%A7%98%E4%BC%A0%E6%8A%80/</url>
+      
+        <content type="html"><![CDATA[<h1 id="收费版"><a href="#收费版" class="headerlink" title="收费版"></a>收费版</h1><p>按照镜头切开<br>时间线-时间线设置-探测场景切点</p><h1 id="免费版"><a href="#免费版" class="headerlink" title="免费版"></a>免费版</h1><h2 id="共享媒体夹"><a href="#共享媒体夹" class="headerlink" title="共享媒体夹"></a>共享媒体夹</h2><p>多个项目用重复素材<br>显示-显示共享媒体夹-背景音乐&#x2F;片头&#x2F;片尾-多层级素材分类(素材统一放在固定位置，不可删)</p><h2 id="筛选素材"><a href="#筛选素材" class="headerlink" title="筛选素材"></a>筛选素材</h2><p>光箱</p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>启用&#x2F;禁用所选节点——Ctrl+D<br>绕过所有调色操作——Shift+D<br>突出显示(抠像效果)——Shift+H<br>灰度模式(查看抠像效果)——监视器右上角蒙版符号<br>影像模式监视器(全屏)——Ctrl+F&#x2F;P<br>增强模式监视器(影院模式)——Alt+F<br>复制调色<br>鼠标中键点击想复制颜色<br>应用之前一个片段的调色——Shift+加号<br>应用之前之前第二个片段的调色——Shift+减号<br>整理节点——右键-清理节点图<br>批处理<br>选中想要一起调整素材-右键-添加到新群组-片段<br>片段前群组——调单独片段前已经产生影响<br>片段后群组——调完单独片段后再产生影响<br>快速转换很多log画面立即导出-片段后群组加矫正LUT-单独对单个片段进行曝光和色偏矫正<br>工具箱-调整片段(调整图层)<br>色彩空间转换<br>Open FX(特效库)-Resolve FX 色彩-色彩空间转换<br>色彩空间<br>伽马<br>光箱-筛选机型-群组-片段前群组-色彩空间转换<br>稳定<br>调色界面-跟踪器-稳定器-稳定(裁切比率&#x2F;平滑度)-更换模式<br>文本跟踪<br>创建文本-切到和素材一样长-调整文本位置-右键创建复合片段-调色界面-选择文本下面片段-稳定器-三点选择旧版稳定器-点跟踪-跟踪点放到想要跟踪物体上-运行向前跟踪-移动跟踪不完美位置-三点选择复制跟踪数据-文字复合片段-三点选择旧版稳定器-三点复制跟踪数据-关闭缩放按钮-强度-100-稳定<br>跟踪蒙版<br>创建节点-进入蒙版界面-选择蒙版形态-调整形状大小-跟踪器-默认云跟踪<br>特效库-马赛克模糊<br>Magic Mask<br>付费版<br>划线跟踪人或特定部位<br>添加文本-Alt按住复制片段到文本上方-魔法蒙版-跟踪-节点图右键添加Alpha输出-字放到人身后</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剪辑 </category>
+          
+          <category> 达芬奇 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>问题</title>
+      <link href="/2025/11/01/%E9%97%AE%E9%A2%98/"/>
+      <url>/2025/11/01/%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>电容充放电原理和时刻<br>芯片EN控制电路<br>EN-RC延迟电路只有电阻没有电容<br>有刷电机带反电动势检测芯片<br>焊盘 width&amp;height</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>格式</title>
+      <link href="/2025/11/01/%E6%A0%BC%E5%BC%8F/"/>
+      <url>/2025/11/01/%E6%A0%BC%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>DXF(Drawing Exchange Fotmat)</p><blockquote><ul><li>开放的矢量图形数据交换格式，以文本形式储存图形信息，可以被多种CAD软件和图形软件读取和写入</li><li>文件相对简单，不支持某些高级功能，但更易于解析和编辑，适用只需要基本图形信息用户</li><li>安全性方面较低，更容易被共享和修改<br>DWG(Drawing)<blockquote><ul><li>AutoCAD软件的原生文件格式，以二进制形式存储图形数据，具有更高的存储效率和复杂性</li><li>支持更多的高级功能和复杂的图形对象，如三维模型、自定义对象等。可以包含更多的元数据和特定于AutoCAD的设置</li><li>更容易受到版权保护和加密限制</li></ul></blockquote></li></ul></blockquote></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电压符号</title>
+      <link href="/2025/11/01/electronic/%E7%94%B5%E5%8E%8B%E7%AC%A6%E5%8F%B7/"/>
+      <url>/2025/11/01/electronic/%E7%94%B5%E5%8E%8B%E7%AC%A6%E5%8F%B7/</url>
+      
+        <content type="html"><![CDATA[<ul><li>VCC(Volt Current Condenser)<ul><li>电路的供电电压或电源电压</li><li>VCC与GND之间的电压差决定了电路中的电流流向和大小</li><li>通常用于双极型晶体管的集电极电源电压</li><li>数字电路中通常指代正电源电压</li><li>广泛应用于模拟电路和数字电路中</li><li>通常用于模拟电源，提供稳定的电压</li></ul></li><li>GND(Ground)<ul><li>电路的参考电位点</li><li>通常定义为0伏特，作为电压和信号的基准</li><li>可以保护设备、减少电磁干扰、稳定电路工作状态</li><li>电子设备中GND并不一定是真正的大地，而是通过导线连接到设备内部的某个公共电位点</li><li>复杂系统中，可能有多个GND</li></ul></li><li>VSS(Voltage Source Supply)<ul><li>主要指源极到源极的电压或某些集成电路(如CMOS)的接地电压</li><li>CMOS电路中，VSS指负电源</li><li>源极引脚之间或源极与地之间的电压参考点</li><li>在电路中为电流提供回流的路径，确保电路中的电流能够正常循环</li><li>用于消除噪声</li></ul></li><li>VDD(Voltage Drain Drain)<ul><li>表示器件内部的工作电压</li><li>通常用于数字电源，提供芯片内部的工作电压</li><li>通常用于为单极器件如MOS晶体管电路提供正电源</li><li>CMOS电路中，通常连接到PMOS晶体管的源极</li></ul></li><li>VEE(Voltage EE)<ul><li>负电源电压</li><li>一般用于模拟电路中，如在PNP型晶体管电路中，VEE表示连接到发射极的电源电压</li><li>在放大电路中较为常见，用于提供对称电源</li></ul></li><li>VREF(Voltage Reference)<ul><li>参考电压或基准电压</li><li>一般用在ADC里当基准数</li></ul></li><li>VBUS(Voltage Bus)<ul><li>USB总线上的电源电压</li><li>通常为5V(具体看USB的版本)</li><li>如果电路就靠USB供电，那么VBUS差不多就等同于VCC了</li></ul></li><li>VBAT(Voltage of Battery)<ul><li>电池的电源电压</li></ul></li><li>AGND(Analog Ground)<ul><li>在电路中代表模拟地</li><li>专门为模拟电路部分提供的接地参考点</li></ul></li><li>DGND<ul><li>在电路中代表数字地</li><li>专门为数字电路部分提供的接地参考点</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图纸</title>
+      <link href="/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/"/>
+      <url>/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="符号"><a href="#符号" class="headerlink" title="符号"></a>符号</h1><p>2-Φ6–制图中共有两个直径为6毫米的孔（圆）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 工程制图 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PCB封装</title>
+      <link href="/2025/11/01/electronic/eda/PCB%E5%B0%81%E8%A3%85/"/>
+      <url>/2025/11/01/electronic/eda/PCB%E5%B0%81%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<p>封装：元器件外形尺寸在PCB上的投影<br>PCB封装：用于实体元器件的图形描述和安装</p><h1 id="焊盘"><a href="#焊盘" class="headerlink" title="焊盘"></a>焊盘</h1><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><table><thead><tr><th>焊接方式</th><th>焊盘外形</th><th>用途</th></tr></thead><tbody><tr><td>通孔焊盘</td><td>规则焊盘</td><td>热风焊盘</td></tr><tr><td>表贴焊盘</td><td>异形焊盘</td><td>隔离焊盘</td></tr></tbody></table><h2 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h2><table><thead><tr><th>焊盘类型</th><th>简称</th><th>命名</th></tr></thead><tbody><tr><td>表面贴装方焊盘</td><td>SMD</td><td></td></tr><tr><td>表面贴装圆焊盘</td><td>SMDC</td><td></td></tr><tr><td>表面贴装手指焊盘</td><td>SMDF</td><td></td></tr><tr><td>通孔圆焊盘</td><td>THC</td><td></td></tr><tr><td>通孔长方焊盘</td><td>THR</td><td></td></tr><tr><td>异形焊盘</td><td>-</td><td></td></tr><tr><td>热焊盘</td><td>FC</td><td></td></tr></tbody></table><h2 id="尺寸规范"><a href="#尺寸规范" class="headerlink" title="尺寸规范"></a>尺寸规范</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> EDA </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>线束</title>
+      <link href="/2025/11/01/electronic/wire/%E7%BA%BF%E6%9D%9F/"/>
+      <url>/2025/11/01/electronic/wire/%E7%BA%BF%E6%9D%9F/</url>
+      
+        <content type="html"><![CDATA[<p>UL1061<br>26AWG 美规<br>OD</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 线束 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>EMC&amp;RF</title>
+      <link href="/2025/11/01/electronic/electronic%20test/EMC&amp;RF/"/>
+      <url>/2025/11/01/electronic/electronic%20test/EMC&amp;RF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="EMC-Test-Procedure"><a href="#EMC-Test-Procedure" class="headerlink" title="EMC Test Procedure"></a>EMC Test Procedure</h1><p>辐射测试<br>切点到参考点距离3米，天线后移<br>3米和10米有差异以10米为准<br>国内3米留余量，国外10米测<br>10米偏差基本在1-1.5db<br>10米标准要求±4db</p><p>传导(AAN)</p><p>![[Pasted image 20251106103453.png]]</p><p>锂电池产品<br>风险：充满变成绿灯，再加干扰变成红灯，过充风险；已经充满但是灯被干扰</p><p>屏幕<br>风险：加干扰触摸失效，卡住(用手试试)</p><h1 id="RED"><a href="#RED" class="headerlink" title="RED"></a>RED</h1><p>Radio Equipment(无线产品)</p><ul><li>无线电传输</li><li>无线电侦测</li><li>无线接收机</li></ul><p>频率范围0-3000HZ<br>红外遥控器超过3000HZ，波长比较短</p><p>Essential Requirements of RED<br>![[Pasted image 20251106104503.png]]<br>整机不能说符合RED同时符合EMC？</p><p>RED Cyber Security<br>wifi&#x2F;4G要有，欧盟海关</p><p>Conformity assessment procedures of RED<br>![[Pasted image 20251106105049.png]]</p><p>说明书</p><ul><li>使用的无线技术的频率范围</li><li>使用的无线技术的额定最大发射功率</li></ul><h1 id="EMC三要素"><a href="#EMC三要素" class="headerlink" title="EMC三要素"></a>EMC三要素</h1><p>Source–Reduce EMC source<br>Path–Cut off the transmission path<br>Object–Strengthen the immunity ability<br>思路：干扰尽量从地线走掉<br>电机正转反转干扰程度不一样<br>锂电池包电压降到百分之二三十，功能打开？干扰会非常大</p><h2 id="影响辐射发射的因素"><a href="#影响辐射发射的因素" class="headerlink" title="影响辐射发射的因素"></a>影响辐射发射的因素</h2><ul><li>天线极化方向：一般垂直会更差，但也有例外</li><li>输入电压、电流不同：一般大电流辐射更差</li><li>不同的工作模式，辐射结果不同</li><li>不同厂家的EMC关键元器件，辐射结果不同，比如电机、电源等等</li><li>产品的测试布置</li></ul><h2 id="影响传导发射的因素"><a href="#影响传导发射的因素" class="headerlink" title="影响传导发射的因素"></a>影响传导发射的因素</h2><ul><li>电源质量：AC&#x2F;DC,DC&#x2F;DC</li><li>工作模式</li><li>测试布置</li></ul><h1 id="RF测试"><a href="#RF测试" class="headerlink" title="RF测试"></a>RF测试</h1><ul><li>发射功率和功率谱密度是通过传导法测试，EUT需要把天线割断并焊出带sma接口的线缆；通过定频发射测试，设定值需要确定并提前摸底</li><li>自适应测试需要EUT与辅助设备(CMW或者路由器)链接并跑量，一般通过Iperf软件跑量；EUT需要刷固件以满足以上测试条件</li><li>杂散测试是辐射法，天线需保留，模块需要通过整机供电，其余功能可关闭</li></ul><h1 id="研发前期"><a href="#研发前期" class="headerlink" title="研发前期"></a>研发前期</h1><ul><li>研发初期，layout布板要有EMC的考量，对于可能得干扰源要预留后期整改的位置：比如晶振输出线上预留0欧姆电阻，AC&#x2F;DC或者DC&#x2F;DC输入输出线上预留滤波电路的位置等等</li><li>高风险项目在正式认证开始前摸底：比如辐射发射、传导发射、辐射杂散等</li><li>电动工具这类产品，电机的影响较大，带不带地线对传导也有很大影响</li><li>RF测试需要提供定频软件及定频软件的操作说明；软件的设定值有明确数值；自适应测试值最好可以通过Iperf跑流，如果无法实现，占空比数值会比较低，需要申明</li><li>辐射测试的布置问题</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 电子测试 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Cadence</title>
+      <link href="/2025/11/01/electronic/eda/cadence/Cadence/"/>
+      <url>/2025/11/01/electronic/eda/cadence/Cadence/</url>
+      
+        <content type="html"><![CDATA[<h1 id="项目管理"><a href="#项目管理" class="headerlink" title="项目管理"></a>项目管理</h1><ul><li>Assembly：存放PCB工程师制作的最终的PCB元件图，标注各个元件放置的位置</li><li>BRD：Board，即PCB工程师用PCB Editor画的PCB图</li><li>Doc：一般存放设计的注意事项或者公司的设计规则</li><li>DS：Data Sheet，存放各个元件的规格书或者图纸</li><li>Dxf：用于存放结构工程师画的结构图，以便PCB工程师在此结构边界内布线和放置元件</li><li>Gerber：用于存放最终出给PCB厂商的图纸资料</li><li>LIB：<ul><li>BRDLIB：<ul><li>Guidance：存放PCB Editor画封装时的一个空文件模板，这个空文件模板没有画任何封装图案，但是里面有对画封装前的所有配置参数。每次新建一个文件画封装前导入此空文件模板</li><li>Package：存放所有元件的封装文件，格式是.psm</li><li>Pad：存放封装里的所有焊盘文件，格式是.pad</li><li>Shape：格式.ssm</li></ul></li><li>SCHLIB：存放原理图元件图案的库</li></ul></li><li>SCH：存放原理图文件<ul><li>allergo</li></ul></li></ul><h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h2 id="创建焊盘"><a href="#创建焊盘" class="headerlink" title="创建焊盘"></a>创建焊盘</h2><p>导热垫(Thermal Pad)和导热过孔(Via for thermal pad)</p><h2 id="创建PCB封装"><a href="#创建PCB封装" class="headerlink" title="创建PCB封装"></a>创建PCB封装</h2><p>Layout-Pins-<br>计算引脚坐标时，提前考虑使原点处于元器件的几何中心，便于后续PCB设计及生产坐标文件的输出<br>丝印框<br>装配框<br>Edit–Z-Copy Shape–Place_Bound_top</p><h1 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h1><p>,,,SOP封装和SOIC封装区别<br>SOIC是由SOP派生出来的：两种封装的具体尺寸，包括芯片的长、宽、引脚宽度、引脚间距等基本一样，所以在PCB设计时<strong>封装SOP与SOIC可以混用</strong><br>SOP和SOIC有细微差别：SOIC 封装在外形上和 SOP 几乎一样。差异在管脚上， SOIC 更加细，据说是为了减少占地面积。SOIC-8 的焊盘宽度是 0.6mm，SOP-8 的焊盘宽度是 0.65mm，综合对比完全可以互相替换。<br>,,,</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> EDA </category>
+          
+          <category> Cadence </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ComfyUI</title>
+      <link href="/2025/10/29/ai/comfyui/ComfyUI/"/>
+      <url>/2025/10/29/ai/comfyui/ComfyUI/</url>
+      
+        <content type="html"><![CDATA[<p>Stable Diffusion<br>comfy 舒适的；轻松的<br>WebUI</p><h1 id="AI绘画原理"><a href="#AI绘画原理" class="headerlink" title="AI绘画原理"></a>AI绘画原理</h1><p>Diffusion-扩散(增加噪声)-生成(去除噪声)<br>ControlNet</p><h1 id="ComfyUI安装"><a href="#ComfyUI安装" class="headerlink" title="ComfyUI安装"></a>ComfyUI安装</h1><h1 id="运用并搭建工作流"><a href="#运用并搭建工作流" class="headerlink" title="运用并搭建工作流"></a>运用并搭建工作流</h1><p>工作流(workflow)<br>add node-loaders-load checkpoint-conditioning-CLIP text encode(Prompt)<br>CLIP(对比性语言-图像预训练)<br>sampling-KSampler(K采样器)<br>:::<br>control_after_generate-randomize(随机新种子)&#x2F;fixed(固定种子不变)&#x2F;increment(生成后种子+1)&#x2F;decrement(生成后种子-1)<br>sampler_name-dpmpp_2m<br>scheduler(调度器)-karras<br>:::<br>Latent(潜空间)-Empty Latent Image(空白潜空间图像)<br>;;;Latent<br>图像的编解码(VAE)<br>尺寸定义及缩放<br>;;;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能 </category>
+          
+          <category> ComfyUI </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>媒体池</title>
+      <link href="/2025/10/28/edit/da%20Vinci/%E5%AA%92%E4%BD%93%E6%B1%A0/"/>
+      <url>/2025/10/28/edit/da%20Vinci/%E5%AA%92%E4%BD%93%E6%B1%A0/</url>
+      
+        <content type="html"><![CDATA[<p>:::info<br>媒体面板-快编面板-剪辑面板-Fusion面板-调色面板-Fairlight面板-交付面板<br>:::<br>[剪辑习惯非常重要]{.label .danger}<br>导入素材之前<br>文件-项目设置-主设置-时间线帧率(最新版或修正)<br>分辨率-帧率<br>色彩管理-Rec709-A-四面体<br>剪辑——创意&#x2F;执行<br>非破坏性操作思维——先导入所有素材-再在媒体池终创建媒体夹进行分类-BROLL&#x2F;AROLL-素材监视器素材筛选-I&#x2F;O入点出点<br>媒体池-右键-时间线-新建时间线<br>ALT同时鼠标中键缩放<br>CTRL+(+&#x2F;-)缩放<br>修剪编辑模式(T)<br>剃刀工具(B)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剪辑 </category>
+          
+          <category> 达芬奇 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>调色</title>
+      <link href="/2025/10/11/edit/da%20Vinci/%E8%B0%83%E8%89%B2/"/>
+      <url>/2025/10/11/edit/da%20Vinci/%E8%B0%83%E8%89%B2/</url>
+      
+        <content type="html"><![CDATA[<p>:::success<br>COLOR TO FILM IS WHAT MUSIC TO OPERA<br>色彩之于影像的意义 正如音乐之于歌剧<br>:::</p><h1 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h1><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><ul><li>跟踪移动物体、</li><li>调整单独颜色</li><li>统一调整画面阴影</li><li>压下某块地方高光</li><li>加噪点&#x2F;炫光&#x2F;光晕——媒体池拖入素材-连接到图层节点-合成模式</li></ul><h1 id="界面"><a href="#界面" class="headerlink" title="界面"></a>界面</h1><p>工作区——重置用户界面布局<br>素材外框——灰色没有改变&#x2F;彩色有改变<br>素材下方——素材编码-双击切换素材名称&#x2F;机型<br>素材右上角——所在轨道号<br>时间线——点击轨道号打开 &#x2F;关闭<br>素材监视器——右键-抓取静帧-导出<br>LUT(颜色查找表)<br>节点逻辑——每个节点独立承载下方调色工具<br>调色工具<br>色轮——暗部-中灰&#x2F;中间调-亮部-偏移&#x2F;全局<br>齿轮控制明度<br>滴管白平衡工具<br>轴心——对比度发生点<br>色相——改变画面色彩偏移<br>色温——冷暖<br>色调——绿色和品红色的偏色<br>中间调细节——类似清晰度(不建议开很高)<br>色彩增强——类似饱和度但不同-基于现有的饱和度有不同分配(算法不同)<br>曲线——改变画面明暗分配<br>S曲线<br>编辑按钮——分离各个单独通道曲线-改变画面颜色<br>复原符号<br>单个<br>重置节点调色<br>Shift+D——绕过调色和Fusion特效<br>Ctrl+D——开关单独节点<br>Alt+D——开关所有节点<br>示波器——读取画面信息并分解，提高调色准确性<br>工作区-视频示波器-波形图&#x2F;矢量图(繁琐步骤)<br>波形图<br>底部代表纯黑，顶部代表纯白<br>暗部碰到波形图底部-亮部不会超出波形图顶部-调整中间调更好的调整整个画面对比<br>调整白平衡——波形图三颜色线聚一起成白色<br>便于理解——剪辑——特效库-生成器-灰色渐变<br>轴心——对比度亮度和暗部分配<br>亮度混合——为0只考虑单个通道调整&#x2F;100调整整体亮度<br>矢量图——显示肤色指示线</p><h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>色相-明度-饱和度<br>一级调色——只对画面整体的调整<br>二级调色——画面局部或对特定颜色的控制</p><h1 id="节点"><a href="#节点" class="headerlink" title="节点"></a>节点</h1><p>用尽可能少的节点达到更好的效果<br>绿色节点——原素材<br>节点标签——添加注释<br>断开连接——双击节点连线<br>添加串行节点——Alt+S<br>二级调色<br>抠像(并行节点)<br>限定器(吸管工具)-取色按钮-单独颜色选区-显示选区(Shift+H)-RGB混合器<br>并行节点——分区调整<br>添加并行节点——Alt+P<br>右键——变换为图层混合器节点(图层节点)<br>图层节点——具有层级关系<br>添加图层节点——Alt+L<br>下面层级比上面的高<br>右键——合成模式<br>外部节点——生成随着前面蒙版&#x2F;抠像变化而变化的反向蒙版<br>-<br>RGB分离节点——把画面的红绿蓝通道单独分离出来<br>Alpha输出节点<br>蒙版-外部节点-右键-添加Alpha输出-蓝色箭头连输出：绿幕合成<br>蒙版转场-顺着边缘画好蒙版-添加Alpha输出：无缝转场<br>复制调色<br>选中片段-要复制画面点击鼠标中键-复制所有节点和参数<br>想复制画面在前一条-Shift+加号<br>想复制画面在前两条-Shift+减号<br>右键调好的画面-抓取静帧-选中没有调色画面-静帧右键-应用调色<br>整一个时间综合调整-片段&#x2F;时间线、</p><h2 id="二级调色"><a href="#二级调色" class="headerlink" title="二级调色"></a>二级调色</h2><p>新建节点-矫正LUT<br>矫正LUT节点前调整曝光<br>风格LUT</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 剪辑 </category>
+          
+          <category> 达芬奇 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>逻辑器件</title>
+      <link href="/2025/09/09/electronic/component/logic/%E9%80%BB%E8%BE%91%E5%99%A8%E4%BB%B6/"/>
+      <url>/2025/09/09/electronic/component/logic/%E9%80%BB%E8%BE%91%E5%99%A8%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="通用逻辑器件-逻辑IC"><a href="#通用逻辑器件-逻辑IC" class="headerlink" title="通用逻辑器件(逻辑IC)"></a>通用逻辑器件(逻辑IC)</h1><p>54军用系列和<strong>74商用系列</strong></p><h2 id="工艺分类"><a href="#工艺分类" class="headerlink" title="工艺分类"></a>工艺分类</h2><table><thead><tr><th align="center">工艺</th><th align="center">产品族</th><th>优点</th><th>不足</th></tr></thead><tbody><tr><td align="center">Bipolar</td><td align="center">TTL、S、LS、AS、F、ALS、ECL</td><td>速度快，强电流驱动能力，工艺简单</td><td>功耗较大，集成度相对较低</td></tr><tr><td align="center">CMOS</td><td align="center">[HC]{.red}、HCT、CD4000、ACL、FCT、[LVC]{.red}、LV、CBT、ALVC、AHC、AHCT、CBTLV、AVC、GTLP</td><td>功耗低、抗干扰能力强，集成度高</td><td>输入电流过大(≥40mA)容易造成锁定效应，造成芯片烧毁</td></tr><tr><td align="center">BiCMOS</td><td align="center">BCT、ABT、LVT、ALVT</td><td>高速度，低功耗</td><td>工艺极其复杂，造价昂贵</td></tr><tr><td align="center">Bipolar:</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">全用三极管实现电路，纯种双极工艺，速度快，电流驱动能力强</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">CMOS:</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">全用MOS管实现电路。互补金属氧化物(PMOS管和NMOS管)共同构成的互补型MOS集成电路制造工艺，由于CMOS中一对MOS组成的门电路在瞬间看，要么PMOS导通，要么NMOS导通，要么都截止，比线性的三极管效率要高很多，因此功耗很低，集成度高</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">BiMOS:</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">既有MOS管，也有三极管。CMOS和双极器件同时集成在同一块芯片上，基本思想是以CMOS器件为主要单元电路，而在要求驱动大电容负载之处加入双极器件或电路，可以使电路达到高速度、低功耗</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">&#x3D;&#x3D;工艺复杂程度&#x3D;&#x3D;：BiCMOS&gt;Bipolar&gt;CMOS</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">![[Pasted image 20251010095618.png]]</td><td align="center"></td><td></td><td></td></tr><tr><td align="center">LVC和LV产品应用范围最广，是目前市场上的主流产品。CD4000产品电压范围最大，最高可达15V</td><td align="center"></td><td></td><td></td></tr></tbody></table><h2 id="功能分类"><a href="#功能分类" class="headerlink" title="功能分类"></a>功能分类</h2><table><thead><tr><th align="center">功能</th><th align="center">逻辑器件</th><th>应用场景</th><th>备注</th></tr></thead><tbody><tr><td align="center">门电路&#x2F;反相器(Invertr)</td><td align="center">与门74X08、与非门74X00、或门74X32、或非门74X02、异或门74X86、反相器：74X04</td><td>逻辑门电路一般用于控制各种模块及系统间通信，如交换机复位系统中。</td><td></td></tr><tr><td align="center">触发器</td><td align="center">J-K触发器、带三态的D触发器74X374、不带三态的D触发器74X74、施密特触发器等</td><td>交换机中多用于POE按键切换电路</td><td></td></tr><tr><td align="center">选择器</td><td align="center">2-1、4-1、8-1选择器74X157、74X153、74X151等</td><td>解决不同I2C设备的地址冲突，不同I2C共享一个负载。隔离不同电压工作的I2C。</td><td></td></tr><tr><td align="center">编&#x2F;译码器</td><td align="center">2&#x2F;4、3&#x2F;8和4&#x2F;16译码器74X139、74X138、74X154等</td><td></td><td></td></tr><tr><td align="center">寄存器</td><td align="center">串-并移位寄存器74X164、并-串寄存器74X165等</td><td>交换机中多用于LED电路。</td><td></td></tr><tr><td align="center">缓冲驱动器</td><td align="center">带反向的缓冲驱动器74X240、不带反向的缓冲驱动器74X244</td><td>不执行任何运算，输出与输入值一致。使高速工作的IC与慢速工作的外设起协调，同步和缓冲的作用。</td><td>增强驱动能力。</td></tr><tr><td align="center">收发器</td><td align="center">寄存器收发器74X245、通用收发器74X245、总线收发器等</td><td></td><td></td></tr><tr><td align="center">转换器</td><td align="center">单向电平转换、双向电平转换和逻辑电平转换。</td><td>能将较高逻辑电平转换成较低逻辑电平，实现不同工作电压IC连接和数据通讯。</td><td></td></tr><tr><td align="center">总线开关</td><td align="center">包括总线交换和通用总线器件等。</td><td>总线开关在高速数据接口中应用较多，用来导通或者阻隔数字信号。</td><td></td></tr></tbody></table><h2 id="电平分类"><a href="#电平分类" class="headerlink" title="电平分类"></a>电平分类</h2><table><thead><tr><th align="center">电平</th><th align="center">逻辑器件产品族</th></tr></thead><tbody><tr><td align="center">0.8V</td><td align="center">AUC、AUP</td></tr><tr><td align="center">1.2V</td><td align="center">AUC、AUP、AVC</td></tr><tr><td align="center">1.5V</td><td align="center">AUC、AUP、AVC</td></tr><tr><td align="center">1.8V</td><td align="center">ALVC、AUC、AUP、AVC、LVC、LV1T</td></tr><tr><td align="center">2.5V</td><td align="center">ALVC、ALVT、AUC、AUP、AVC、CBTLV、LV、LV1T、LV-A、LVC</td></tr><tr><td align="center">3.3V</td><td align="center">AC、AHC、ALB、ALVC、ALVT、AUP、AVC、CBLTV、LV、LV-A、LVC、LVT、LV1T、AUP1T</td></tr><tr><td align="center">5V</td><td align="center">ABT、AC&#x2F;ACT、AHC、AHCT、ALS、AS、BCT、CBT、F、LV、LV1T、LV-A、LS、S、TTL、CD4K、FCT2</td></tr><tr><td align="center">5V以上</td><td align="center">CD4000</td></tr><tr><td align="center">特殊逻辑器件</td><td align="center">BTL、ETL、GTL、GTLP、HSTL、SSTL、SSTV、TVC、VME、LSF</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 逻辑器件 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>开关</title>
+      <link href="/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/"/>
+      <url>/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="轻触开关-Tactile-Switch"><a href="#轻触开关-Tactile-Switch" class="headerlink" title="轻触开关(Tactile Switch)"></a>轻触开关(Tactile Switch)</h1><h2 id="定义与核心特征"><a href="#定义与核心特征" class="headerlink" title="定义与核心特征"></a>定义与核心特征</h2><p>瞬时接触型电子开关</p><ul><li>[瞬时动作]{.rainbow}：仅在施加外部压力(通常为手指按压)时导通电路，撤去压力后凭借内部弹性结构(多为金属弹片)自动复位断开电路。不具备自锁功能</li><li>[触感反馈]{.rainbow}：内部弹片结构在按压行程中产生形变，当达到临界点(操作力点)时突然“塌陷”，提供清晰可辨的“咔嗒”触感(Tactile Feedback)和声音反馈(Click Sound)，明确指示开关已被有效触发</li><li>[小行程、低操作力]{.rainbow}：按键行程(Travel)通常短小(0.1mm<del>1mm)，所需操作力(Operating Force)较低(几十克力<a href="%E8%A1%A8%E7%A4%BA%E4%B8%80%E5%85%8B%E7%89%A9%E4%BD%93%E6%89%80%E5%8F%97%E7%9A%84%E9%87%8D%E5%8A%9B%EF%BC%8CG=mg%EF%BC%8Cg=9.8%E7%89%9B/%E5%8D%83%E5%85%8B%EF%BC%8C%E6%89%80%E4%BB%A51000%E5%85%8B%E5%8A%9B=9.81%E7%89%9B%E9%A1%BF%EF%BC%8C%E5%8D%B31000gf=9.81N%EF%BC%8C1N=102gf">^1</a></del>几百克力)，适合频繁、快速操作</li><li>[紧凑尺寸]{.rainbow}：体积小巧、封装形式多样(SMT、THT)，高度集成化，适应现代电子产品微型化需求</li></ul><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ol><li>[初始状态]{.rainbow}(释放状态-off)<ul><li>内部拱形金属弹片(Dome)处于自然拱起状态</li><li>弹片与底部固定触点(Common Terminal,C)保持接触，但与另一个固定触点(Normally Open Terminal,NO)之间存在微小间隙</li><li>电路处于开路状态(C与NO断开)</li></ul></li><li>[按压过程]{.rainbow}<ol><li>手指施加垂直向下的力于按键帽(Button&#x2F;Plunger)</li><li>压力通过按键帽传递至弹片顶部</li><li>弹片在压力下逐渐向下弹性形变(储存势能)</li></ol></li><li>[临界触发点]{.rainbow}(操作力点-Actuation Point)<ol><li>当压力达到并超过弹片的临界屈曲力时，弹片结构失稳，瞬间从拱形“塌陷”成反向凹形或平直状态</li><li>此瞬间动作产生明显的“咔嗒”触感和声音</li><li>弹片底部(或与弹片相连的动触点)迅速与NO触点接触</li><li>电路导通(C与NO连通)</li></ol></li><li>[复位过程]{.rainbow}(释放状态恢复-Reset)<ol><li>撤去手指压力</li><li>储存于弹片中的弹性势能释放。驱动弹片迅速向上回弹</li><li>弹片恢复初始拱形状态，脱离与NO触点的接触、</li><li>电路恢复开路状态(C与NO断开)<br><strong>关键点</strong>：弹片的材料、形状(圆形、十字形、四腿形等)、厚度、拱高设计是决定操作力、行程、触感、回弹力、寿命的核心因素</li></ol></li></ol><h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>典型SMT贴片轻触开关：</p><ol><li>[上盖&#x2F;外壳]{.rainbow}(Housing&#x2F;Cover)<ul><li><strong>材质</strong>：耐高温绝缘材料(如PBT、LCP、PA66)，提供结构支撑、电气绝缘和环境保护</li><li><strong>功能</strong>：固定内部组件，提供按键帽的导向和行程限制，防止灰尘、液体侵入(防护等级依据设计而定)</li></ul></li><li>[按键帽&#x2F;柱塞]{.rainbow}(Button&#x2F;Plunger)<ul><li><strong>材质</strong>：工程塑料或金属(不锈钢)，顶部常覆有硅胶或其他材质材料以提升触感或密封性</li><li><strong>功能</strong>：直接承受用户按压，将力传递至弹片，其形状(平顶、凸顶、十字形)影响按压体验</li></ul></li><li>[金属弹片]{.rainbow}(Dome&#x2F;Snap Disc)<ul><li><strong>材质</strong>：不锈钢(SUS 301、SUS 304最常见)，有时镀金(Au)或镀银(Ag)以提升导电性和耐腐蚀性</li><li><strong>功能</strong>：提供触感反馈、触发电路通断、产生回弹力</li></ul></li><li>[基板&#x2F;底座]{.rainbow}(Base)<ul><li><strong>材质</strong>：绝缘材料(如FR4环氧树脂板、耐高温塑料)或金属(接地用)</li><li><strong>功能</strong>：承载固定触点(端子)，提供与PCB焊接的界面</li></ul></li><li>[固定触点]{.rainbow}(Terminals)<ul><li><strong>端子类型</strong>：SMT贴片端子(鸥翼型、J型)、DIP插件端子。通常为黄铜或磷青铜基材，表面镀层(锡、金、银)以提高可焊性、导电性和耐腐蚀性</li><li><strong>触点定义</strong>：<ul><li>公共端(Common,C&#x2F;COM)：始终与弹片(动触点)接触</li><li>常开端(Normally Open,NO)：常态下与弹片(动触点)断开，按压导通时连通</li><li>(部分开关有常闭端(Normally Closed,NC)，轻触开关中较少见)</li></ul></li></ul></li><li>[内部空间&#x2F;腔体]{.rainbow}(Cavity)<ul><li><strong>功能</strong>：容纳弹片并提供其动作空间。设计影响弹片动作顺畅度和防尘能力</li></ul></li><li>[辅助部件]{.rainbow}(可选)<ul><li><strong>密封圈(Sealing Ring&#x2F;Gasket)</strong>：硅胶或橡胶材质，用于提升防水防尘等级(如IP67)</li><li><strong>粘性背胶(Adhesive Tape)</strong>：用于面板安装固定</li><li><strong>防护盖&#x2F;薄膜(Protective Cover&#x2F;Film)</strong>：防止异物进入或作为面板的一部分<br><strong>结构设计趋势</strong><br>更薄型化(Low Profile)、更小尺寸、更高防护等级、更优触感一致性、更易自动化贴装</li></ul></li></ol><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ol><li>[按安装方式]{.rainbow}<ol><li><strong>贴片型(SMT-Surface Mount Technology)</strong><ul><li>特点：端子为金属焊盘，通过回流焊工艺贴装在PCB表面。主流封装形式</li><li>优势：节省PCB空间(无通孔)，自动化贴装效率高，适合高密度组装</li><li>常见尺寸：3x3mm, 3x4mm, 4x4mm, 4.5x4.5mm, 5x5mm, 6x6mm等</li></ul></li><li><strong>插件型(THT-Through-Hole Technology)</strong><ul><li>特点：端子为金属引脚，插入PCB通孔后焊接</li><li>优势：机械强度更高，焊接点更牢固，维修更换相对容易</li><li>常见封装：DIP(Dual In-line Package)</li></ul></li></ol></li><li>[按按键高度&#x2F;行程]{.rainbow}<ul><li><strong>超薄型(Ultra Low Profile)</strong>：高度&lt;1.0mm(如0.65mm)，行程极小。用于超薄设备(手机、平板)</li><li><strong>薄型(Low Profile)</strong>：高度1.0mm~2.5mm。主流高度，平衡了薄型化和良好触感</li><li><strong>标准型(Standard Profile)</strong>：高度&gt;2.5mm。行程和操作力可能更大，触感更明显</li></ul></li><li>[按按键顶部形状]{.rainbow}<ul><li><strong>平顶型(Flat)</strong>：最常见，与面板齐平或微凸</li><li><strong>凸顶型(Domed)</strong>：顶部圆弧凸起，便于手指定位</li><li><strong>十字型&#x2F;开孔型(Cross&#x2F;Holed)</strong>：中心有孔或十字槽，便于安装定位销或透光(用于背光开关)</li></ul></li><li>[按触感反馈特性]{.rainbow}<ul><li><strong>标准触感型</strong>：具有清晰“咔嗒”感</li><li><strong>软触感型(Soft Tactile)</strong>：“咔嗒”感更柔和、安静</li><li><strong>无声型&#x2F;静音型(Silent)</strong>：通过特殊弹片设计(如硅胶圆顶Silicon Dome)或阻尼结构，极大减弱或消除点击声，仅有触感变化</li></ul></li><li>[按防护等级]{.rainbow}<ul><li><strong>标准型</strong>：无特殊密封，防水防尘能力弱</li><li><strong>防尘型</strong>：带基本防尘结构</li><li><strong>防水型</strong>：带有密封圈(O-ring)</li></ul></li><li>[按特殊功能]{.rainbow}<ul><li><strong>带灯型(Illuminated)</strong>：集成LED(通常为SMD LED)，提供背光指示功能，需额外供电引脚</li><li><strong>带接地端子型</strong>：增加接地脚(Ground Pin)，用于ESD防护或屏蔽</li><li><strong>多向按键型(Multi-directional)</strong>：单一开关支持多个方向按压(如上、下、左、右、中)，内部结构更复杂(如五向摇杆开关)</li></ul></li></ol><h2 id="关键材料"><a href="#关键材料" class="headerlink" title="关键材料"></a>关键材料</h2><p>材料选择直接影响开关的性能、寿命、可靠性和成本</p><ol><li>[外壳&#x2F;上盖材料]{.rainbow}<ol><li><strong>PBT(聚对苯二甲酸丁二醇酯)</strong>：常用，耐热性好(&gt;200℃)，尺寸稳定，耐化学性好，成本适中</li><li><strong>LCP(液晶聚合物)</strong>：超耐高温(&gt;260摄氏度)，极低吸湿性，尺寸稳定性极佳，流动性好(利于薄壁成型)，成本高。用于高端、小型化、耐高温回流焊要求严苛的产品</li><li><strong>PA6&#x2F;PA46(尼龙)</strong>：韧性好，耐磨损，成本较低，但吸湿性较大，尺寸稳定性略逊于PBT&#x2F;LCP</li><li><strong>金属(不锈钢)</strong>：用于需要极高强度、EMI屏蔽或特殊外观的场合</li></ol></li><li>[弹片材料]{.rainbow}<ol><li><strong>不锈钢(SUS 301,SUS 304)</strong>：绝对主流材料<ul><li>SUS 301：硬度高(HV 430-550)，弹性好，回弹力强，寿命长。是要求高操作力、清晰触感和长寿命开关的首选</li><li>SUS 304：硬度较低(HV 350-450)，耐腐蚀性更优，成本略低。常用于对操作力要求稍低或更强调耐腐蚀的环境</li></ul></li><li><strong>表面处理</strong>：为提高导电性、耐腐蚀性和耐磨性，常进行电镀<ul><li>镀金(Au)：接触电阻最低且最稳定，耐腐蚀性极佳，成本最高。用于高可靠、低电平信号(电信、医疗、精密仪器)</li><li>镀银(Ag)：导电性好，成本低于镀金，但易硫化发黑(特别是在含硫环境中)</li><li>镀锡(Sn)：成本最低，可焊性好，但耐磨性和耐腐蚀性一般。常用于低端产品或不直接作为接触面的基材</li></ul></li></ol></li><li>[基板&#x2F;底座材料]{.rainbow}<ul><li><strong>FR4环氧玻璃纤维板</strong>：最常用，绝缘性好，强度高，耐热性满足一般回流焊要求</li><li><strong>高温塑料(如PBT,LCP)</strong>：用于一体化注塑成型的底座</li><li><strong>金属基板(如铝)</strong>：用于需要散热或接地屏蔽的场合</li></ul></li><li>[端子材料]{.rainbow}<ol><li><strong>基材</strong>：黄铜(Brass,H62&#x2F;H65)或磷青铜(Phosphor Bronze,C5191&#x2F;C5210)<ul><li>黄铜：导电性好，成本低，强度尚可</li><li>磷青铜：弹性、抗疲劳性、耐腐蚀性优于黄铜，导电性略低，成本稍高。常用于需要良好插拔耐久性或弹性接触的端子</li></ul></li><li><strong>端子表面镀层</strong>：与弹片镀层类似，常用锡(Sn)、金(Au)、银(Ag)。选择需考虑可焊性、耐腐蚀性、成本和接触电阻要求</li></ol></li><li>[密封&#x2F;辅助材料]{.rainbow}<ul><li><strong>硅橡胶(Silicone Rubber)</strong>：耐高低温(-60℃~200℃)，弹性好，化学惰性，用于防水密封圈(O-ring,Gasket)或软质按键帽</li><li><strong>聚氨酯(Polyurethane)</strong>：耐磨性、耐油性好，有时用于特殊密封件</li><li><strong>粘合剂</strong>：耐高温双面胶带(如3M VHB)用于面板粘贴安装</li></ul></li></ol><h2 id="参数-选型"><a href="#参数-选型" class="headerlink" title="参数(&#x3D;&#x3D;选型&#x3D;&#x3D;)"></a>参数(&#x3D;&#x3D;选型&#x3D;&#x3D;)</h2><ol><li>[电气参数]{.rainbow}(Electrical Characteristics)<ul><li><strong>额定电压(Rated Voltage)</strong>：开关能安全可靠工作的最大电压(DC或AC)。常见12VDC,24VDC,48VDC</li><li><strong>额定电流(Rated Current)</strong>：开关触点能承受的最大连续电流。范围从毫安级(信号开关)到几百毫安(如50mA,100mA,200mA)。高电流会显著降低寿命并增加发热风险</li><li><strong>接触电阻(Contact Resistance)</strong>：触点闭合时两接触点间的电阻。关键参数！要求尽可能低(通常&lt;100mΩ，优质品&lt;50mΩ)且稳定。受触点材料、镀层、接触压力和污染影响</li><li><strong>绝缘电阻(Insulation Resistance)</strong>：开关断开触点间或触点与外壳间的电阻(通常&gt;100MΩ@100VDC)。反映绝缘性能</li><li><strong>耐电压&#x2F;介电强度(Dielectric Strength&#x2F;Withstand Voltage)</strong>：开关断开触点间或触点与外壳间能承受而不击穿的最高电压(如250VAC for 1min)。反映绝缘耐压能力</li></ul></li><li>[机械参数]{.rainbow}(Mechanical Characteristics)：<ul><li><strong>操作力(Operating Force)</strong>：使开关触发(弹片塌陷)所需的最小力。单位：gf(克力)或N(牛顿)。<strong>直接影响按压手感</strong>(轻触或需用力)。范围广泛(160gf,180gf,250gf,350gf等)</li><li><strong>回弹力(Return Force)</strong>：按键释放后，弹片恢复原状产生的力。应足够保证可靠复位</li><li><strong>总行程(Total Travel)</strong>：按键从自由状态到完全按到底的移动距离</li><li><strong>预行程(Pre-travel)</strong>：从按键开始下压到达操作力点(触发点)的移动距离</li><li><strong>过行程(Overtravel)</strong>：从操作力点到按键被完全按到底(被限位)的移动距离。提供一定的操作余量</li><li><strong>操作力点(Actuation Point&#x2F;Tactile Point)</strong>：弹片塌陷、电路导通的精确位置(通常以行程百分比表示，如50%Total Travel)</li><li><strong>释放点(Release Point)</strong>：按键回升过程中，弹片开始复位、电路断开的精确位置。通常略低于操作力点(存在差值Hysteresis)</li><li><strong>触感(Tactility)</strong>：操作力-行程曲线中出现的明显“突降”或“峰值”，表征触感强度(Peak Force-Operating Force)。量化或主观描述(清晰、柔和、无感)</li></ul></li><li>[耐久性与可靠性]{.rainbow}(Durability &amp; Reliability)<ul><li><strong>机械寿命(Mechanical Life)</strong>：无负载(空载)条件下，开关能承受的操作次数(通常数十万至数百万次)。反映纯机械结构的磨损寿命</li><li><strong>电气寿命(Electrical Life)</strong>：在额定负载(电压、电流)条件下，开关能可靠完成通断操作的次数(通常数万至数十万次)。<strong>远低于机械寿命</strong>，受触点电弧烧蚀、材料转移、污染影响极大</li><li><strong>工作温度范围(Operating Temperature Range)</strong>：开关能正常工作的环境温度范围(如-40℃~+85℃)。材料(尤其塑料和弹片)需在此范围内保持性能稳定</li><li><strong>防护等级(Ingress Protection Rating-IPXX)</strong>：如IP67(完全防尘，可短时浸水)。由密封结构决定</li><li><strong>耐焊接热(Solder Heat Resistance)</strong>：SMT开关承受回流焊温度曲线的能力(如260℃ for 10s)。关键材料(塑料、弹片)需耐受此高温而不变形退化</li><li><strong>ESD保护(ESD Immunity)</strong>：抵抗静电放电破坏的能力(通常按IEC 6100-4-2标准测试，如±8kV接触放电)。设计(如接地路径)和材料(绝缘性)影响ESD表现</li></ul></li><li>[环境耐受性]{.rainbow}(Environmental Resistance)<ul><li><strong>耐高温高湿&#x2F;冷热冲击</strong>：开关在严苛温度变化或循环下的性能稳定性</li><li><strong>耐化学品</strong>：抵抗清洁剂、溶剂、汗液等侵蚀的能力</li><li><strong>耐振动&#x2F;冲击</strong>：在运输或使用过程中抵抗机械应力的能力<br>表：轻触开关关键性能参数概览表</li></ul></li></ol><h2 id="选型指南"><a href="#选型指南" class="headerlink" title="选型指南"></a>选型指南</h2><ol><li>电气需求<ul><li><strong>负载特性</strong>：电流&#x2F;电压大小？(最重要！信号级选小电流开关，功率级慎选并留余量)直流(DC)还是交流(AC)？负载性质(阻性、容性、感性-感性负载最易产生电弧)？</li><li><strong>信号完整性</strong>：是否需要极低且稳定的接触电阻？(高精度测量、微弱信号)——选镀金触点</li><li><strong>电路设计</strong>：需要几组触点(常开NO)？端子形式(SMT&#x2F;THT)？引脚排布？</li></ul></li><li>机械与操作需求<ul><li><strong>操作感受</strong>：期望的操作力大小？行程长短？触感类型(清晰、柔和、静音)？声音要求(有声&#x2F;静音)？</li><li><strong>尺寸限制</strong>：PCB允许的安装面积(长×宽)？整机允许的总高度？按键帽尺寸和形状？</li><li><strong>安装方式</strong>：SMT贴片 or THT插件？面板粘贴安装(需带背胶)？</li></ul></li><li>环境与可靠性需求<ul><li><strong>工作环境</strong>：湿温度范围？有无粉尘、液体(水、油)？是否接触化学品、汗液？有无强烈振动、冲击？——决定防护等级(IPXX)、材料选择(耐化性)、结构强度</li><li><strong>ESD风险</strong>：是否在易产生静电的环境？是否需要特殊ESD防护设计(如接地脚)？</li><li><strong>寿命要求</strong>：预期操作次数？机械寿命要求？电气寿命要求(在何种负载下)？——选择寿命规格远高于实际需求的型号，尤其在负载较重时</li><li><strong>法规认证</strong>：是否需满足特定行业标准(如汽车AEC-Q200，医疗ISO 13485)？</li></ul></li><li>成本与供应链<ul><li><strong>预算限制</strong></li><li><strong>采购批量</strong>：标准品 or 定制？</li><li><strong>供应商资质</strong>：行业口碑、质量体系认证(ISO 9001)、技术支持能力、交货期稳定性</li></ul></li></ol><h3 id="流程建议"><a href="#流程建议" class="headerlink" title="流程建议"></a>流程建议</h3><ol><li>明确负载电流&#x2F;电压(最优先！)</li><li>确定尺寸(长宽高)和安装方式(SMT&#x2F;THT)限制</li><li>定义操作力和触感偏好</li><li>评估环境条件(温湿度、防护等级)</li><li>设定寿命和可靠性目标</li><li>筛选供应商提供的符合上述核心要求的型号清单</li><li>对比关键参数(接触电阻、寿命数据、防护等级)、成本、样品实测手感</li><li>考虑进行小批量环境&#x2F;寿命验证测试</li></ol><h3 id="常见误区"><a href="#常见误区" class="headerlink" title="常见误区"></a>常见误区</h3><ul><li>只关注尺寸和价格，忽略负载电流匹配——导致触点迅速烧蚀失效</li><li>混淆机械寿命和电子寿命——对带负载的实际寿命期望过高</li><li>忽视环境因素(如湿气、腐蚀)对接触电阻和寿命的影响</li><li>未实际按压样品，仅凭参数选型——触感体验不符合预期</li></ul><h2 id="制造工艺"><a href="#制造工艺" class="headerlink" title="制造工艺"></a>制造工艺</h2><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 开关 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>note提醒块</title>
+      <link href="/2025/09/06/special/note%E6%8F%90%E9%86%92%E5%9D%97/"/>
+      <url>/2025/09/06/special/note%E6%8F%90%E9%86%92%E5%9D%97/</url>
+      
+        <content type="html"><![CDATA[<p>本功能基于 [markdown-it-container]{.kbd .red}<br>:::default<br>默认默认<br>:::</p><p>:::primary<br>基本基本<br>:::</p><p>:::info<br>提示提示<br>:::</p><p>:::success<br>成功成功<br>:::</p><p>:::warning<br>警告警告<br>:::</p><p>:::danger<br>危险危险<br>:::</p><p>:::danger no-icon<br>危险危险<br>:::</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 特殊功能 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>label标签块</title>
+      <link href="/2025/09/06/special/label%E6%A0%87%E7%AD%BE%E5%9D%97/"/>
+      <url>/2025/09/06/special/label%E6%A0%87%E7%AD%BE%E5%9D%97/</url>
+      
+        <content type="html"><![CDATA[<p>本功能基于[markdown-it-bracketed-spans]{.kbd .red}和[markdown-it-attrs]{.kbd .red}<br>[default]{.label}<br>[primary]{.label .primary}<br>[info]{.label .info}<br>[:heavy_check_mark:success]{.label .success}<br>[warning]{.label .warning}<br>[:broken_heart:danger]{.label .danger}</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 特殊功能 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>连接器</title>
+      <link href="/2025/09/06/electronic/component/connector/%E8%BF%9E%E6%8E%A5%E5%99%A8/"/>
+      <url>/2025/09/06/electronic/component/connector/%E8%BF%9E%E6%8E%A5%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 连接器 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电容</title>
+      <link href="/2025/09/06/electronic/component/capacitor/%E7%94%B5%E5%AE%B9/"/>
+      <url>/2025/09/06/electronic/component/capacitor/%E7%94%B5%E5%AE%B9/</url>
+      
+        <content type="html"><![CDATA[<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>![[Pasted image 20251010095313.png]]</p><ol><li>MLCC(叠层&#x2F;多层陶瓷电容)<br> MLCC采用多层陶瓷结构，每层陶瓷之间通过金属电极相连，形成多个并联的微小电容器。这种结构不仅提高了电容器的容量密度，还有效降低了ESR值。此外，MLCC采用高性能的陶瓷材料和金属电极材料，进一步优化了其ESR性能<br> 电极层数越多容量越大<br> 介电材料：X5R(二类)、X7R(二类)、C0G&#x2F;NP0(一类陶瓷)<br> 小容量(1nf以下)一般C0G&#x2F;NP0，温度稳定性好，精度5%以下<br> 中等容量(1nf-1uf)X7R为主，精度5%-10%<br> 高容量(1uf以上)用X5R较多，要求高X7R，精度10%-20%为主(电解电容一般20%)<br> X7R温度稳定性好，介电常数小但是容量做不上来，比较贵<br> X5R温度稳定性差<br> 优点：ESR(等效串联电阻)较小，通常只有数Ω到数十Ω，对高频滤波效果好。低ESR值可以提高电容器的充放电效率，减少能量损耗。其次，低ESR值可以改善电容器的热性能，降低工作温度，提高可靠性。最后，低ESR值可以使电容器在高频电路中表现出更好的性能，满足现在电子设备对高频特性的要求<br> 缺点：容量做不大，陶瓷耐压做不高</li><li>钽电容<br> 容值可以做高，不推荐用，不稳定，加高电压可能会爆炸，里面贵金属，贵，体积特别小可以考虑用</li><li>铝电解电容AL.Elec<br> 优点：价格低、电容量大、适用于大电流、大容量、低频等领域的应用<br> 缺点：有漏电流，ESR(等效串联电阻)大，所以纹波电流(脉动电流)引起的热损失大，会导致自发热，缩短寿命</li><li>薄膜电容<br> 优点：绝缘电压可以做很高<br> 缺点：体积比陶瓷电容大，成本高<br>![[Pasted image 20251010095409.png]]</li></ol><h1 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h1><h2 id="自举电容"><a href="#自举电容" class="headerlink" title="自举电容"></a>自举电容</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 电容 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>捷优奇</title>
+      <link href="/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/"/>
+      <url>/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>捷优信达和昌奇合办捷优奇</p></blockquote><h1 id="SMT"><a href="#SMT" class="headerlink" title="SMT"></a>SMT</h1><ul><li>放PCB</li><li>印刷，印锡膏</li><li>SPI检查，体积高度</li><li>贴元器件</li><li>AOI检查，有没有缺件，错件，有的工厂没有这步</li><li>回流焊，235-250</li><li>炉后AOI，有没有少锡，上锡状况，器件间距</li><li>收板</li><li>有BGA的产品，要照，X- RAY，首片</li></ul><h1 id="DIP"><a href="#DIP" class="headerlink" title="DIP"></a>DIP</h1><ul><li>插件</li><li>波峰焊，引脚焊接</li><li>修整</li><li>UV胶</li><li>FCP功能测试</li><li>点黑胶，灯上面，线束</li><li>灌胶，AB一比一，灌胶房，机器自动抽，一片40s，万一设备坏了，一个灌胶机</li><li>装壳</li><li>电压阻抗测试</li></ul><p>线束<br>半自动剥线器</p><p>剥线管<br>胶包玻璃纤维</p><p>点胶房<br>检验pin针上有没有胶</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> SMT/DIP </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电阻</title>
+      <link href="/2025/09/06/electronic/component/resistor/%E7%94%B5%E9%98%BB/"/>
+      <url>/2025/09/06/electronic/component/resistor/%E7%94%B5%E9%98%BB/</url>
+      
+        <content type="html"><![CDATA[<p>三星网站有单独规格书<br><strong>电阻阻值精度字母代码：</strong><br>L&#x3D;±0.01%<br>P&#x3D;±0.02%<br>W&#x3D;±0.05%<br>B&#x3D;±0.1%<br>C&#x3D;±0.25%<br>D&#x3D;±0.5%<br>&#x3D;&#x3D;F&#x3D;±1%&#x3D;&#x3D;<br>G&#x3D;±2%<br>H&#x3D;±3%<br>&#x3D;&#x3D;J&#x3D;±5%&#x3D;&#x3D;<br>&#x3D;&#x3D;K&#x3D;±10%&#x3D;&#x3D;<br>&#x3D;&#x3D;M&#x3D;±20%&#x3D;&#x3D;<br>N&#x3D;±30%<br>电阻1%覆盖5%</p><h2 id="0Ω电阻-Jumper"><a href="#0Ω电阻-Jumper" class="headerlink" title="0Ω电阻(Jumper)"></a>0Ω电阻(Jumper)</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 电阻 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电阻</title>
+      <link href="/2025/09/06/electronic/component/optical%20coupler/%E5%85%89%E8%80%A6/"/>
+      <url>/2025/09/06/electronic/component/optical%20coupler/%E5%85%89%E8%80%A6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>实现信号隔离的元器件，通常用于各部分电路之间，使其不互相受到影响<br>![[光耦实物图.jpeg]]<br>![[光耦原理图.png]]</p><h2 id="内部结构及其使用原理"><a href="#内部结构及其使用原理" class="headerlink" title="内部结构及其使用原理"></a>内部结构及其使用原理</h2><p>由一个发光二极管和一个光敏三极管封装而成<br>使用原理：当发光二极管有信号输入时，会被点亮，此时光敏三极管导通，从而使得右边电路可以正常工作</p><h2 id="基本电路应用"><a href="#基本电路应用" class="headerlink" title="基本电路应用"></a>基本电路应用</h2><p>常见的光耦电路结构：<br>![[光耦电路.png]]<br>光耦的两边各有两个引脚分别连接MCU与外围电路，并且两边信号没有直接联系。上图右边为MCU部分，左边为外围电路，<strong>倘若左边电路因电流过大而被烧毁，也不会影响右边MCU正常工作</strong>，这就是光耦在实际电路中的作用<br><strong>R1的作用</strong>：光耦的1引脚为电源输入端，发光二极管的耐压值有限，所以要添加电阻进行限流，否则会烧毁。阻值一般选择1K-10K，将电流控制在100uA左右。电流越大，三极管导通速度越快，具体选值要根据手册来计算<br><strong>C1的作用</strong>：C1电容与R1电阻搭配来使用，对输入信号进行滤波，由于不知道现场的干扰频率，所以这里的电容普遍选值为10nF或者100nF<br>理想信号：<br>![[理想信号.png]]<br>实际信号会受到现场噪声影响，有许多小毛刺，不够平滑<br>![[实际信号.png]]<br>加了电容之后，这些小毛刺都会被吸收掉，使得信号更加平滑<br>![[滤波信号.png]]<br><strong>R2的作用</strong>：当光耦的1引脚没有信号进来时，此时引脚的状态为浮空，我们应该避免引脚处于浮空，所以在这里接个电阻使得引脚接地，为0V、低电平。这样就可以确保二极管百分百不会发光<br><strong>R3的作用</strong>：与R2同理，使得引脚处于固定电平，避免因浮空状态而造成电路工作混乱<br><strong>D1的作用</strong>：D1是一个稳压二极管，用来保护发光二极管。人的手在碰到电路板时，可能会有静电产生，人体静电可达几千伏甚至几万伏，此时稳压二极管会瞬间被击穿，并吸收电能后将其释放，从而起到保护作用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 光电耦合器 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>场效应管</title>
+      <link href="/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/"/>
+      <url>/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<p>电压驱动型器件<br>常用于信号开关、功率开关、电平转换等各种用途</p><h1 id="类型与应用"><a href="#类型与应用" class="headerlink" title="类型与应用"></a>类型与应用</h1><p>![[Pasted image 20251010100155.png]]<br>NMOS管：<br>- 电路符号：箭头往里，箭头方向代表电子走向<br>- 电子开关：控制信号G极为高电平时导通，低电平时断开<br>- 导通电阻小，导通功耗小<br>- [低边开关]{.label .danger}应用首选，驱动方便，选型灵活<br>- N沟道MOSFET驱动比较复杂，一般需要额外电源或[自举驱动]{.label .danger}<br>- MOS管&#x3D;&#x3D;体二极管&#x3D;&#x3D;的负极作为电源输入端<br>PMOS管：<br>- 电路符号：箭头往外，箭头方向代表电子走向<br>- 电子开关：控制信号G极为低电平时导通，高电平时断开<br>- 导通电阻大(制造工艺?)，导通功耗大<br>- [高边开关]{.label .danger}应用，用P沟道MOSFET驱动比较简单，但导通电阻相对较大，!!价格相对较高!!<br>- MOS管&#x3D;&#x3D;体二极管&#x3D;&#x3D;的负极作为电源输入端<br><strong>体二极管</strong>：MOS管不可避免的寄生二极管<br>+++danger 影响</p><ul><li>正向压降较高会增加开关损耗，导致MOS管发热</li><li>在高频开关应用中，反向恢复时间和电流会影响效率和产生电磁干扰<br>![[体二极管.png]]<br>![[MOS驱动电路.png]]<br>+++</li></ul><h1 id="关键参数"><a href="#关键参数" class="headerlink" title="关键参数"></a>关键参数</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 场效应管 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2025-09-07月全食</title>
+      <link href="/2025/09/05/photo/lunar_eclipse/2025-09-07%E6%9C%88%E5%85%A8%E9%A3%9F/"/>
+      <url>/2025/09/05/photo/lunar_eclipse/2025-09-07%E6%9C%88%E5%85%A8%E9%A3%9F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关键时间"><a href="#关键时间" class="headerlink" title="关键时间"></a>关键时间</h1><ul><li>[23:28:02]{.kbd .red}半影食始</li><li>[00:26:40]{.kbd .red}初亏</li><li>[01:30:14]{.kbd .red}食既</li><li>[02:11:41]{.kbd .red}食甚</li><li>[02:53:08]{.kbd .red}生光</li><li>[03:56:42]{.kbd .red}复圆</li><li>[04:55:20]{.kbd .red}半影食终</li></ul><h1 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h1><h2 id="天气与地点"><a href="#天气与地点" class="headerlink" title="天气与地点"></a>天气与地点</h2><ul><li>提前48小时查看云量，优先选择海拔高、光害低的开阔地<br>+++info  参考app<br>windy，天文通，莉景天气<br>+++</li><li>城市内也可拍摄，只要月亮方向无遮挡即可</li></ul><h2 id="器材清单"><a href="#器材清单" class="headerlink" title="器材清单"></a>器材清单</h2><ul><li>机身：单反、微单、手机皆可<br>[EOS R10]{.label .primary}</li><li>镜头：<ul><li>特写：≥400mm(全画幅)</li><li>月轨：85mm-135mm</li><li>&#x3D;&#x3D;地景+月轨&#x3D;&#x3D;：24-100mm<br>  [RF-S18-150mm(等效28.8-240mm)]{.label .primary}</li></ul></li><li>支架：稳固三脚架</li><li>便携：双肩包&#x2F;斜挎包</li><li>远控：快门线&#x2F;遥控器&#x2F;手机app[调参数用]{.label .warning}<br>[Camera Connect]{.label .primary}</li><li>手机党：10×光学变焦机型</li><li>进阶：赤道仪<br>[:broken_heart:!!暂时供不起!!]{.label .danger}</li><li>续航：电池、充电宝</li><li>个人：热水、夜间防寒、防蚊用品、小凳子</li></ul><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ul><li><p>模式：手动M档，关闭防抖</p></li><li><p>对焦：务必手动对焦，放大屏幕对着月亮边缘调清晰</p></li><li><p>焦段：拍月食全过程序列，推荐30mm左右；想全程记录无压力，20mm更稳妥</p></li><li><p>测光：点测光，锁定月亮亮度，避免过曝</p></li><li></li><li><p>初亏：<br>:::info<br>ISO 100-200 | 快门 1&#x2F;100-1&#x2F;500 s | 光圈 f&#x2F;8-f&#x2F;11<br>:::</p></li><li><p>全食(血月)：<br>:::info<br>ISO 1600以上 | 快门 1&#x2F;4-2 s | 光圈 f5&#x2F;6-f&#x2F;8<br>:::</p></li><li><p>复圆：[:broken_heart:一定记得调不然过曝]{.label .danger}<br>:::info<br>ISO 100-200 | 快门 1&#x2F;100-1&#x2F;500 s | 光圈 f&#x2F;8-f&#x2F;11<br>:::</p></li></ul><h2 id="实战流程"><a href="#实战流程" class="headerlink" title="实战流程"></a>实战流程</h2><ol><li>预先试拍满月，确认对焦与构图</li><li>设置间隔拍摄参数：间隔时间控制在17s左右，拍摄张数750-1000</li><li>初亏开始，保持曝光参数，连续拍摄记录缺口变化</li><li>开始提高曝光：月亮逐渐变暗，逐步降快门，提ISO</li><li>全食段：切换血月参数，可拍一张地景正常曝光备用</li><li>生光后：反向调整参数，恢复高快门</li><li>复圆后：可收工，也可再拍一组地景用于后期合成<br>:::info<br>拍摄的同时不要忘记用眼睛观看，欣赏和记录我全都要<br>:::</li></ol><h2 id="创意拍法"><a href="#创意拍法" class="headerlink" title="创意拍法"></a>创意拍法</h2><p><strong>糖葫芦序列</strong></p><ul><li>固定机位，每8-10min拍一张，后期把月亮按时间轴“串”成一串糖葫芦</li><li>需提前用Planit&#x2F;Stellarium模拟月亮轨迹，选取合适地景<br><strong>延时摄影</strong><br>间隔10-20s拍一张，合成月食全过程视频<br><strong>HDR合成</strong><br>包围曝光拍摄地景和月亮，后期合成<br><strong>血月+银河</strong></li><li>食甚阶段月亮亮度仅约-3等，可同时拍到夏季银河</li><li>超广角14-24mm，f&#x2F;2.8，ISO 3200，15-20s，地景单独曝光后HDR合成<br><strong>超大巨月+地标</strong></li><li>使用600mm以上长焦，在1-2km外寻找高处建筑&#x2F;桥梁，利用透视压缩拍出“红月悬塔”</li><li>提前用地图软件测算拍摄距离与月亮仰角</li></ul><h2 id="后期思路"><a href="#后期思路" class="headerlink" title="后期思路"></a>后期思路</h2><ol><li>Lightroom统一调色</li><li>Photoshop堆栈“变亮”叠加月轨GIF</li><li>血月+地景：分别导入图层，蒙版擦出正确曝光区域</li></ol><h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><p>可能只能拍月亮序列，今年月亮较高，<br>优先拍序列，次要拍延时<br>避免不停变换参数，设置包围曝光，一组3-5张，每张间隔1-1.5档曝光？<br>拍摄间隔时间：建议3-5分钟一组</p><h2 id="巧摄"><a href="#巧摄" class="headerlink" title="巧摄"></a>巧摄</h2><p><strong>广角拍摄带地景的月食</strong></p><ul><li><p>目的：制作延时和月食序列</p></li><li><p>器材：20mm或更广才能包括整个序列</p></li><li><p>模拟月食序列，把构图定下来，相机全程不动</p></li><li><p>按照月全食来定下来曝光参数，全程M档(所以开始和结束的时候，月亮会过曝，不过没事)</p></li><li><p>曝光计算</p></li><li><p>手动模式</p></li><li><p>EV</p></li><li><p>已知场景</p></li><li><p>月食(出现五个月全食)</p></li><li><p>Danjon(丹戎標度)</p></li><li><p>经验拍广角用Danjon3(EV1.6)</p></li><li><p>长按ISO变为自动</p></li><li><p>星星星轨</p></li><li><p>星轨模式关闭</p></li><li><p>星点法则模糊圈法则</p></li><li><p>星点法则设置，传感器大小，大幅打印打开</p></li><li><p>20mm &lt; 4s，针对星星，月亮变为1s</p></li><li><p>景深计算摄影工具</p></li><li><p>前景想拍灯光芒四射，最好f&#x2F;16但是画质会有损失，一般改到f&#x2F;13或者f&#x2F;11</p></li><li><p>M档曝光，调节参数</p></li><li><p>间隔拍摄，间隔10s以上</p></li><li><p>取景框有设置3×3+对角线</p></li><li><p>拍出来金箍棒月亮序列，前后过曝</p></li></ul><p><strong>ISO一般不超过6400</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 摄影 </category>
+          
+          <category> 月全食 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>spoiler隐藏文字</title>
+      <link href="/2025/09/05/special/spoiler%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97/"/>
+      <url>/2025/09/05/special/spoiler%E9%9A%90%E8%97%8F%E6%96%87%E5%AD%97/</url>
+      
+        <content type="html"><![CDATA[<p>本功能基于 [markdown-it-spoiler]{.kbd .red} 和 [markdown-it-attrs]{.kbd .red}<br>!!黑幕黑幕黑幕黑幕黑幕黑幕!! :鼠标滑过显示内容<br>!!模糊模糊模糊模糊模糊模糊!!{.bulr} :选中文字显示内容</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 特殊功能 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>emoji绘文字</title>
+      <link href="/2025/09/05/special/emoji%E7%BB%98%E6%96%87%E5%AD%97/"/>
+      <url>/2025/09/05/special/emoji%E7%BB%98%E6%96%87%E5%AD%97/</url>
+      
+        <content type="html"><![CDATA[<p>本功能基于 [markdown-it-emoji]{.kbd .red} ，所有标签参考戳此</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">:kissing_heart:</span><br><span class="line">:ring:</span><br><span class="line">:notes:</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 特殊功能 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>effects文字特效</title>
+      <link href="/2025/09/05/special/effects%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88/"/>
+      <url>/2025/09/05/special/effects%E6%96%87%E5%AD%97%E7%89%B9%E6%95%88/</url>
+      
+        <content type="html"><![CDATA[<p>本功能基于[markdown-it-ins]{.kbd .red}、 [markdown-it-bracketed-spans]{.kbd .red}和[markdown-it-attrs]{.kbd .red}</p><blockquote><p>本主题风格颜色通用样式：default、primary、success、info、warning、danger</p></blockquote><p>++下划线++<br>++波浪线++{.wavy}<br>++着重点++{.dot}<br>++紫色下划线++{.primary}<br>++绿色波浪线++{.wavy .success}<br>++黄色着重点++{.dot .warning}<br><del>删除线</del><br><del>红色删除线</del>{.danger}<br>&#x3D;&#x3D;荧光高亮&#x3D;&#x3D;<br>[赤橙黄绿青蓝紫]{.rainbow}<br>[红色]{.red}<br>[粉色]{.pink}<br>[橙色]{.orange}<br>[黄色]{.yellow}<br>[绿色]{.green}<br>[靛青]{.aqua}<br>[蓝色]{.blue}<br>[紫色]{.purple}<br>[灰色]{.grey}<br>快捷键 [Ctrl]{.kbd} + [C]{.kbd .red}<br>H<del>2</del>0<br>29^th^</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 特殊功能 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>待办</title>
+      <link href="/2025/09/04/%E5%BE%85%E5%8A%9E/"/>
+      <url>/2025/09/04/%E5%BE%85%E5%8A%9E/</url>
+      
+        <content type="html"><![CDATA[<ul><li>outtime文章失效</li><li>播放按钮播放前后变化</li><li>首页轮播图下滑到底</li><li>移除顶部模糊(<a href="https://liuxiaohanhanzi.top/blog-construction/ShokaX%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97/">https://liuxiaohanhanzi.top/blog-construction/ShokaX%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97/</a>)</li><li>添加可动立牌</li><li>鼠标放到字句上出现提示框，提示框内容可编辑</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>更新日志</title>
+      <link href="/2025/09/04/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
+      <url>/2025/09/04/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
+      
+        <content type="html"><![CDATA[<ol><li>添加小黄花飘落物<br>2025-09-04<br><a href="https://lyrashore.com/computer-science/hexo/enhance/2025-3-2/">https://lyrashore.com/computer-science/hexo/enhance/2025-3-2/</a></li><li>改变鼠标点击特效，烟花——爱心<br>2025-09-04<br><a href="https://blog.minz.li/shokaX/ShokaX%E6%8F%92%E4%BB%B6-%E9%BB%9E%E6%93%8A%E6%84%9B%E5%BF%83%E6%95%88%E6%9E%9C/">https://blog.minz.li/shokaX/ShokaX%E6%8F%92%E4%BB%B6-%E9%BB%9E%E6%93%8A%E6%84%9B%E5%BF%83%E6%95%88%E6%9E%9C/</a></li><li>打开BGM播放开关<br>2025-09-04</li><li>effects文字特效<br>2025-09-05</li><li>emoji绘文字<br>2025-09-05</li><li>spoiler隐藏文字<br>2025-09-05</li><li>collapse折叠块<br>2025-09-06</li><li>label标签块<br>2025-09-06</li><li>note提醒块<br>2025-09-06</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>力森工厂学习</title>
+      <link href="/2025/09/03/electronic/component/diode/%E5%8A%9B%E6%A3%AE%E5%B7%A5%E5%8E%82%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2025/09/03/electronic/component/diode/%E5%8A%9B%E6%A3%AE%E5%B7%A5%E5%8E%82%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="力森电子-LSDPS-二极管"><a href="#力森电子-LSDPS-二极管" class="headerlink" title="力森电子(LSDPS)二极管"></a>力森电子(LSDPS)二极管</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>金坛封装厂<br>力森电子——新洁能(控股?)——国硅集成(控股60%以上)<br>代工上游：长晶、MCC……<br>16949认证</p><h2 id="生产制造流程"><a href="#生产制造流程" class="headerlink" title="生产制造流程"></a>生产制造流程</h2><ul><li>组装：框架固定在机器中，将晶圆切割成一个个芯片(PN结)，组合在一起</li><li>上锡膏：所用锡的熔点在290℃</li><li>点胶</li><li>焊接：进入焊接炉</li><li>清洗：自动化工序，洗掉多余的锡和胶</li><li>模压</li><li>塑封：机器自动出胶，挤压成型</li><li>切割：大片切割成一个个小芯片，留下的金属框架单独收集</li><li>回流焊：温度在265℃(正常焊接温度在250-260℃)，可以提前释放应力，防止塑料和金属(?)不同导致变形。&#x3D;&#x3D;一般工厂没有的流程&#x3D;&#x3D;</li><li>测试：每个器件经过测试机测量各种参数(VF、漏电流、VBR……)并记录，汇总到总台</li><li>印制：合格品激光打印(?)</li><li>包装：代工品牌直发</li></ul><h2 id="实验室"><a href="#实验室" class="headerlink" title="实验室"></a>实验室</h2><ul><li>HTRB高温反偏实验</li><li>TC(车规品全部测试，常规品抽检)</li><li>浪涌电流实验</li></ul><h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>打线工艺一般用于小信号<br>新品投产做1000小时测试(45天)<br>168小时(7天)<br>2小时</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 二极管 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二极管 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>名词解释</title>
+      <link href="/2025/09/02/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/"/>
+      <url>/2025/09/02/%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><ol><li>PCBA(Printed Circuit Board Assembly)<br>印刷电路板组装件，将电子元件通过焊接工艺固定到PCB上的成品</li><li>PCB(Printed Circuit Board)<br>印刷电路板，由绝缘基材、导电线路和焊盘组成的三维结构载体</li><li>PDM(Product Data Management)&#x2F;PLM(Product Lifecycle Management)<br>产品数据管理&#x2F;产品生命周期管理</li><li>CIS(Component Information System)<br>cadence 元器件库管理</li><li>Typ(Typical)<br>典型值</li><li>EVT(Engineering Verification Test)<br>工程验证测试阶段，电子方案验证</li><li>DVT(Design Verification Test)<br>设计验证测试阶段</li><li>PVT(Production Verification Test)<br>生产验证测试阶段，制程验证</li><li>MVT(Mass-Production Verification Test)<br>量产验证测试</li><li>TVS(Transient Voltage Suppressor)<br>瞬态抑制二极管</li><li>ESD(Electro-Static Discharge)<br>静电放电，两种带电材料或物体之间由接触、短路或电介质击穿引起的瞬时电流流动；气压、温度和湿度等因素会影响电场强度；造成所有电子元器件或集成电路系统过度电应力破坏的主要元凶，损伤毁灭性和永久性，会造成电路直接烧毁</li><li>EMC(Electro Magnetic Compatibility)<br>电磁兼容，对电子产品在电磁场方面干扰大小(EMI)和抗干扰能力(EMS)的综合评定</li><li>IMU(Inertial Measurement Unit)<br>惯性测量单元，电子设备，用于测量和报告物体的三个基本线性运动(加速度)和三个基本角运动(角速度)</li><li>HUB<br>集线器</li></ol>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>二极管</title>
+      <link href="/2025/09/02/electronic/component/diode/%E4%BA%8C%E6%9E%81%E7%AE%A1/"/>
+      <url>/2025/09/02/electronic/component/diode/%E4%BA%8C%E6%9E%81%E7%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="二极管"><a href="#二极管" class="headerlink" title="二极管"></a>二极管</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>一种由半导体材料制成的具有单向导电性能的电子元器件</p><ul><li>半导体：导电能力介于导体和绝缘体之间的物质</li></ul><h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><p>由一个由P型半导体和N型半导体形成的PN结加上相应的电极引线及管壳封装构成</p><ul><li>N型半导体：电子型半导体，自由电子浓度远大于空穴浓度的杂质半导体</li><li>P型半导体：空穴型半导体，以带正电的空穴导电为主</li></ul><h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><p>PN结加正向电压时，呈现低电阻，具有较大的正向扩散电流；PN结加反向电压时，呈现高电阻，具有很小的反向漂移电流<br>PN结具有单向导电性</p><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p><strong>PN结型二极管(双极型)</strong></p><table><thead><tr><th>种类</th><th>用途</th></tr></thead><tbody><tr><td>整流二极管</td><td>整流</td></tr><tr><td>开关二极管</td><td>整流</td></tr><tr><td>快速恢复二极管(FRD)</td><td>整流</td></tr><tr><td>齐纳二极管 稳压用</td><td>稳压</td></tr><tr><td>齐纳二极管 保护用</td><td>稳压</td></tr><tr><td>ESD保护二极管(TVS)</td><td>稳压</td></tr><tr><td>波段开关二极管*PIN二极管</td><td>高频</td></tr><tr><td>二极管整流桥</td><td>整流</td></tr><tr><td>阶跃恢复二极管(SRD)</td><td>整流</td></tr><tr><td>雪崩二极管(ABD)</td><td>稳压</td></tr><tr><td>变容二极管</td><td>电容</td></tr><tr><td><strong>金属-半导体接触二极管(单极型)</strong></td><td></td></tr><tr><td>种类</td><td>用途</td></tr><tr><td>———–</td><td>–</td></tr><tr><td>肖特基二极管(SBD)</td><td>整流</td></tr><tr><td>SiC肖特基二极管(SiC SBD)</td><td>整流</td></tr><tr><td>检波肖特基二极管</td><td>高频</td></tr><tr><td><strong>PN结二极管光半导体</strong></td><td></td></tr></tbody></table><ul><li>贴片LED</li><li>激光二极管</li><li>光电二极管<br><strong>结型FET(JFET)</strong></li><li>恒流二极管(CRD)</li></ul><h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><h3 id="正向"><a href="#正向" class="headerlink" title="正向"></a>正向</h3><ul><li>导通电压：正向超过某一数值后，二极管才有明显的正向电流。室温下，硅管的Vth约为0.5V，锗管的Vth约为0.1V</li><li>大于导通电压的区域称为&#x3D;&#x3D;导通区&#x3D;&#x3D;。当流过二极管的电流Ｉ比较大时，二极管两端的电压几乎维持恒定，硅管约为 0.6～0.8Ｖ（通常取 0.7Ｖ），锗管约为 0.2～0.3V（通常取 0.2Ｖ）</li></ul><h3 id="反向"><a href="#反向" class="headerlink" title="反向"></a>反向</h3><ul><li>在反向电压小于反向击穿电压的范围内，由少数载流子形成的反向电流很小，而且与反向电压的大小基本无关。此部分为&#x3D;&#x3D;截止区&#x3D;&#x3D;。<br>由二极管的正向与反向特性可直观的看出：①二极管是非线性器件；②二极管具有单向导电性</li></ul><h3 id="反向击穿"><a href="#反向击穿" class="headerlink" title="反向击穿"></a>反向击穿</h3><p>当反向电压增加到某一数值VBR时，反向电流急剧增大的现象</p><h3 id="温度影响"><a href="#温度影响" class="headerlink" title="温度影响"></a>温度影响</h3><p>温度升高会导致正向特性左移(导通电压降低，正向压降降低)，反向特性下移(反向电流增加)</p><h3 id="击穿"><a href="#击穿" class="headerlink" title="击穿"></a>击穿</h3><p>二极管击穿分为电击穿和热击穿，电击穿过程是可逆的，热击穿是任何时候都需要避免的</p><ol><li>电击穿</li></ol><ul><li>雪崩击穿<br>PN结掺杂浓度低，所加反向电压较高，击穿电压与浓度成反比(一般需要比较高的电压&gt;6V)</li><li>齐纳击穿<br>PN结掺杂浓度高，所加反向电压较低，阻挡层很薄，如稳压管(齐纳二极管)<br>采取适当的掺杂工艺，可将硅PN结的雪崩击穿电压控制在8~1000V，而齐纳击穿电压低于5V</li></ul><ol start="2"><li>热击穿<br>使用二极管过程中，由于反向电流和反向电压过大，使得PN结功耗变大，超过PN结的允许功耗，温度上升直到过热使PN结击穿的现象<br>热击穿后二极管将发生永久性损坏</li></ol><h2 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h2><ol><li>IO(平均整流电流 PEAK Average Rectified Output Current)<br>实际应用电流部分设计参考(网络，库中这个参数并无重点标记，部分规格书无此参数)</li><li>IF(最大整流电流Forward Continuous Current)<br>二极管长期连续工作时允许通过的最大正向电流值</li><li>VRRM(最大可重复峰值反向电压Maximum Repetitive Peak Reverse Voltage)&#x3D;&#x3D;库中填此参数&#x3D;&#x3D;<br> 包括所有重复瞬态电压，不包括不重复瞬态电压<br> 通常与电路相关，比如交流信号每个周期的最高点即重复峰值电压</li><li>VRM(反向峰值电压Peak Reverse Voltage)<br>二极管两端允许施加的最大反向电压。若大于此值，则反向电流(IR)剧增，二极管的单向导电性被破坏，从而引起反向击穿。通常取反向击穿电压(VBR)的一半作为VRM<blockquote><p>反向不重复峰值电压Non-Repetitive Peak Reverse Voltage，通常由外部因素引起，半导体整流二极管两端出现的任何不重复最大瞬时值的瞬态方向电压。可以认为就是二极管最高反向工作电压&#x3D;&#x3D;待确认&#x3D;&#x3D;</p></blockquote></li><li>IR(反向电流Reverse Current&#x2F;反向漏电电流Reverse Leakage Current)</li></ol><ul><li>反向电流是指二极管在规定的温度和反向电压作用下，流过二极管的反向电流。</li><li>不同的反向电压下反向电流不同。</li><li>反向电流越小，管子的单方向导电性能越好。</li><li>反向电流与温度密切相关，大约温度每升高100℃，反向电流增大一倍。</li><li>硅二极管比锗二极管在高温下具有较好的稳定性。</li></ul><ol start="6"><li>CT(结电容Diode Junction Capacitance)</li></ol><ul><li>结电容的大小直接表示了二极管的频率特性。</li><li>由于结电容的存在，当频率高到某一程度时，容抗小到使PN结短路，导致二极管失去单向导电性，不能工作</li><li>PN结面积越大，结电容也越大，越不能在高频情况下工作</li></ul><ol start="7"><li>IFSM(正向浪涌电流Forward Surge Current)<br>允许流过的瞬间电流，超过这个值会损坏二极管</li><li>TRR(反向恢复时间Reverse Recovery Time)<br>从正向电压变成反向电压时，电流一般不能瞬时截止，要延迟一点时间，这个时间就是反向恢复时间<br>这个参数决定了二极管的开关速度</li></ol><h2 id="判别"><a href="#判别" class="headerlink" title="判别"></a>判别</h2><h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><h3 id="原理图和PCB丝印"><a href="#原理图和PCB丝印" class="headerlink" title="原理图和PCB丝印"></a>原理图和PCB丝印</h3><h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><h2 id="肖特基二极管"><a href="#肖特基二极管" class="headerlink" title="肖特基二极管"></a>肖特基二极管</h2><p>金属与半导体接触形成&#x3D;&#x3D;金属-半导体结&#x3D;&#x3D;(非PN结)<br>也称为金属－半导体（接触）二极管或表面势垒二极管，是一种热载流子二极管<br><strong>特点</strong><br>开关频率高，反向恢复时间极短(可以小到几纳秒)，正向压降低，正向导通压降仅0.4V左右</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> 二极管 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 二极管 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学习</title>
+      <link href="/2025/09/01/%E5%AD%A6%E4%B9%A0/"/>
+      <url>/2025/09/01/%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p><em>斜体</em></p><p><strong>粗体</strong></p><blockquote><p>这是一个引用</p></blockquote><p>[这是zz的主页]（<a href="https://zhesphere.github.io)/">https://zhesphere.github.io）</a></p><p>*无序列表1</p><ul><li><p>无序列表2</p><ul><li>无序列表2.1</li></ul></li></ul><ul><li>无序列表3</li></ul><ol><li>有序列表1<ol start="2"><li>有序列表1.1</li></ol></li><li>有序列表2</li><li>有序列表3</li></ol><hr><hr><p><del>这是要被删除的文字</del></p><p><u>这行文字已被添加下划线</u></p><p><code>Hello world</code></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line">python</span><br></pre></td></tr></table></figure><table><thead><tr><th>项目</th><th>供应商</th><th>数量</th></tr></thead><tbody><tr><td>dad</td><td>dads</td><td>dada</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p>|:—-|:——–:|——:|<br>|锁片|德利|1PCS|<br>|端子林鑫|2Pcs|</p><p>dsad</p><p>使用Markdown<a href="Markdown%E6%98%AF%E4%B8%80%E7%A7%8D%E7%BA%AF%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80">^1</a>可以效率的书写文档，直接转换成HTML[^2]，你可以使用Typora[^T]编辑器进行书写</p><p>\</p><p>*</p><p>-</p><p>+</p><p>.</p><ul><li><p><input disabled="" type="checkbox"> 未完成</p></li><li><p><input checked="" disabled="" type="checkbox"> 已完成</p></li></ul><p>$$ E&#x3D;mc^2 $$</p><table>    <tr>        <th rowspan="2">值班人员</th>        <th>星期一</th>        <th>星期二</th>        <th>星期三</th>    </tr>    <tr>        <td>李强</td>        <td>张明</td>        <td>王平</td>    </tr></table><p><font face="楷体" color=#00ffff size=5>改变文字格式</font></p><p>[^2]: HyperText Mrakup Language 超文本标记语言<br>[^T]: NEW WAY TO READ &amp; WRITE MARKDOWN</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>DC-DC</title>
+      <link href="/2025/09/01/electronic/component/dc-dc/DC-DC/"/>
+      <url>/2025/09/01/electronic/component/dc-dc/DC-DC/</url>
+      
+        <content type="html"><![CDATA[<h1 id="DC-DC-开关电源"><a href="#DC-DC-开关电源" class="headerlink" title="DC-DC(开关电源)"></a>DC-DC(开关电源)</h1><h2 id="厂商"><a href="#厂商" class="headerlink" title="厂商"></a>厂商</h2><ul><li>矽力杰&#x3D;&#x3D;主要&#x3D;&#x3D;</li><li>3PEAK&#x3D;&#x3D;需要成本低次要部分&#x3D;&#x3D;</li><li>进口&#x3D;&#x3D;备选&#x3D;&#x3D;</li></ul><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>直流转直流电源(Direct Current)，直流电路中将一个电压值的电能变为另一个电压值的电能的装置</p><h3 id="构成"><a href="#构成" class="headerlink" title="构成"></a>构成</h3><p>控制芯片、电感线圈、二极管、三极管、电容器（一般）</p><h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul><li>与LDO(低压差线性稳压器)相比&#x3D;&#x3D;效率高&#x3D;&#x3D;，通常效率在70%以上，效率高的可达到95%以上</li><li>适应电压范围宽</li></ul><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><ol><li>Buck DC-DC converter</li><li>Boost DC-DC converter</li><li>Buck-Boost DC-DC converter</li></ol><h2 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h2><ol><li>同步整流<br>采用通态电阻极低的MOS管代替二极管<br>续流MOSFET的导通和关断是主动的，与开关管的动作严格同步</li></ol><ul><li>大大降低损耗</li><li>价格昂贵</li><li>轻载时工作状态更好</li><li>低压(30V、40V)同步较多</li></ul><ol start="2"><li>异步整流<br>续流二极管的导通和关断是被动的，与开关管的动作不同步</li></ol><ul><li>二极管轻载时的损耗较大</li><li>轻载时由于工作在不连续模式产生很大的噪声</li><li>高压一般做异步</li></ul><h2 id="调制方式"><a href="#调制方式" class="headerlink" title="调制方式"></a>调制方式</h2><ol><li>PFM(脉冲&#x3D;&#x3D;频率&#x3D;&#x3D;调制方式)<br>开关脉冲宽度一定，通过改变脉冲输出频率，使输出电压达到稳定<br><strong>优点</strong><br>长时间使用耗电小（尤其小负载）<br><strong>缺点</strong><br>重负载情况下，效率明显低于PWM方式<br>由于其纹波频谱比较分散规律少，使得滤波电路的设计十分复杂与困难</li><li>PWM(脉冲&#x3D;&#x3D;宽度&#x3D;&#x3D;调制方式)<br>开关脉冲的频率一定，通过改变脉冲输出宽度，使输出电压达到稳定<br><strong>优点</strong><br>控制电路简单，易于设计与实现<br>具有良好的电压纹波和噪声<br>频率特性好，线性度高<br>在重负载情况下有极高的效率<br><strong>缺点</strong><br>随着负载变轻，效率下降，轻负载情况下效率很低</li><li>PSM(&#x3D;&#x3D;待补充&#x3D;&#x3D;)</li></ol><h2 id="DC-DC和LDO差别"><a href="#DC-DC和LDO差别" class="headerlink" title="DC-DC和LDO差别"></a>DC-DC和LDO差别</h2><p><strong>LDO</strong><br>线性功耗高，跑不了大电流，低压差小电流用，最高40V<br><strong>DC-DC</strong><br>大电流用</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> DC-DC </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 器件学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

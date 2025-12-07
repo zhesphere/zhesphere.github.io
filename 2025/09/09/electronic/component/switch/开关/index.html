@@ -1,0 +1,610 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>开关 | 哲哲折 - 分享技术与摄影艺术</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="https://www.zsphere.top/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><!-- Open Graph--><meta name="description" content="轻触开关(Tactile Switch)定义与核心特征瞬时接触型电子开关 [瞬时动作]{.rainbow}：仅在施加外部压力(通常为手指按压)时导通电路，撤去压力后凭借内部弹性结构(多为金属弹片)自动复位断开电路。不具备自锁功能 [触感反馈]{.rainbow}：内部弹片结构在按压行程中产生形变，"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="哲哲折 - 分享技术与摄影艺术"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link rel="stylesheet" href="/schedule/schedule.css"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: {"appId":"NTOAA3CGNB","apiKey":"95adffc008d154b626f8bf16c42cab67","indexName":"zsstop","hits":{"per_page":6}},
+    localsearch: undefined,
+    runtime: '2025-12-03 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: LYZ","link":"链接: ","source":"来源: 哲哲折 - 分享技术与摄影艺术","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["你可以的","你一定可以的","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"这里有宝藏！","back":"ヾ(≧∇≦*)ゝHey, hey, you fell for it."},
+    expire: {"time":30,"position":"top","text_prev":"This article expired ","text_next":"30 day ago, if the content does not match, please contact the webmaster to update it."},
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body id="body"><div><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude fas fa-circle-chevron-right"></i></a></div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /<img [^>]+ class="wl-emoji">/g
+    let cache = utils.saveToLocal.get('waline-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+    await fetch('https://waline.zsphere.top//api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
+        .then(async data => {
+            for (const i of data.data) {
+                let title = ''
+                if (i.url) {
+                    await fetch(i.url).then(res => res.text()).then(html => {
+                        const parser = new DOMParser()
+                        const doc = parser.parseFromString(html, 'text/html')
+                        title = doc.querySelector('title').innerText
+                    }).catch(() => {
+                        title = i.url
+                    })
+                }
+                if (title.indexOf('|') > 0) {
+                    title = title.split('|')[0]
+                }
+                ls.push({
+                    title: title,
+                    url: i.url,
+                    nick: i.nick,
+                    avatar: i.avatar,
+                    time: new Date(i.time),
+                    content: formatContent(i.comment)
+                })
+            }
+            setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+            utils.saveToLocal.set('waline-recent-comments-console', ls, 0.2)
+        })
+
+    function setHtml(el, data) {
+        el.innerHTML = data.length !== 0 ? data.map(i => `
+                            <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                                <div class="comment-info">
+                                    <img src="${i.avatar}" class="nolazyload" alt="${i.nick}">
+                                    <div>
+                                        <span class="comment-user">${i.nick}</span>
+                                    </div>
+                                    <time class="comment-time" datetime="${i.time}"></time>
+                                </div>
+                                <div class="comment-content">${i.content}</div>
+                                <div class="comment-title">
+                                <i class="solitude fas fa-comment"></i>
+                                ${i.title}</div>
+                            </div>
+                        `).join('') : `暂无评论...`
+        if (typeof utils !== 'undefined') utils.diffDateFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '[表情]')
+        content = content.replace(/<img.*?>/g, '[图片]');
+        content = content.replace(/<a.*?>.*?<\/a>/g, '[链接]');
+        content = content.replace(/<pre.*?>.*?<\/pre>/g, '[代码]');
+        content = content.replace(/<.*?>/g, '');
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/markdown/">markdown<sup>1</sup></a><a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管<sup>2</sup></a><a href="/tags/%E5%99%A8%E4%BB%B6%E5%AD%A6%E4%B9%A0/">器件学习<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2025/11/"><span class="date">2025/11</span><div class="count-group"><span class="count">11</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/10/"><span class="date">2025/10</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/09/"><span class="date">2025/09</span><div class="count-group"><span class="count">21</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">35</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="waline_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
+  await fetch('https://waline.zsphere.top//api/comment?type=count', {method: 'GET'}).then(async res => res.json())
+    .then(async data => {
+      document.querySelector('#waline_allcount').innerHTML = data.data
+    })
+})()</script></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">BLOG</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" href="https://www.zsphere.top/" title="Zsphere"><img class="nolazyload back-menu-item-icon" src="/img/pwa/zsphere.ico" alt="Zsphere"><span class="back-menu-item-text">Zsphere</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>装备</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/markdown/">markdown<sup>1</sup></a><a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管<sup>2</sup></a><a href="/tags/%E5%99%A8%E4%BB%B6%E5%AD%A6%E4%B9%A0/">器件学习<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">15.5k</div></div></div></div></div><div><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">BLOG</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" href="https://www.zsphere.top/" title="Zsphere"><img class="nolazyload back-menu-item-icon" src="/img/pwa/zsphere.ico" alt="Zsphere"><span class="back-menu-item-text">Zsphere</span></a></div></div></div></div><a href="/" title="返回博客主页" id="site-name"><span class="title">ZS</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">开关</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>装备</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/default.avif" alt="开关"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E7%94%B5%E5%AD%90/">电子</a></span><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">开关</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2025-09-09 13:03:01"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2025-09-09T05:03:01.000Z">2025-09-09T05:03:01.000Z</time></span><span class="post-meta-date" title="最后更新于 2025-11-12 19:37:58"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2025-11-12T11:37:58.000Z">2025-11-12T11:37:58.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">3.9k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fas fa-clock" title="阅读耗时"></i><span>14 分钟</span></span><span class="post-meta-position" title="作者IP归属地为China"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>China</span></span><a class="post-meta-pv" href="/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/" title="文章热度"><i class="post-meta-icon solitude fas fa-fire-flame-curved"></i><span class="waline-pageview-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fas fa-comment"></i><a href="/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/#post-comment"><span class="waline-comment-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a></span></div></div></div><div class="post-radius-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h1 id="轻触开关-Tactile-Switch"><a href="#轻触开关-Tactile-Switch" class="headerlink" title="轻触开关(Tactile Switch)"></a>轻触开关(Tactile Switch)</h1><h2 id="定义与核心特征"><a href="#定义与核心特征" class="headerlink" title="定义与核心特征"></a>定义与核心特征</h2><p>瞬时接触型电子开关</p>
+<ul>
+<li>[瞬时动作]{.rainbow}：仅在施加外部压力(通常为手指按压)时导通电路，撤去压力后凭借内部弹性结构(多为金属弹片)自动复位断开电路。不具备自锁功能</li>
+<li>[触感反馈]{.rainbow}：内部弹片结构在按压行程中产生形变，当达到临界点(操作力点)时突然“塌陷”，提供清晰可辨的“咔嗒”触感(Tactile Feedback)和声音反馈(Click Sound)，明确指示开关已被有效触发</li>
+<li>[小行程、低操作力]{.rainbow}：按键行程(Travel)通常短小(0.1mm<del>1mm)，所需操作力(Operating Force)较低(几十克力<a href="%E8%A1%A8%E7%A4%BA%E4%B8%80%E5%85%8B%E7%89%A9%E4%BD%93%E6%89%80%E5%8F%97%E7%9A%84%E9%87%8D%E5%8A%9B%EF%BC%8CG=mg%EF%BC%8Cg=9.8%E7%89%9B/%E5%8D%83%E5%85%8B%EF%BC%8C%E6%89%80%E4%BB%A51000%E5%85%8B%E5%8A%9B=9.81%E7%89%9B%E9%A1%BF%EF%BC%8C%E5%8D%B31000gf=9.81N%EF%BC%8C1N=102gf">^1</a></del>几百克力)，适合频繁、快速操作</li>
+<li>[紧凑尺寸]{.rainbow}：体积小巧、封装形式多样(SMT、THT)，高度集成化，适应现代电子产品微型化需求</li>
+</ul>
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><ol>
+<li>[初始状态]{.rainbow}(释放状态-off)<ul>
+<li>内部拱形金属弹片(Dome)处于自然拱起状态</li>
+<li>弹片与底部固定触点(Common Terminal,C)保持接触，但与另一个固定触点(Normally Open Terminal,NO)之间存在微小间隙</li>
+<li>电路处于开路状态(C与NO断开)</li>
+</ul>
+</li>
+<li>[按压过程]{.rainbow}<ol>
+<li>手指施加垂直向下的力于按键帽(Button&#x2F;Plunger)</li>
+<li>压力通过按键帽传递至弹片顶部</li>
+<li>弹片在压力下逐渐向下弹性形变(储存势能)</li>
+</ol>
+</li>
+<li>[临界触发点]{.rainbow}(操作力点-Actuation Point)<ol>
+<li>当压力达到并超过弹片的临界屈曲力时，弹片结构失稳，瞬间从拱形“塌陷”成反向凹形或平直状态</li>
+<li>此瞬间动作产生明显的“咔嗒”触感和声音</li>
+<li>弹片底部(或与弹片相连的动触点)迅速与NO触点接触</li>
+<li>电路导通(C与NO连通)</li>
+</ol>
+</li>
+<li>[复位过程]{.rainbow}(释放状态恢复-Reset)<ol>
+<li>撤去手指压力</li>
+<li>储存于弹片中的弹性势能释放。驱动弹片迅速向上回弹</li>
+<li>弹片恢复初始拱形状态，脱离与NO触点的接触、</li>
+<li>电路恢复开路状态(C与NO断开)<br><strong>关键点</strong>：弹片的材料、形状(圆形、十字形、四腿形等)、厚度、拱高设计是决定操作力、行程、触感、回弹力、寿命的核心因素</li>
+</ol>
+</li>
+</ol>
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><p>典型SMT贴片轻触开关：</p>
+<ol>
+<li>[上盖&#x2F;外壳]{.rainbow}(Housing&#x2F;Cover)<ul>
+<li><strong>材质</strong>：耐高温绝缘材料(如PBT、LCP、PA66)，提供结构支撑、电气绝缘和环境保护</li>
+<li><strong>功能</strong>：固定内部组件，提供按键帽的导向和行程限制，防止灰尘、液体侵入(防护等级依据设计而定)</li>
+</ul>
+</li>
+<li>[按键帽&#x2F;柱塞]{.rainbow}(Button&#x2F;Plunger)<ul>
+<li><strong>材质</strong>：工程塑料或金属(不锈钢)，顶部常覆有硅胶或其他材质材料以提升触感或密封性</li>
+<li><strong>功能</strong>：直接承受用户按压，将力传递至弹片，其形状(平顶、凸顶、十字形)影响按压体验</li>
+</ul>
+</li>
+<li>[金属弹片]{.rainbow}(Dome&#x2F;Snap Disc)<ul>
+<li><strong>材质</strong>：不锈钢(SUS 301、SUS 304最常见)，有时镀金(Au)或镀银(Ag)以提升导电性和耐腐蚀性</li>
+<li><strong>功能</strong>：提供触感反馈、触发电路通断、产生回弹力</li>
+</ul>
+</li>
+<li>[基板&#x2F;底座]{.rainbow}(Base)<ul>
+<li><strong>材质</strong>：绝缘材料(如FR4环氧树脂板、耐高温塑料)或金属(接地用)</li>
+<li><strong>功能</strong>：承载固定触点(端子)，提供与PCB焊接的界面</li>
+</ul>
+</li>
+<li>[固定触点]{.rainbow}(Terminals)<ul>
+<li><strong>端子类型</strong>：SMT贴片端子(鸥翼型、J型)、DIP插件端子。通常为黄铜或磷青铜基材，表面镀层(锡、金、银)以提高可焊性、导电性和耐腐蚀性</li>
+<li><strong>触点定义</strong>：<ul>
+<li>公共端(Common,C&#x2F;COM)：始终与弹片(动触点)接触</li>
+<li>常开端(Normally Open,NO)：常态下与弹片(动触点)断开，按压导通时连通</li>
+<li>(部分开关有常闭端(Normally Closed,NC)，轻触开关中较少见)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>[内部空间&#x2F;腔体]{.rainbow}(Cavity)<ul>
+<li><strong>功能</strong>：容纳弹片并提供其动作空间。设计影响弹片动作顺畅度和防尘能力</li>
+</ul>
+</li>
+<li>[辅助部件]{.rainbow}(可选)<ul>
+<li><strong>密封圈(Sealing Ring&#x2F;Gasket)</strong>：硅胶或橡胶材质，用于提升防水防尘等级(如IP67)</li>
+<li><strong>粘性背胶(Adhesive Tape)</strong>：用于面板安装固定</li>
+<li><strong>防护盖&#x2F;薄膜(Protective Cover&#x2F;Film)</strong>：防止异物进入或作为面板的一部分<br><strong>结构设计趋势</strong><br>更薄型化(Low Profile)、更小尺寸、更高防护等级、更优触感一致性、更易自动化贴装</li>
+</ul>
+</li>
+</ol>
+<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><ol>
+<li>[按安装方式]{.rainbow}<ol>
+<li><strong>贴片型(SMT-Surface Mount Technology)</strong><ul>
+<li>特点：端子为金属焊盘，通过回流焊工艺贴装在PCB表面。主流封装形式</li>
+<li>优势：节省PCB空间(无通孔)，自动化贴装效率高，适合高密度组装</li>
+<li>常见尺寸：3x3mm, 3x4mm, 4x4mm, 4.5x4.5mm, 5x5mm, 6x6mm等</li>
+</ul>
+</li>
+<li><strong>插件型(THT-Through-Hole Technology)</strong><ul>
+<li>特点：端子为金属引脚，插入PCB通孔后焊接</li>
+<li>优势：机械强度更高，焊接点更牢固，维修更换相对容易</li>
+<li>常见封装：DIP(Dual In-line Package)</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>[按按键高度&#x2F;行程]{.rainbow}<ul>
+<li><strong>超薄型(Ultra Low Profile)</strong>：高度&lt;1.0mm(如0.65mm)，行程极小。用于超薄设备(手机、平板)</li>
+<li><strong>薄型(Low Profile)</strong>：高度1.0mm~2.5mm。主流高度，平衡了薄型化和良好触感</li>
+<li><strong>标准型(Standard Profile)</strong>：高度&gt;2.5mm。行程和操作力可能更大，触感更明显</li>
+</ul>
+</li>
+<li>[按按键顶部形状]{.rainbow}<ul>
+<li><strong>平顶型(Flat)</strong>：最常见，与面板齐平或微凸</li>
+<li><strong>凸顶型(Domed)</strong>：顶部圆弧凸起，便于手指定位</li>
+<li><strong>十字型&#x2F;开孔型(Cross&#x2F;Holed)</strong>：中心有孔或十字槽，便于安装定位销或透光(用于背光开关)</li>
+</ul>
+</li>
+<li>[按触感反馈特性]{.rainbow}<ul>
+<li><strong>标准触感型</strong>：具有清晰“咔嗒”感</li>
+<li><strong>软触感型(Soft Tactile)</strong>：“咔嗒”感更柔和、安静</li>
+<li><strong>无声型&#x2F;静音型(Silent)</strong>：通过特殊弹片设计(如硅胶圆顶Silicon Dome)或阻尼结构，极大减弱或消除点击声，仅有触感变化</li>
+</ul>
+</li>
+<li>[按防护等级]{.rainbow}<ul>
+<li><strong>标准型</strong>：无特殊密封，防水防尘能力弱</li>
+<li><strong>防尘型</strong>：带基本防尘结构</li>
+<li><strong>防水型</strong>：带有密封圈(O-ring)</li>
+</ul>
+</li>
+<li>[按特殊功能]{.rainbow}<ul>
+<li><strong>带灯型(Illuminated)</strong>：集成LED(通常为SMD LED)，提供背光指示功能，需额外供电引脚</li>
+<li><strong>带接地端子型</strong>：增加接地脚(Ground Pin)，用于ESD防护或屏蔽</li>
+<li><strong>多向按键型(Multi-directional)</strong>：单一开关支持多个方向按压(如上、下、左、右、中)，内部结构更复杂(如五向摇杆开关)</li>
+</ul>
+</li>
+</ol>
+<h2 id="关键材料"><a href="#关键材料" class="headerlink" title="关键材料"></a>关键材料</h2><p>材料选择直接影响开关的性能、寿命、可靠性和成本</p>
+<ol>
+<li>[外壳&#x2F;上盖材料]{.rainbow}<ol>
+<li><strong>PBT(聚对苯二甲酸丁二醇酯)</strong>：常用，耐热性好(&gt;200℃)，尺寸稳定，耐化学性好，成本适中</li>
+<li><strong>LCP(液晶聚合物)</strong>：超耐高温(&gt;260摄氏度)，极低吸湿性，尺寸稳定性极佳，流动性好(利于薄壁成型)，成本高。用于高端、小型化、耐高温回流焊要求严苛的产品</li>
+<li><strong>PA6&#x2F;PA46(尼龙)</strong>：韧性好，耐磨损，成本较低，但吸湿性较大，尺寸稳定性略逊于PBT&#x2F;LCP</li>
+<li><strong>金属(不锈钢)</strong>：用于需要极高强度、EMI屏蔽或特殊外观的场合</li>
+</ol>
+</li>
+<li>[弹片材料]{.rainbow}<ol>
+<li><strong>不锈钢(SUS 301,SUS 304)</strong>：绝对主流材料<ul>
+<li>SUS 301：硬度高(HV 430-550)，弹性好，回弹力强，寿命长。是要求高操作力、清晰触感和长寿命开关的首选</li>
+<li>SUS 304：硬度较低(HV 350-450)，耐腐蚀性更优，成本略低。常用于对操作力要求稍低或更强调耐腐蚀的环境</li>
+</ul>
+</li>
+<li><strong>表面处理</strong>：为提高导电性、耐腐蚀性和耐磨性，常进行电镀<ul>
+<li>镀金(Au)：接触电阻最低且最稳定，耐腐蚀性极佳，成本最高。用于高可靠、低电平信号(电信、医疗、精密仪器)</li>
+<li>镀银(Ag)：导电性好，成本低于镀金，但易硫化发黑(特别是在含硫环境中)</li>
+<li>镀锡(Sn)：成本最低，可焊性好，但耐磨性和耐腐蚀性一般。常用于低端产品或不直接作为接触面的基材</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>[基板&#x2F;底座材料]{.rainbow}<ul>
+<li><strong>FR4环氧玻璃纤维板</strong>：最常用，绝缘性好，强度高，耐热性满足一般回流焊要求</li>
+<li><strong>高温塑料(如PBT,LCP)</strong>：用于一体化注塑成型的底座</li>
+<li><strong>金属基板(如铝)</strong>：用于需要散热或接地屏蔽的场合</li>
+</ul>
+</li>
+<li>[端子材料]{.rainbow}<ol>
+<li><strong>基材</strong>：黄铜(Brass,H62&#x2F;H65)或磷青铜(Phosphor Bronze,C5191&#x2F;C5210)<ul>
+<li>黄铜：导电性好，成本低，强度尚可</li>
+<li>磷青铜：弹性、抗疲劳性、耐腐蚀性优于黄铜，导电性略低，成本稍高。常用于需要良好插拔耐久性或弹性接触的端子</li>
+</ul>
+</li>
+<li><strong>端子表面镀层</strong>：与弹片镀层类似，常用锡(Sn)、金(Au)、银(Ag)。选择需考虑可焊性、耐腐蚀性、成本和接触电阻要求</li>
+</ol>
+</li>
+<li>[密封&#x2F;辅助材料]{.rainbow}<ul>
+<li><strong>硅橡胶(Silicone Rubber)</strong>：耐高低温(-60℃~200℃)，弹性好，化学惰性，用于防水密封圈(O-ring,Gasket)或软质按键帽</li>
+<li><strong>聚氨酯(Polyurethane)</strong>：耐磨性、耐油性好，有时用于特殊密封件</li>
+<li><strong>粘合剂</strong>：耐高温双面胶带(如3M VHB)用于面板粘贴安装</li>
+</ul>
+</li>
+</ol>
+<h2 id="参数-选型"><a href="#参数-选型" class="headerlink" title="参数(&#x3D;&#x3D;选型&#x3D;&#x3D;)"></a>参数(&#x3D;&#x3D;选型&#x3D;&#x3D;)</h2><ol>
+<li>[电气参数]{.rainbow}(Electrical Characteristics)<ul>
+<li><strong>额定电压(Rated Voltage)</strong>：开关能安全可靠工作的最大电压(DC或AC)。常见12VDC,24VDC,48VDC</li>
+<li><strong>额定电流(Rated Current)</strong>：开关触点能承受的最大连续电流。范围从毫安级(信号开关)到几百毫安(如50mA,100mA,200mA)。高电流会显著降低寿命并增加发热风险</li>
+<li><strong>接触电阻(Contact Resistance)</strong>：触点闭合时两接触点间的电阻。关键参数！要求尽可能低(通常&lt;100mΩ，优质品&lt;50mΩ)且稳定。受触点材料、镀层、接触压力和污染影响</li>
+<li><strong>绝缘电阻(Insulation Resistance)</strong>：开关断开触点间或触点与外壳间的电阻(通常&gt;100MΩ@100VDC)。反映绝缘性能</li>
+<li><strong>耐电压&#x2F;介电强度(Dielectric Strength&#x2F;Withstand Voltage)</strong>：开关断开触点间或触点与外壳间能承受而不击穿的最高电压(如250VAC for 1min)。反映绝缘耐压能力</li>
+</ul>
+</li>
+<li>[机械参数]{.rainbow}(Mechanical Characteristics)：<ul>
+<li><strong>操作力(Operating Force)</strong>：使开关触发(弹片塌陷)所需的最小力。单位：gf(克力)或N(牛顿)。<strong>直接影响按压手感</strong>(轻触或需用力)。范围广泛(160gf,180gf,250gf,350gf等)</li>
+<li><strong>回弹力(Return Force)</strong>：按键释放后，弹片恢复原状产生的力。应足够保证可靠复位</li>
+<li><strong>总行程(Total Travel)</strong>：按键从自由状态到完全按到底的移动距离</li>
+<li><strong>预行程(Pre-travel)</strong>：从按键开始下压到达操作力点(触发点)的移动距离</li>
+<li><strong>过行程(Overtravel)</strong>：从操作力点到按键被完全按到底(被限位)的移动距离。提供一定的操作余量</li>
+<li><strong>操作力点(Actuation Point&#x2F;Tactile Point)</strong>：弹片塌陷、电路导通的精确位置(通常以行程百分比表示，如50%Total Travel)</li>
+<li><strong>释放点(Release Point)</strong>：按键回升过程中，弹片开始复位、电路断开的精确位置。通常略低于操作力点(存在差值Hysteresis)</li>
+<li><strong>触感(Tactility)</strong>：操作力-行程曲线中出现的明显“突降”或“峰值”，表征触感强度(Peak Force-Operating Force)。量化或主观描述(清晰、柔和、无感)</li>
+</ul>
+</li>
+<li>[耐久性与可靠性]{.rainbow}(Durability &amp; Reliability)<ul>
+<li><strong>机械寿命(Mechanical Life)</strong>：无负载(空载)条件下，开关能承受的操作次数(通常数十万至数百万次)。反映纯机械结构的磨损寿命</li>
+<li><strong>电气寿命(Electrical Life)</strong>：在额定负载(电压、电流)条件下，开关能可靠完成通断操作的次数(通常数万至数十万次)。<strong>远低于机械寿命</strong>，受触点电弧烧蚀、材料转移、污染影响极大</li>
+<li><strong>工作温度范围(Operating Temperature Range)</strong>：开关能正常工作的环境温度范围(如-40℃~+85℃)。材料(尤其塑料和弹片)需在此范围内保持性能稳定</li>
+<li><strong>防护等级(Ingress Protection Rating-IPXX)</strong>：如IP67(完全防尘，可短时浸水)。由密封结构决定</li>
+<li><strong>耐焊接热(Solder Heat Resistance)</strong>：SMT开关承受回流焊温度曲线的能力(如260℃ for 10s)。关键材料(塑料、弹片)需耐受此高温而不变形退化</li>
+<li><strong>ESD保护(ESD Immunity)</strong>：抵抗静电放电破坏的能力(通常按IEC 6100-4-2标准测试，如±8kV接触放电)。设计(如接地路径)和材料(绝缘性)影响ESD表现</li>
+</ul>
+</li>
+<li>[环境耐受性]{.rainbow}(Environmental Resistance)<ul>
+<li><strong>耐高温高湿&#x2F;冷热冲击</strong>：开关在严苛温度变化或循环下的性能稳定性</li>
+<li><strong>耐化学品</strong>：抵抗清洁剂、溶剂、汗液等侵蚀的能力</li>
+<li><strong>耐振动&#x2F;冲击</strong>：在运输或使用过程中抵抗机械应力的能力<br>表：轻触开关关键性能参数概览表</li>
+</ul>
+</li>
+</ol>
+<h2 id="选型指南"><a href="#选型指南" class="headerlink" title="选型指南"></a>选型指南</h2><ol>
+<li>电气需求<ul>
+<li><strong>负载特性</strong>：电流&#x2F;电压大小？(最重要！信号级选小电流开关，功率级慎选并留余量)直流(DC)还是交流(AC)？负载性质(阻性、容性、感性-感性负载最易产生电弧)？</li>
+<li><strong>信号完整性</strong>：是否需要极低且稳定的接触电阻？(高精度测量、微弱信号)——选镀金触点</li>
+<li><strong>电路设计</strong>：需要几组触点(常开NO)？端子形式(SMT&#x2F;THT)？引脚排布？</li>
+</ul>
+</li>
+<li>机械与操作需求<ul>
+<li><strong>操作感受</strong>：期望的操作力大小？行程长短？触感类型(清晰、柔和、静音)？声音要求(有声&#x2F;静音)？</li>
+<li><strong>尺寸限制</strong>：PCB允许的安装面积(长×宽)？整机允许的总高度？按键帽尺寸和形状？</li>
+<li><strong>安装方式</strong>：SMT贴片 or THT插件？面板粘贴安装(需带背胶)？</li>
+</ul>
+</li>
+<li>环境与可靠性需求<ul>
+<li><strong>工作环境</strong>：湿温度范围？有无粉尘、液体(水、油)？是否接触化学品、汗液？有无强烈振动、冲击？——决定防护等级(IPXX)、材料选择(耐化性)、结构强度</li>
+<li><strong>ESD风险</strong>：是否在易产生静电的环境？是否需要特殊ESD防护设计(如接地脚)？</li>
+<li><strong>寿命要求</strong>：预期操作次数？机械寿命要求？电气寿命要求(在何种负载下)？——选择寿命规格远高于实际需求的型号，尤其在负载较重时</li>
+<li><strong>法规认证</strong>：是否需满足特定行业标准(如汽车AEC-Q200，医疗ISO 13485)？</li>
+</ul>
+</li>
+<li>成本与供应链<ul>
+<li><strong>预算限制</strong></li>
+<li><strong>采购批量</strong>：标准品 or 定制？</li>
+<li><strong>供应商资质</strong>：行业口碑、质量体系认证(ISO 9001)、技术支持能力、交货期稳定性</li>
+</ul>
+</li>
+</ol>
+<h3 id="流程建议"><a href="#流程建议" class="headerlink" title="流程建议"></a>流程建议</h3><ol>
+<li>明确负载电流&#x2F;电压(最优先！)</li>
+<li>确定尺寸(长宽高)和安装方式(SMT&#x2F;THT)限制</li>
+<li>定义操作力和触感偏好</li>
+<li>评估环境条件(温湿度、防护等级)</li>
+<li>设定寿命和可靠性目标</li>
+<li>筛选供应商提供的符合上述核心要求的型号清单</li>
+<li>对比关键参数(接触电阻、寿命数据、防护等级)、成本、样品实测手感</li>
+<li>考虑进行小批量环境&#x2F;寿命验证测试</li>
+</ol>
+<h3 id="常见误区"><a href="#常见误区" class="headerlink" title="常见误区"></a>常见误区</h3><ul>
+<li>只关注尺寸和价格，忽略负载电流匹配——导致触点迅速烧蚀失效</li>
+<li>混淆机械寿命和电子寿命——对带负载的实际寿命期望过高</li>
+<li>忽视环境因素(如湿气、腐蚀)对接触电阻和寿命的影响</li>
+<li>未实际按压样品，仅凭参数选型——触感体验不符合预期</li>
+</ul>
+<h2 id="制造工艺"><a href="#制造工艺" class="headerlink" title="制造工艺"></a>制造工艺</h2><h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2></article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">LYZ</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏</span><ul class="reward-group"><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/wechatpay.webp" alt="Wechatpay" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">Wechatpay</div></li><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/alipay.webp" alt="Alipay" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">Alipay</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">由于您的支持，我才能够实现写作的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fwww.zsphere.top%2F2025%2F09%2F09%2Felectronic%2Fcomponent%2Fswitch%2F%25E5%25BC%2580%25E5%2585%25B3%2F&amp;title=%E5%BC%80%E5%85%B3&amp;desc=undefined&amp;summary=undefined&amp;site=%E5%BC%80%E5%85%B3&amp;pics=%2Fimg%2Fdefault.avif" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://www.zsphere.top/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://www.zsphere.top/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://www.zsphere.top/2025/09/09/electronic/component/switch/%E5%BC%80%E5%85%B3/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">哲哲折 - 分享技术与摄影艺术</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/09/09/electronic/component/logic/%E9%80%BB%E8%BE%91%E5%99%A8%E4%BB%B6/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">逻辑器件</div></div></a></div><div class="next-post pull-right"><a href="/2025/09/06/special/note%E6%8F%90%E9%86%92%E5%9D%97/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">note提醒块</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="waline-comment-count"><i class="solitude fas fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div id="waline-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">LYZ</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/zhesphere" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/356745391" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%BB%E8%A7%A6%E5%BC%80%E5%85%B3-Tactile-Switch"><span class="toc-text">轻触开关(Tactile Switch)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%E4%B8%8E%E6%A0%B8%E5%BF%83%E7%89%B9%E5%BE%81"><span class="toc-text">定义与核心特征</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84"><span class="toc-text">结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B"><span class="toc-text">类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E6%9D%90%E6%96%99"><span class="toc-text">关键材料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E6%95%B0-%E9%80%89%E5%9E%8B"><span class="toc-text">参数(&#x3D;&#x3D;选型&#x3D;&#x3D;)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E5%9E%8B%E6%8C%87%E5%8D%97"><span class="toc-text">选型指南</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%BB%BA%E8%AE%AE"><span class="toc-text">流程建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E8%AF%AF%E5%8C%BA"><span class="toc-text">常见误区</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%B6%E9%80%A0%E5%B7%A5%E8%89%BA"><span class="toc-text">制造工艺</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-text">应用</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2025/11/11/edit/da%20Vinci/LUTS/" title="LUTS"><div class="thumbnail"><img alt="LUTS" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/LUTS.webp"></div><div class="content"><span class="title" href="/2025/11/11/edit/da%20Vinci/LUTS/" title="LUTS">LUTS</span><span class="categories" href="/2025/11/11/edit/da%20Vinci/LUTS/">剪辑</span></div></a><a class="aside-list-item" href="/2025/11/05/edit/da%20Vinci/%E5%B8%A7%E7%8E%87/" title="帧率"><div class="thumbnail"><img alt="帧率" src="/img/default.avif"></div><div class="content"><span class="title" href="/2025/11/05/edit/da%20Vinci/%E5%B8%A7%E7%8E%87/" title="帧率">帧率</span><span class="categories" href="/2025/11/05/edit/da%20Vinci/%E5%B8%A7%E7%8E%87/">剪辑</span></div></a><a class="aside-list-item" href="/2025/11/04/edit/da%20Vinci/%E7%A7%98%E4%BC%A0%E6%8A%80/" title="秘传技"><div class="thumbnail"><img alt="秘传技" src="/img/default.avif"></div><div class="content"><span class="title" href="/2025/11/04/edit/da%20Vinci/%E7%A7%98%E4%BC%A0%E6%8A%80/" title="秘传技">秘传技</span><span class="categories" href="/2025/11/04/edit/da%20Vinci/%E7%A7%98%E4%BC%A0%E6%8A%80/">剪辑</span></div></a><a class="aside-list-item" href="/2025/11/01/%E9%97%AE%E9%A2%98/" title="问题"><div class="thumbnail"><img alt="问题" src="/img/default.avif"></div><div class="content"><span class="title" href="/2025/11/01/%E9%97%AE%E9%A2%98/" title="问题">问题</span></div></a><a class="aside-list-item" href="/2025/11/01/%E6%A0%BC%E5%BC%8F/" title="格式"><div class="thumbnail"><img alt="格式" src="/img/default.avif"></div><div class="content"><span class="title" href="/2025/11/01/%E6%A0%BC%E5%BC%8F/" title="格式">格式</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/zhesphere" title="Github"><i class="solitude  fab fa-github"></i></a><div><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/author.webp" alt="返回顶部"></div></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/356745391" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div><div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="Archives">Archives</a><a class="footer-item" href="/categories/" title="Categories">Categories</a><a class="footer-item" href="/tags/" title="Tags">Tags</a></div></div><div class="footer-group"><h3 class="footer-title">排列</h3><div class="footer-links"><a class="footer-item" href="/cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/privacy/" title="Privacy">Privacy</a><a class="footer-item" href="/copyright/" title="Copyright">Copyright</a></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 By<a class="footer-bar-link" href="/" title="LYZ">LYZ</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div><div class="footer-bar-right"><a class="footer-bar-link" href="/atom.xml" title="">RSS</a><a class="footer-bar-link" href="/" title=""><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a><a class="footer-bar-link" href="/" title="">boringbay</a></div></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script async src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><script defer src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.75.7/dist/instantsearch.production.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/algoliasearch@5.19.0/dist/algoliasearch.umd.min.js"></script><!-- Right menu functionality--><script defer src="/js/right_menu.js?v=3.0.21"></script><script src="/schedule/schedule.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><div class="js-pjax"><script>(() => {
+    let walineInitFunction = window.walineFn || null
+
+    function initWaline(initFn) {
+        const walineOptions = {
+            el: '#waline-wrap',
+            serverURL: 'https://waline.zsphere.top/',
+            pageview: false,
+            dark: 'html[data-theme="dark"]',
+            path: window.location.pathname,
+            comment: true,
+            ...null
+        }
+        const walineInstance = initFn(walineOptions)
+        utils.addGlobalFn('pjax', () => walineInstance.destroy(), 'destroyWaline')
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .wl-content img:not(.wl-emoji)'))
+        sco.owoBig({
+            body: '.wl-emoji-popup',
+            item: '.wl-tab-wrapper button'
+        })
+    }
+
+    async function loadWaline() {
+        if (walineInitFunction) initWaline(walineInitFunction)
+        else {
+            await utils.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.4.3/dist/waline.min.css')
+            const {init} = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.4.3/dist/waline.min.js')
+            walineInitFunction = init || Waline.init
+            initWaline(walineInitFunction)
+            window.walineFn = walineInitFunction
+        }
+        false && barrageWaline()
+    }
+
+    if (true || true) {
+        if (true) utils.loadComment(document.getElementById('waline-wrap'), loadWaline)
+        else loadWaline()
+    } else window.loadTwoComment = loadWaline
+})()
+</script><script defer pjax src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fas fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=3.0.21"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+        <script>
+            const posts = ["2025/11/11/edit/da Vinci/LUTS/","2025/11/05/edit/da Vinci/帧率/","2025/11/04/edit/da Vinci/秘传技/","2025/11/01/问题/","2025/11/01/格式/","2025/11/01/electronic/电压符号/","2025/11/01/electronic/engineering drawing/图纸/","2025/11/01/electronic/eda/PCB封装/","2025/11/01/electronic/wire/线束/","2025/11/01/electronic/electronic test/EMC&RF/","2025/11/01/electronic/eda/cadence/Cadence/","2025/10/29/ai/comfyui/ComfyUI/","2025/10/28/edit/da Vinci/媒体池/","2025/10/11/edit/da Vinci/调色/","2025/09/09/electronic/component/logic/逻辑器件/","2025/09/09/electronic/component/switch/开关/","2025/09/06/special/note提醒块/","2025/09/06/special/label标签块/","2025/09/06/electronic/component/connector/连接器/","2025/09/06/electronic/component/capacitor/电容/","2025/09/06/electronic/component/SMT_DIP/捷优奇/","2025/09/06/electronic/component/resistor/电阻/","2025/09/06/electronic/component/optical coupler/光耦/","2025/09/06/electronic/component/mos/场效应管/","2025/09/05/photo/lunar_eclipse/2025-09-07月全食/","2025/09/05/special/spoiler隐藏文字/","2025/09/05/special/emoji绘文字/","2025/09/05/special/effects文字特效/","2025/09/04/待办/","2025/09/04/更新日志/","2025/09/03/electronic/component/diode/力森工厂学习/","2025/09/02/名词解释/","2025/09/02/electronic/component/diode/二极管/","2025/09/01/学习/","2025/09/01/electronic/component/dc-dc/DC-DC/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
