@@ -1,0 +1,434 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>阻抗匹配 | 哲哲折 - 分享技术与摄影艺术</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="https://www.zsphere.top/2026/02/24/electronic/%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><!-- Open Graph--><meta name="description" content="全面理解阻抗匹配（Impedance Matching） - 知乎 什么是阻抗匹配阻抗匹配(Impedance Matching)指通过调整输入阻抗和输出阻抗来使得电子器件满足一定条件，通常该条件是使得系统传输功率最大或者使得信号反射最小。例如，在无线传输系统中需要匹配射频发射设备和接受天线的阻抗以"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="哲哲折 - 分享技术与摄影艺术"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link rel="stylesheet" href="/schedule/schedule.css"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: {"appId":"NTOAA3CGNB","apiKey":"95adffc008d154b626f8bf16c42cab67","indexName":"zsstop","hits":{"per_page":6}},
+    localsearch: undefined,
+    runtime: '2025-12-03 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: LYZ","link":"链接: ","source":"来源: 哲哲折 - 分享技术与摄影艺术","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["你可以的","你一定可以的","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"这里有宝藏！","back":"ヾ(≧∇≦*)ゝHey, hey, you fell for it."},
+    expire: {"time":30,"position":"top","text_prev":"This article expired ","text_next":"30 day ago, if the content does not match, please contact the webmaster to update it."},
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body id="body"><div><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude fas fa-circle-chevron-right"></i></a></div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /<img [^>]+ class="wl-emoji">/g
+    let cache = utils.saveToLocal.get('waline-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+    await fetch('https://waline.zsphere.top//api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
+        .then(async data => {
+            for (const i of data.data) {
+                let title = ''
+                if (i.url) {
+                    await fetch(i.url).then(res => res.text()).then(html => {
+                        const parser = new DOMParser()
+                        const doc = parser.parseFromString(html, 'text/html')
+                        title = doc.querySelector('title').innerText
+                    }).catch(() => {
+                        title = i.url
+                    })
+                }
+                if (title.indexOf('|') > 0) {
+                    title = title.split('|')[0]
+                }
+                ls.push({
+                    title: title,
+                    url: i.url,
+                    nick: i.nick,
+                    avatar: i.avatar,
+                    time: new Date(i.time),
+                    content: formatContent(i.comment)
+                })
+            }
+            setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+            utils.saveToLocal.set('waline-recent-comments-console', ls, 0.2)
+        })
+
+    function setHtml(el, data) {
+        el.innerHTML = data.length !== 0 ? data.map(i => `
+                            <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                                <div class="comment-info">
+                                    <img src="${i.avatar}" class="nolazyload" alt="${i.nick}">
+                                    <div>
+                                        <span class="comment-user">${i.nick}</span>
+                                    </div>
+                                    <time class="comment-time" datetime="${i.time}"></time>
+                                </div>
+                                <div class="comment-content">${i.content}</div>
+                                <div class="comment-title">
+                                <i class="solitude fas fa-comment"></i>
+                                ${i.title}</div>
+                            </div>
+                        `).join('') : `暂无评论...`
+        if (typeof utils !== 'undefined') utils.diffDateFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '[表情]')
+        content = content.replace(/<img.*?>/g, '[图片]');
+        content = content.replace(/<a.*?>.*?<\/a>/g, '[链接]');
+        content = content.replace(/<pre.*?>.*?<\/pre>/g, '[代码]');
+        content = content.replace(/<.*?>/g, '');
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/markdown/">markdown<sup>1</sup></a><a href="/tags/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">开关电源<sup>1</sup></a><a href="/tags/%E5%99%A8%E4%BB%B6%E5%AD%A6%E4%B9%A0/">器件学习<sup>1</sup></a><a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管<sup>2</sup></a><a href="/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">运算放大器<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2026/03/"><span class="date">2026/03</span><div class="count-group"><span class="count">10</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/02/"><span class="date">2026/02</span><div class="count-group"><span class="count">11</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/01/"><span class="date">2026/01</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/12/"><span class="date">2025/12</span><div class="count-group"><span class="count">4</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/11/"><span class="date">2025/11</span><div class="count-group"><span class="count">11</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/10/"><span class="date">2025/10</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/09/"><span class="date">2025/09</span><div class="count-group"><span class="count">21</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/08/"><span class="date">2025/08</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">63</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">63</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="waline_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
+  await fetch('https://waline.zsphere.top//api/comment?type=count', {method: 'GET'}).then(async res => res.json())
+    .then(async data => {
+      document.querySelector('#waline_allcount').innerHTML = data.data
+    })
+})()</script></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">BLOG</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" href="https://www.zsphere.top/" title="Zsphere"><img class="nolazyload back-menu-item-icon" src="/img/pwa/zsphere.ico" alt="Zsphere"><span class="back-menu-item-text">Zsphere</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>装备</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/markdown/">markdown<sup>1</sup></a><a href="/tags/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">开关电源<sup>1</sup></a><a href="/tags/%E5%99%A8%E4%BB%B6%E5%AD%A6%E4%B9%A0/">器件学习<sup>1</sup></a><a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管<sup>2</sup></a><a href="/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">运算放大器<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">66.9k</div></div></div></div></div><div><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">BLOG</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" href="https://www.zsphere.top/" title="Zsphere"><img class="nolazyload back-menu-item-icon" src="/img/pwa/zsphere.ico" alt="Zsphere"><span class="back-menu-item-text">Zsphere</span></a></div></div></div></div><a href="/" title="返回博客主页" id="site-name"><span class="title">ZS</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">阻抗匹配</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>装备</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/default.avif" alt="阻抗匹配"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">阻抗匹配</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2026-02-24 14:13:00"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2026-02-24T06:13:00.000Z">2026-02-24T06:13:00.000Z</time></span><span class="post-meta-date" title="最后更新于 2026-03-15 13:32:16"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2026-03-15T05:32:16.747Z">2026-03-15T05:32:16.747Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">3.2k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fas fa-clock" title="阅读耗时"></i><span>11 分钟</span></span><span class="post-meta-position" title="作者IP归属地为China"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>China</span></span><a class="post-meta-pv" href="/2026/02/24/electronic/%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D/" title="文章热度"><i class="post-meta-icon solitude fas fa-fire-flame-curved"></i><span class="waline-pageview-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fas fa-comment"></i><a href="/2026/02/24/electronic/%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D/#post-comment"><span class="waline-comment-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a></span></div></div></div><div class="post-radius-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/657842246">全面理解阻抗匹配（Impedance Matching） - 知乎</a></p>
+<h1 id="什么是阻抗匹配"><a href="#什么是阻抗匹配" class="headerlink" title="什么是阻抗匹配"></a>什么是阻抗匹配</h1><p>阻抗匹配(Impedance Matching)指通过调整输入阻抗和输出阻抗来使得电子器件满足一定条件，通常该条件是使得系统传输功率最大或者使得信号反射最小。例如，在无线传输系统中需要匹配射频发射设备和接受天线的阻抗以此来实现传输功率最大化。</p>
+<h1 id="为什么要阻抗匹配"><a href="#为什么要阻抗匹配" class="headerlink" title="为什么要阻抗匹配"></a>为什么要阻抗匹配</h1><h2 id="阻抗匹配作用"><a href="#阻抗匹配作用" class="headerlink" title="阻抗匹配作用"></a>阻抗匹配作用</h2><ul>
+<li><strong>最大功率传输</strong>：对信号源和负载进行阻抗匹配，可以实现传输功率最大化，提高能量转换性能；</li>
+<li><strong>最小反射损耗</strong>：匹配阻抗可以减少信号在电路中的反射，提高信号质量和传输效率；</li>
+<li><strong>优化系统性能</strong>：阻抗匹配可以确保信号在系统中的稳定传输，避免信号失真和性能下降。阻抗匹配对于获得理想的 VSWR（电压驻波比）非常重要。</li>
+<li><strong>PCB场景</strong><ul>
+<li><strong>减少高频噪声以及边沿过冲</strong>。如果一个信号的边沿非常陡峭，则含有大量的高频成分，将会辐射干扰，另外，也容易产生过冲。串联电阻与信号线的分布电容以及负载输入电容等形成一个RC电路，这样就会降低信号边沿的陡峭程度。</li>
+<li><strong>减少高频反射以及自激振荡</strong>。当信号的频率很高时，则信号的波长就很短，当波长短得跟传输线长度可以比拟时，反射信号叠加在原信号上将会改变原信号的形状。如果传输线的特征阻抗跟负载阻抗不相等(即不匹配)时，在负载端就会产生反射，造成自激振荡。PCB板内走线的低频信号直接连通即可，一般不需要加串行匹配电阻。</li>
+<li><strong>并行阻抗匹配</strong>又叫“[[RS485|终端阻抗匹配]]”，一般用在输入&#x2F;输出接口端，主要指与传输电缆的阻抗匹配。例如，LVDS与RS422&#x2F;485使用5类双绞线的输入端匹配电阻为100~120Ω；视频信号使用同轴电缆的匹配电阻为75Ω或50Ω、使用扁平电缆为300Ω。<strong>并行匹配电阻的阻值与传输电缆的介质有关，与长度无关</strong>，其主要作用也是<strong>防止信号反射、减少自激振荡。</strong></li>
+</ul>
+</li>
+<li><strong>低频和高频场景</strong>：<ul>
+<li>当信号传输中如果传输线上发生特性阻抗突变也会发生反射。</li>
+<li>波长与频率成反比，低频信号的波长远远大于传输线的长度，因此一般不用考虑反射问题，也就是说<strong>低频电路做不做阻抗匹配也不会出现什么大问题</strong>。</li>
+<li>在高频领域，当<strong>信号的波长与传输线长出于相同量级时反射的信号易与原信号混叠</strong>，影响信号质量，通过阻抗匹配可有效减少 消除高频信号反射。所以<strong>高频电路一定要做阻抗匹配</strong>。</li>
+</ul>
+</li>
+</ul>
+<h2 id="阻抗失配后果"><a href="#阻抗失配后果" class="headerlink" title="阻抗失配后果"></a>阻抗失配后果</h2><ul>
+<li><strong>高频电路</strong>：在高频电路中，当发送端与传输线之间、传输线与接收端之间阻抗不匹配时，就会产生反射，这些反射信号将破坏原有的输出信号，并叠加在原始输出信号上，导致输出电压不稳定，产生波峰和波谷，从而使得传输至负载的功率减小，更严重可能导致导致原始信号发生过冲，振铃，抖动，影响上升沿，下降沿等。</li>
+<li><strong>天线场景</strong>：无线电接收系统的天线-传输线接口处的阻抗失配会导致系统内部噪声系数显着增加。</li>
+<li>阻抗匹配的概念应用范围广泛，阻抗匹配常见于<strong>各级放大电路之间，放大电路与负载之间，信号与传输电路之间，微波电路与系统的设计中</strong>。无论是有源还是无源，都必须考虑匹配问题，根本原因是<strong>电压电流信号在低频电路中是电压与电流，但是在高频中却表现为导行电磁波，如果阻抗不匹配就会发生严重的反射，损坏仪器和设备</strong>。</li>
+<li>在长线传输中，若阻抗不匹配，那么<strong>对模拟信号将形成驻波</strong>，<strong>对数字信号则表现为上升沿和下降沿的振铃和过冲</strong>，如下图所示。该过冲将形成强烈的电磁干扰，可能会损坏后级输入电流的保护二极管，甚至使其失效。<br>![[数字系统中由于信号反射引起的波形畸变.png]]</li>
+</ul>
+<h1 id="如何实现阻抗匹配？阻抗匹配的应用场景有哪些？"><a href="#如何实现阻抗匹配？阻抗匹配的应用场景有哪些？" class="headerlink" title="如何实现阻抗匹配？阻抗匹配的应用场景有哪些？"></a>如何实现阻抗匹配？阻抗匹配的应用场景有哪些？</h1><h2 id="如何实现阻抗匹配"><a href="#如何实现阻抗匹配" class="headerlink" title="如何实现阻抗匹配"></a>如何实现阻抗匹配</h2><p>阻抗匹配的本质就是：使得 <strong>特性阻抗 或 信号源阻抗 &#x3D; 负载的共轭阻抗</strong>，即$$R_S+jX_S&#x3D;R_L-jX_L$$<br>![[阻抗匹配示意图.jpg]]<br><strong>阻抗匹配的方法</strong>：</p>
+<ol>
+<li><strong>调整传输线</strong>（即改$Z_0$）<br>(PCB走线阻抗主要来自寄生的电容、电阻、电感系数，主要因素有材料介电常数、线宽、线厚乃至焊盘的厚度等。) 调整传输线是加长源和负载间的距离，配合电容和电感把阻抗力调整为零。此时信号不会发生反射，能量都能被负载吸收，PCB 阻抗的范围是 25 至120 欧姆，高速PCB布线中，一般把数字信号的走线阻抗设计为50欧姆。</li>
+<li><strong>调整阻抗力</strong> (即改变源阻抗或负载阻抗)<ul>
+<li>使用<strong>变压器</strong>来做阻抗转换。</li>
+<li>使用<strong>串联&#x2F;并联电容或电感</strong>：这在调试射频电路中常常使用。</li>
+<li>使用<strong>串联&#x2F;并联电阻</strong>: 当一些驱动器的阻抗比较低，可以串联一个合适的电阻来跟传输线匹配，例如高速信号线，有时会由联一个几十欧的电阻。而一些接收器的输入阻抗则比较高，可以使用并联电阻的方法，来跟传输线匹配，例，485总线接收器、CAN总线接受器，常在数据线终端并联120欧的匹配电阻。 (始端串联匹配，终端并联匹配)<br>注：实际情况中可通过史密斯圆图来逐步优化，实现阻抗匹配</li>
+</ul>
+</li>
+</ol>
+<h2 id="不同场景"><a href="#不同场景" class="headerlink" title="不同场景"></a>不同场景</h2><ul>
+<li><strong>一些默认规定</strong>：<ol>
+<li>同轴电缆基带50欧姆；</li>
+<li>对频率较高的RF信号来讲，最常见的是50欧姆的阻抗控制频带75欧姆；</li>
+<li>对绞线(差分对)为85-100欧姆；</li>
+<li>USB、LVDS、HDMI、 SATA等一般要做85-100欧姆阻抗控制。</li>
+</ol>
+</li>
+<li><strong>电源场景</strong>：电源内阻等于负载阻抗时，输出功率最大</li>
+<li><strong>长短线缆</strong>：普通宽频放大器输出阻抗通常为50欧姆，因此，功率传输电路则需要考虑阻抗匹配，但当信号波长远大于电缆长度时，可以不考虑阻抗匹配，反之则需要考虑。</li>
+<li><strong>高速PCB布线</strong>：由于同轴电缆阻抗通常为50欧姆，因此要求线路的阻抗是50欧姆</li>
+<li><strong>多级放大电路</strong>:<br>  在多级放大器中，几个单级放大器级联在一起以获得足够的增益。<strong>n个单级放大器连续级联，但不直接连接形成n级放大器</strong>。级联在连续放大器级之间连接时遵循放大器阻抗匹配的原则。放大器中的阻抗匹配有助于减少损耗，并通过n级放大器将最大功率从输入端传递给负载。<br>  多级放大器的阻抗匹配是通过<strong>耦合网络</strong>实现的，包括阻容耦合、变压器耦合、直接耦合等方案。最终目的是使<strong>后级放大的输入阻抗</strong>与<strong>前级放大的输出阻抗</strong>相匹配。<ol>
+<li>电阻-电容耦合：两个连续的放大器级通过电阻-电容网络耦合。这是多级放大器中最常用、最方便、最便宜的方案。这种类型的耦合方案用于音频小信号放大器、公共寻址系统、电视接收机、CD播放机等。</li>
+<li>变压器耦合：在固定偏置放大器级中，每级的集电极电阻由变压器的初级绕组代替，次级绕组代替偏置网络与第二级有源器件(晶体管)基极之间的连接线。变压器耦合节省了大量的功率，并有助于实现适当的阻抗匹配。通过选择合适的变压器匝数比，最终使得使<strong>后级放大的输入阻抗</strong>与<strong>前级放大的输出阻抗</strong>相匹配。变压器耦合放大器适用于广播和电视接收机中射</li>
+<li>直接耦合：为了放大缓慢变化的信号，使用直接耦合放大器。在直接耦合放大器中，连接线用于级联两个放大器级。当待放大信号的频率较低时，直接耦合效果最好。然而，交流和直流信号都耦合到后续阶段。</li>
+</ol>
+</li>
+</ul>
+<h1 id="其他相关背景知识"><a href="#其他相关背景知识" class="headerlink" title="其他相关背景知识"></a>其他相关背景知识</h1><h2 id="什么是阻抗？"><a href="#什么是阻抗？" class="headerlink" title="什么是阻抗？"></a>什么是阻抗？</h2><ul>
+<li><strong>定义</strong>：<br>  <strong>阻抗</strong>（electrical impedance）是电路中电阻、电感、电容对交流电的阻碍作用的统称。阻抗是一个复数，实部称为电阻，虚部称为电抗。其中电容在电路中对交流电所起的阻碍作用称为<strong>容抗</strong>，电感在电路中对交流电所起的阻碍作用称为<strong>感抗</strong>，容抗和感抗合称为<strong>电抗</strong>。</li>
+<li><strong>表示</strong>：<br>  阻抗通常以符号$Z$标记。阻抗是复数，可以用相量$Z_m\angle\theta$或$Z_me^{j\theta}$来表示，其中$Z_m$是阻抗的大小，$\theta$是阻抗的相位。向量表示法：（1）直角形式：$R+jX$ ；（2）极形式：$Z_m\angle\theta$ ；（3）指数形式：$Z_me^{j\theta}$ ；其中：$R&#x3D;Z_m\cos\theta$，$X&#x3D;Z_m\sin\theta$，$Z_m&#x3D;\sqrt{R^2+X^2}$，$\theta&#x3D;\arctan(X&#x2F;R)$</li>
+</ul>
+<h2 id="什么是传输线中的信号反射？"><a href="#什么是传输线中的信号反射？" class="headerlink" title="什么是传输线中的信号反射？"></a>什么是传输线中的信号反射？</h2><p>首先，当电磁波到达两种具有不同折射率的介质界面时，会发生信号反射。其中平面波的信号反射能用反射系数来表示，但不能用来表示像PCB印刷电路板这种复杂的结构。</p>
+<h2 id="如何推导传输线信号反射系数（reflection-coefficient）？"><a href="#如何推导传输线信号反射系数（reflection-coefficient）？" class="headerlink" title="如何推导传输线信号反射系数（reflection coefficient）？"></a>如何推导传输线信号反射系数（reflection coefficient）？</h2><ul>
+<li><strong>反射系数的定义</strong>：反射波电压与入射波电压之比</li>
+<li><strong>反射系数推导</strong>：</li>
+</ul>
+<p>如下图所示，假设一信号从左侧输入，沿着特性阻抗为$Z_0$的无损传输线到达位于$Z&#x3D;0$处的终端，终端阻抗为$Z_L$, 该阻抗可能包含实部和虚部。在这种情况下，可能存在信号的反射，那么，如何表示这个反射的波形呢？<br>![[从左端注入的信号到达位于Z&#x3D;0的终端上.png]]</p>
+<h2 id="什么是传输线的特性阻抗（characteristic-impedance）？"><a href="#什么是传输线的特性阻抗（characteristic-impedance）？" class="headerlink" title="什么是传输线的特性阻抗（characteristic impedance）？"></a>什么是传输线的特性阻抗（characteristic impedance）？</h2><ul>
+<li><strong>定义</strong>：<br>任何射频传输线（如：同轴电缆和开关等）都存在一些特性阻抗（characteristic impedance），该阻抗可能随线路长度的变化改变或者不变。特性阻抗定义为沿该传输线上的单个波的电压幅值和电流幅值之比，也就是说，信号频率和传输线路的单位电阻、电导、电容和电感将决定电压和电流之比，从而也将决定特性阻抗大小，通常表示为$Z_0$。</li>
+<li><strong>特性阻抗的专属特性</strong>：<ol>
+<li>传输线的特性阻抗由传输线的材料和结构决定，和传输线的长度无关。</li>
+<li>无损传输线的特性阻抗是纯实数，没有虚部。</li>
+<li>由位于这种线路一端的源提供能量，通过这种无损传输线传输时，信号没有反射，因此不会在传输过程中损耗能量。即，在源看来，这条传输线就像是一条无限长的，不会使信号发生反射的传输线。</li>
+</ol>
+</li>
+<li><strong>区分输入阻抗和特性阻抗</strong>：<br>一般对于有限长度的传输线来说，信号到达传输线末端后，信号将沿着传输线相反方向反射回来，当反射信号到达信号发射源是，它将再次被反射，并叠加到发射信号中，从而改变了输出如电压和电流之比，导致电压电流之比不再等于特性阻抗，这个<strong>包含反射能量的新比值被称为输入阻抗。当传输线是无限长时，传输线的特性阻抗就等于输入阻抗</strong>。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">LYZ</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏</span><ul class="reward-group"><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/wechatpay.webp" alt="Wechatpay" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">Wechatpay</div></li><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/alipay.webp" alt="Alipay" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">Alipay</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">由于您的支持，我才能够实现写作的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fwww.zsphere.top%2F2026%2F02%2F24%2Felectronic%2F%25E9%2598%25BB%25E6%258A%2597%25E5%258C%25B9%25E9%2585%258D%2F&amp;title=%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D&amp;desc=null&amp;summary=null&amp;site=%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D&amp;pics=%2Fimg%2Fdefault.avif" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://www.zsphere.top/2026/02/24/electronic/%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://www.zsphere.top/2026/02/24/electronic/%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://www.zsphere.top/2026/02/24/electronic/%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">哲哲折 - 分享技术与摄影艺术</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/02/25/electronic/%E5%9B%BE%E8%85%BE%E6%9F%B1/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">图腾柱</div></div></a></div><div class="next-post pull-right"><a href="/2026/02/12/electronic/tele/RS485/RS485/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">RS485</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="waline-comment-count"><i class="solitude fas fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div id="waline-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">LYZ</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/zhesphere" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/356745391" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D"><span class="toc-text">什么是阻抗匹配</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D"><span class="toc-text">为什么要阻抗匹配</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D%E4%BD%9C%E7%94%A8"><span class="toc-text">阻抗匹配作用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BB%E6%8A%97%E5%A4%B1%E9%85%8D%E5%90%8E%E6%9E%9C"><span class="toc-text">阻抗失配后果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D%EF%BC%9F%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D%E7%9A%84%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">如何实现阻抗匹配？阻抗匹配的应用场景有哪些？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%98%BB%E6%8A%97%E5%8C%B9%E9%85%8D"><span class="toc-text">如何实现阻抗匹配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C%E5%9C%BA%E6%99%AF"><span class="toc-text">不同场景</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%9B%B8%E5%85%B3%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86"><span class="toc-text">其他相关背景知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E9%98%BB%E6%8A%97%EF%BC%9F"><span class="toc-text">什么是阻抗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BC%A0%E8%BE%93%E7%BA%BF%E4%B8%AD%E7%9A%84%E4%BF%A1%E5%8F%B7%E5%8F%8D%E5%B0%84%EF%BC%9F"><span class="toc-text">什么是传输线中的信号反射？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%8E%A8%E5%AF%BC%E4%BC%A0%E8%BE%93%E7%BA%BF%E4%BF%A1%E5%8F%B7%E5%8F%8D%E5%B0%84%E7%B3%BB%E6%95%B0%EF%BC%88reflection-coefficient%EF%BC%89%EF%BC%9F"><span class="toc-text">如何推导传输线信号反射系数（reflection coefficient）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BC%A0%E8%BE%93%E7%BA%BF%E7%9A%84%E7%89%B9%E6%80%A7%E9%98%BB%E6%8A%97%EF%BC%88characteristic-impedance%EF%BC%89%EF%BC%9F"><span class="toc-text">什么是传输线的特性阻抗（characteristic impedance）？</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/03/15/%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/" title="质量管理"><div class="thumbnail"><img alt="质量管理" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/15/%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/" title="质量管理">质量管理</span></div></a><a class="aside-list-item" href="/2026/03/15/electronic/component/BJT/%E4%B8%89%E6%9E%81%E7%AE%A1/" title="三极管"><div class="thumbnail"><img alt="三极管" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/15/electronic/component/BJT/%E4%B8%89%E6%9E%81%E7%AE%A1/" title="三极管">三极管</span></div></a><a class="aside-list-item" href="/2026/03/15/electronic/component/%E5%99%A8%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" title="器件工程师"><div class="thumbnail"><img alt="器件工程师" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/15/electronic/component/%E5%99%A8%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/" title="器件工程师">器件工程师</span></div></a><a class="aside-list-item" href="/2026/03/14/electronic/electronic%20test/EMC/" title="EMC"><div class="thumbnail"><img alt="EMC" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/14/electronic/electronic%20test/EMC/" title="EMC">EMC</span><span class="categories" href="/2026/03/14/electronic/electronic%20test/EMC/">电子</span></div></a><a class="aside-list-item" href="/2026/03/13/electronic/Spectrum%20analyzer/Spectrum%20analyzer/" title="频谱仪"><div class="thumbnail"><img alt="频谱仪" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/13/electronic/Spectrum%20analyzer/Spectrum%20analyzer/" title="频谱仪">频谱仪</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/zhesphere" title="Github"><i class="solitude  fab fa-github"></i></a><div><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/author.webp" alt="返回顶部"></div></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/356745391" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div><div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="Archives">Archives</a><a class="footer-item" href="/categories/" title="Categories">Categories</a><a class="footer-item" href="/tags/" title="Tags">Tags</a></div></div><div class="footer-group"><h3 class="footer-title">排列</h3><div class="footer-links"><a class="footer-item" href="/cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/privacy/" title="Privacy">Privacy</a><a class="footer-item" href="/copyright/" title="Copyright">Copyright</a></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 - 2026 By<a class="footer-bar-link" href="/" title="LYZ">LYZ</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div><div class="footer-bar-right"><a class="footer-bar-link" href="/atom.xml" title="">RSS</a><a class="footer-bar-link" href="/" title=""><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a><a class="footer-bar-link" href="/" title="">boringbay</a></div></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script async src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><script defer src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.75.7/dist/instantsearch.production.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/algoliasearch@5.19.0/dist/algoliasearch.umd.min.js"></script><!-- Right menu functionality--><script defer src="/js/right_menu.js?v=3.0.21"></script><script src="/schedule/schedule.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><div class="js-pjax"><script>(() => {
+    let walineInitFunction = window.walineFn || null
+
+    function initWaline(initFn) {
+        const walineOptions = {
+            el: '#waline-wrap',
+            serverURL: 'https://waline.zsphere.top/',
+            pageview: false,
+            dark: 'html[data-theme="dark"]',
+            path: window.location.pathname,
+            comment: true,
+            ...null
+        }
+        const walineInstance = initFn(walineOptions)
+        utils.addGlobalFn('pjax', () => walineInstance.destroy(), 'destroyWaline')
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .wl-content img:not(.wl-emoji)'))
+        sco.owoBig({
+            body: '.wl-emoji-popup',
+            item: '.wl-tab-wrapper button'
+        })
+    }
+
+    async function loadWaline() {
+        if (walineInitFunction) initWaline(walineInitFunction)
+        else {
+            await utils.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.4.3/dist/waline.min.css')
+            const {init} = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.4.3/dist/waline.min.js')
+            walineInitFunction = init || Waline.init
+            initWaline(walineInitFunction)
+            window.walineFn = walineInitFunction
+        }
+        false && barrageWaline()
+    }
+
+    if (true || true) {
+        if (true) utils.loadComment(document.getElementById('waline-wrap'), loadWaline)
+        else loadWaline()
+    } else window.loadTwoComment = loadWaline
+})()
+</script><script defer pjax src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fas fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=3.0.21"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+        <script>
+            const posts = ["2026/03/15/质量管理/","2026/03/15/electronic/component/BJT/三极管/","2026/03/15/electronic/component/器件工程师/","2026/03/14/electronic/electronic test/EMC/","2026/03/13/electronic/Spectrum analyzer/Spectrum analyzer/","2026/03/11/electronic/电路原理/","2026/03/04/数学公式/","2026/03/04/electronic/高频电路设计/","2026/03/04/electronic/component/crystal/晶振/","2026/03/03/MindMap/","2026/02/28/electronic/component/NOR FLASH/NOR FLASH/","2026/02/28/electronic/component/mos/stockpile/","2026/02/27/工具/","2026/02/25/electronic/component/选型/","2026/02/25/electronic/图腾柱/","2026/02/24/electronic/阻抗匹配/","2026/02/12/electronic/tele/RS485/RS485/","2026/02/06/electronic/焊接/","2026/02/04/electronic/component/dc-dc/EN使能/","2026/02/03/electronic/tele/总线协议/","2026/02/03/electronic/Project/USB（TYPE-C）转串口（TTL）/","2026/01/26/electronic/Project/模数电案例/","2026/01/15/electronic/eda/cadence/Pspice/","2025/12/17/photo/双子座流星雨观看以及拍摄指南/","2025/12/17/electronic/component/led/LED/","2025/12/16/electronic/Project/反激开关电源/","2025/12/08/electronic/component/omp/运算放大器/","2025/11/11/edit/da Vinci/LUTS/","2025/11/05/edit/da Vinci/帧率/","2025/11/04/edit/da Vinci/秘传技/","2025/11/01/格式/","2025/11/01/问题/","2025/11/01/electronic/电压符号/","2025/11/01/electronic/eda/PCB封装/","2025/11/01/electronic/electronic test/EMC&RF/","2025/11/01/electronic/engineering drawing/图纸/","2025/11/01/electronic/wire/线束/","2025/11/01/electronic/eda/cadence/Cadence/","2025/10/29/ai/comfyui/ComfyUI/","2025/10/28/edit/da Vinci/媒体池/","2025/10/11/edit/da Vinci/调色/","2025/09/09/electronic/component/logic/逻辑器件/","2025/09/09/electronic/component/switch/开关/","2025/09/06/special/note提醒块/","2025/09/06/special/label标签块/","2025/09/06/electronic/component/SMT_DIP/捷优奇/","2025/09/06/electronic/component/connector/连接器/","2025/09/06/electronic/component/capacitor/电容/","2025/09/06/electronic/component/mos/场效应管/","2025/09/06/electronic/component/optical coupler/光耦/","2025/09/06/electronic/component/resistor/电阻/","2025/09/05/photo/lunar_eclipse/2025-09-07月全食/","2025/09/05/special/spoiler隐藏文字/","2025/09/05/special/emoji绘文字/","2025/09/05/special/effects文字特效/","2025/09/04/待办/","2025/09/04/更新日志/","2025/09/03/electronic/component/diode/力森工厂学习/","2025/09/02/electronic/名词解释/","2025/09/02/electronic/component/diode/二极管/","2025/09/01/学习/","2025/09/01/electronic/component/dc-dc/DC-DC/","2025/08/21/electronic/component/dc-dc/矽力杰/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
