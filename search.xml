@@ -793,29 +793,6 @@
     
     
     <entry>
-      <title>捷优奇</title>
-      <link href="/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/"/>
-      <url>/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>捷优信达和昌奇合办捷优奇</p></blockquote><h1 id="SMT"><a href="#SMT" class="headerlink" title="SMT"></a>SMT</h1><ul><li>放PCB</li><li>印刷，印锡膏</li><li>SPI检查，体积高度</li><li>贴元器件</li><li>AOI检查，有没有缺件，错件，有的工厂没有这步</li><li>回流焊，235-250</li><li>炉后AOI，有没有少锡，上锡状况，器件间距</li><li>收板</li><li>有BGA的产品，要照，X- RAY，首片</li></ul><h1 id="DIP"><a href="#DIP" class="headerlink" title="DIP"></a>DIP</h1><ul><li>插件</li><li>波峰焊，引脚焊接</li><li>修整</li><li>UV胶</li><li>FCP功能测试</li><li>点黑胶，灯上面，线束</li><li>灌胶，AB一比一，灌胶房，机器自动抽，一片40s，万一设备坏了，一个灌胶机</li><li>装壳</li><li>电压阻抗测试</li></ul><p>线束<br>半自动剥线器</p><p>剥线管<br>胶包玻璃纤维</p><p>点胶房<br>检验pin针上有没有胶</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电子 </category>
-          
-          <category> 器件学习 </category>
-          
-          <category> SMT/DIP </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>连接器</title>
       <link href="/2025/09/06/electronic/component/connector/%E8%BF%9E%E6%8E%A5%E5%99%A8/"/>
       <url>/2025/09/06/electronic/component/connector/%E8%BF%9E%E6%8E%A5%E5%99%A8/</url>
@@ -853,6 +830,29 @@
           <category> 器件学习 </category>
           
           <category> 电容 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>捷优奇</title>
+      <link href="/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/"/>
+      <url>/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>捷优信达和昌奇合办捷优奇</p></blockquote><h1 id="SMT"><a href="#SMT" class="headerlink" title="SMT"></a>SMT</h1><ul><li>放PCB</li><li>印刷，印锡膏</li><li>SPI检查，体积高度</li><li>贴元器件</li><li>AOI检查，有没有缺件，错件，有的工厂没有这步</li><li>回流焊，235-250</li><li>炉后AOI，有没有少锡，上锡状况，器件间距</li><li>收板</li><li>有BGA的产品，要照，X- RAY，首片</li></ul><h1 id="DIP"><a href="#DIP" class="headerlink" title="DIP"></a>DIP</h1><ul><li>插件</li><li>波峰焊，引脚焊接</li><li>修整</li><li>UV胶</li><li>FCP功能测试</li><li>点黑胶，灯上面，线束</li><li>灌胶，AB一比一，灌胶房，机器自动抽，一片40s，万一设备坏了，一个灌胶机</li><li>装壳</li><li>电压阻抗测试</li></ul><p>线束<br>半自动剥线器</p><p>剥线管<br>胶包玻璃纤维</p><p>点胶房<br>检验pin针上有没有胶</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+          <category> 器件学习 </category>
+          
+          <category> SMT/DIP </category>
           
       </categories>
       
