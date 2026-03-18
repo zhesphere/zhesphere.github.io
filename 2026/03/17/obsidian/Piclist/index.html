@@ -1,0 +1,510 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Piclist | 哲哲折 - 分享技术与摄影艺术</title><noscript>开启JavaScript才能访问本站哦~</noscript><link rel="icon" href="/img/pwa/favicon.png"><link rel="stylesheet" href="/css/index.css?v=3.0.21"><link rel="canonical" href="https://www.zsphere.top/2026/03/17/obsidian/Piclist/index.html"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"><!-- Feature-specific CSS--><!-- aplayer--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.min.css"><!-- katex--><!-- Open Graph--><meta name="description" content="官网：PicList下载链接：github(建议使用IDM下载) 如何在Obsidian中使用 在社区插件中搜索安装Image auto upload插件 进入插件设置页面，将默认上传器修改为PicGo(app) 设置PicGo server为http:&amp;#x2F;&amp;#x2F;127.0.0.1:36677&amp;#x2F;uploa"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="哲哲折 - 分享技术与摄影艺术"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/img/pwa/favicon.png"><link rel="apple-touch-icon" href="/img/pwa/favicon.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '3.0.21' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script>let mdate = "7-7,9-18,12-13";
+mdate = (mdate.split(","));
+let ndate = new Date();
+for (let i of mdate) {
+    if (i === (ndate.getMonth()+1) + "-" + (ndate.getDate())) {
+        document.documentElement.classList.add('memorial');
+    }
+}
+</script><link rel="stylesheet" href="/schedule/schedule.css"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+            },
+            diffDateFormat: (selector) => {
+                selector.forEach(item => {
+                    const date = new Date(item.getAttribute('datetime') || item.textContent);
+                    item.textContent = (date.getMonth() + 1).toString()+'/'+date.getDate().toString();
+                });
+            },
+        }
+    })()</script><!-- theme--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: {"appId":"NTOAA3CGNB","apiKey":"95adffc008d154b626f8bf16c42cab67","indexName":"zsstop","hits":{"per_page":6}},
+    localsearch: undefined,
+    runtime: '2025-12-03 00:00:00',
+    lazyload: {
+        enable: false,
+        error: '/img/error_load.avif'
+    },
+    copyright: {"limit":50,"author":"作者: LYZ","link":"链接: ","source":"来源: 哲哲折 - 分享技术与摄影艺术","info":"著作权归作者所有。 商业转载请联系作者获得授权，非商业转载请注明出处。"},
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"day":"天前","hour":"小时前","just":"刚刚","min":"分钟前","month":"个月前"},"day":" 天","f12":"开发者模式已打开，请遵循GPL协议。","totalk":"无需删除空行，直接输入评论即可","search":{"empty":"找不到你查询的内容：${query}","hit":"找到 ${hits} 条结果，用时 ${time} 毫秒","placeholder":"输入关键词快速查找","count":"共 <b>${count}</b> 条结果。","loading":"搜索中..."}},
+    aside: {
+        state: {
+            morning: "✨ 早上好，新的一天开始了",
+            noon: "🍲 午餐时间",
+            afternoon: "🌞 下午好",
+            night: "早点休息",
+            goodnight: "晚安 😴",
+        },
+        witty_words: ["你可以的","你一定可以的","祝你好运，陌生人"],
+        witty_comment: {
+            prefix: '好久不见，',
+            back: '欢迎再次回来，',
+        },
+    },
+    covercolor: {
+        enable: false
+    },
+    comment: false,
+    lightbox: 'fancybox',
+    right_menu: {"mode":{"dark":"深色模式","light":"浅色模式"},"img_error":"此图片无法复制与下载","music":{"start":"播放音乐","stop":"暂停音乐"},"translate":true},
+    translate: {"translateDelay":0,"defaultEncoding":2},
+    lure: {"jump":"这里有宝藏！","back":"ヾ(≧∇≦*)ゝHey, hey, you fell for it."},
+    expire: {"time":30,"position":"top","text_prev":"This article expired ","text_next":"30 day ago, if the content does not match, please contact the webmaster to update it."},
+};</script><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body id="body"><div><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fas fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><div class="author-content-item-title">最新评论<a class="recent-comment-more" href="/recentcomments/" title="最近评论"><i class="solitude fas fa-circle-chevron-right"></i></a></div></div><div class="console_recentcomments"><script pjax>(async () => {
+    document.querySelector('.console-card .console_recentcomments').textContent = `加载中...`
+    const emojiReg = /<img [^>]+ class="wl-emoji">/g
+    let cache = utils.saveToLocal.get('waline-recent-comments-console')
+    if (cache) {
+        setHtml(document.querySelector('.console-card .console_recentcomments'), cache)
+        return
+    }
+    let ls = []
+    await fetch('https://waline.zsphere.top//api/comment?type=recent&count=6', {method: 'GET'}).then(async res => res.json())
+        .then(async data => {
+            for (const i of data.data) {
+                let title = ''
+                if (i.url) {
+                    await fetch(i.url).then(res => res.text()).then(html => {
+                        const parser = new DOMParser()
+                        const doc = parser.parseFromString(html, 'text/html')
+                        title = doc.querySelector('title').innerText
+                    }).catch(() => {
+                        title = i.url
+                    })
+                }
+                if (title.indexOf('|') > 0) {
+                    title = title.split('|')[0]
+                }
+                ls.push({
+                    title: title,
+                    url: i.url,
+                    nick: i.nick,
+                    avatar: i.avatar,
+                    time: new Date(i.time),
+                    content: formatContent(i.comment)
+                })
+            }
+            setHtml(document.querySelector('.console-card .console_recentcomments'), ls)
+            utils.saveToLocal.set('waline-recent-comments-console', ls, 0.2)
+        })
+
+    function setHtml(el, data) {
+        el.innerHTML = data.length !== 0 ? data.map(i => `
+                            <div class="comment-card" title="${i.title}" onclick="pjax.loadUrl('${i.url}')">
+                                <div class="comment-info">
+                                    <img src="${i.avatar}" class="nolazyload" alt="${i.nick}">
+                                    <div>
+                                        <span class="comment-user">${i.nick}</span>
+                                    </div>
+                                    <time class="comment-time" datetime="${i.time}"></time>
+                                </div>
+                                <div class="comment-content">${i.content}</div>
+                                <div class="comment-title">
+                                <i class="solitude fas fa-comment"></i>
+                                ${i.title}</div>
+                            </div>
+                        `).join('') : `暂无评论...`
+        if (typeof utils !== 'undefined') utils.diffDateFormat(document.querySelectorAll('.comment-time'))
+        else {
+            document.addEventListener('pjax:complete', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+            document.addEventListener('DOMContentLoaded', () => utils.diffDateFormat(document.querySelectorAll('.comment-time')))
+        }
+    }
+
+    function formatContent(content) {
+        content = content.replace(emojiReg, '[表情]')
+        content = content.replace(/<img.*?>/g, '[图片]');
+        content = content.replace(/<a.*?>.*?<\/a>/g, '[链接]');
+        content = content.replace(/<pre.*?>.*?<\/pre>/g, '[代码]');
+        content = content.replace(/<.*?>/g, '');
+        return content
+    }
+})()</script></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">标签</div><div class="author-content-item-title">寻找感兴趣的领域</div></div><div class="card-tag-cloud"><a href="/tags/markdown/">markdown<sup>1</sup></a><a href="/tags/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">开关电源<sup>1</sup></a><a href="/tags/%E5%99%A8%E4%BB%B6%E5%AD%A6%E4%B9%A0/">器件学习<sup>1</sup></a><a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管<sup>2</sup></a><a href="/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">运算放大器<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="item"><a href="/archives/2026/03/"><span class="date">2026/03</span><div class="count-group"><span class="count">15</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/02/"><span class="date">2026/02</span><div class="count-group"><span class="count">11</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2026/01/"><span class="date">2026/01</span><div class="count-group"><span class="count">2</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/12/"><span class="date">2025/12</span><div class="count-group"><span class="count">4</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/11/"><span class="date">2025/11</span><div class="count-group"><span class="count">11</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/10/"><span class="date">2025/10</span><div class="count-group"><span class="count">3</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/09/"><span class="date">2025/09</span><div class="count-group"><span class="count">21</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/2025/08/"><span class="date">2025/08</span><div class="count-group"><span class="count">1</span><span class="unit">篇</span></div></a></li><li class="item"><a href="/archives/"><span class="date">全部文章</span><div class="count-group"><span class="count">68</span><span class="unit">篇</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="昼夜切换"><i class="solitude fas fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="边栏显示控制"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="音乐开关"><i class="solitude fas fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div></div><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">68</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/recentcomments/"><div class="headline">评论</div><div class="length-num" id="waline_allcount"><i class="solitude fas fa-spinner fa-spin"></i></div><script pjax="pjax">(async () => {
+  await fetch('https://waline.zsphere.top//api/comment?type=count', {method: 'GET'}).then(async res => res.json())
+    .then(async data => {
+      document.querySelector('#waline_allcount').innerHTML = data.data
+    })
+})()</script></a></div></div></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i><span>显示模式</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">BLOG</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" href="https://www.zsphere.top/" title="Zsphere"><img class="nolazyload back-menu-item-icon" src="/img/pwa/zsphere.ico" alt="Zsphere"><span class="back-menu-item-text">Zsphere</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>装备</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="card-tag-cloud"><a href="/tags/markdown/">markdown<sup>1</sup></a><a href="/tags/%E5%BC%80%E5%85%B3%E7%94%B5%E6%BA%90/">开关电源<sup>1</sup></a><a href="/tags/%E5%99%A8%E4%BB%B6%E5%AD%A6%E4%B9%A0/">器件学习<sup>1</sup></a><a href="/tags/%E4%BA%8C%E6%9E%81%E7%AE%A1/">二极管<sup>2</sup></a><a href="/tags/%E8%BF%90%E7%AE%97%E6%94%BE%E5%A4%A7%E5%99%A8/">运算放大器<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">网站信息</span><div class="webinfo"><div class="webinfo-item"><div class="item-name">全站字数 :</div><div class="item-count">80.3k</div></div></div></div></div><div><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="translate" type="button" title="简繁转换">简</button><button class="mode" type="button" title="显示模式切换" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="侧边栏" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="扩展" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="目录" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="评论" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="返回顶部" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">BLOG</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="Solitude"><img class="nolazyload back-menu-item-icon" src="/img/pwa/favicon.ico" alt="Solitude"><span class="back-menu-item-text">Solitude</span></a><a class="back-menu-item" href="https://www.zsphere.top/" title="Zsphere"><img class="nolazyload back-menu-item-icon" src="/img/pwa/zsphere.ico" alt="Zsphere"><span class="back-menu-item-text">Zsphere</span></a></div></div></div></div><a href="/" title="返回博客主页" id="site-name"><span class="title">ZS</span><i class="solitude fas fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">Piclist</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><span>首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>文章</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>友链</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/moments/"><i class="solitude  fas fa-wifi"></i><span>朋友圈</span></a></li><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>友情链接</span></a></li><li><a class="site-page child" href="javascript:travelling()"><i class="solitude  fas fa-gift"></i><span>宝藏博主</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>我的</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>关于</span></a></li><li><a class="site-page child" href="/kit/"><i class="solitude  fas fa-laptop"></i><span>装备</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>音乐馆</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="travellings_button"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html" title=""><i class="solitude fas fa-train"></i></a></div><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机一篇文章" href="javascript:void(0);"><i class="solitude fas fa-dice-d6"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索"><i class="solitude fas fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="中控台" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fas fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="/img/default.avif" alt="Piclist"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="该文章为原创文章，注意版权协议">原创</a><div class="tag_share"><div class="post-meta__tag-list"></div></div></div></div><h1 class="post-title">Piclist</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="发布于 2026-03-17 11:38:00"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2026-03-17T03:38:00.000Z">2026-03-17T03:38:00.000Z</time></span><span class="post-meta-date" title="最后更新于 2026-03-18 19:58:48"><i class="post-meta-icon solitude fas fa-arrows-rotate"></i><time datetime="2026-03-18T11:58:48.451Z">2026-03-18T11:58:48.451Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fas fa-file-word" title="文章字数"></i><span class="word-count">1k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fas fa-clock" title="阅读耗时"></i><span>4 分钟</span></span><span class="post-meta-position" title="作者IP归属地为China"><i class="post-meta-icon solitude fas fa-location-dot"></i><span>China</span></span><a class="post-meta-pv" href="/2026/03/17/obsidian/Piclist/" title="文章热度"><i class="post-meta-icon solitude fas fa-fire-flame-curved"></i><span class="waline-pageview-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a><span class="post-meta-commentcount" title="评论数" onclick="sco.scrollTo('post-comment')"><i class="solitude fas fa-comment"></i><a href="/2026/03/17/obsidian/Piclist/#post-comment"><span class="waline-comment-count"><i class="solitude fas fa-spinner fa-spin"></i></span></a></span></div></div></div><div class="post-radius-bottom"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><p>官网：<a target="_blank" rel="noopener" href="https://piclist.cn/">PicList</a><br>下载链接：<a target="_blank" rel="noopener" href="https://github.com/Kuingsmile/PicList/releases/latest">github</a>(建议使用IDM下载)</p>
+<h1 id="如何在Obsidian中使用"><a href="#如何在Obsidian中使用" class="headerlink" title="如何在Obsidian中使用"></a>如何在Obsidian中使用</h1><ol>
+<li>在社区插件中搜索安装<code>Image auto upload</code>插件</li>
+<li>进入插件设置页面，将默认上传器修改为<code>PicGo(app)</code></li>
+<li>设置<code>PicGo server</code>为<code>http://127.0.0.1:36677/upload</code></li>
+<li>如需启用云端删除功能，请在删除接口中填入<code>http://127.0.0.1:36677/delete</code></li>
+</ol>
+<h1 id="图床设置"><a href="#图床设置" class="headerlink" title="图床设置"></a>图床设置</h1><h2 id="阿里云OSS"><a href="#阿里云OSS" class="headerlink" title="阿里云OSS"></a>阿里云OSS</h2><p>官方网站：<a target="_blank" rel="noopener" href="https://www.aliyun.com/product/oss">https://www.aliyun.com/product/oss</a><br>官方文档：<a target="_blank" rel="noopener" href="https://help.aliyun.com/product/31815.html">https://help.aliyun.com/product/31815.html</a></p>
+<h3 id="配置项"><a href="#配置项" class="headerlink" title="配置项"></a>配置项</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;_configName&quot;: &quot;&quot;, // 图床配置名</span><br><span class="line">  &quot;accessKeyId&quot;: &quot;&quot;,</span><br><span class="line">  &quot;accessKeySecret&quot;: &quot;&quot;,</span><br><span class="line">  &quot;bucket&quot;: &quot;&quot;, // 存储空间名</span><br><span class="line">  &quot;area&quot;: &quot;&quot;, // 存储区域代号</span><br><span class="line">  &quot;path&quot;: &quot;&quot;, // 自定义存储路径</span><br><span class="line">  &quot;customUrl&quot;: &quot;&quot; // 自定义域名，注意要加http://或者https://</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><h4 id="accessKeyId-accessKeySecret"><a href="#accessKeyId-accessKeySecret" class="headerlink" title="accessKeyId &amp; accessKeySecret"></a>accessKeyId &amp; accessKeySecret</h4><p>你需要在阿里云AccessKey管理页面中创建或者查看你的accessKeyId和accessKeySecret，可以通过以下两种方式进入：</p>
+<ol>
+<li>直接访问<a target="_blank" rel="noopener" href="https://ram.console.aliyun.com/manage/ak">管理页面网址</a></li>
+<li>登录阿里云后，点击右上角头像，选择 <code>AccessKey管理</code>。</li>
+</ol>
+<h4 id="bucket-area"><a href="#bucket-area" class="headerlink" title="bucket &amp; area"></a>bucket &amp; area</h4><p>从 <code>阿里云工作台-&gt;对象存储OSS-&gt;bucket列表</code>进入存储桶管理页面，或者直接访问<a target="_blank" rel="noopener" href="https://oss.console.aliyun.com/bucket">https://oss.console.aliyun.com/bucket</a>，即可查看到你的bucket列表和对应的存储区域。<br>请把存储桶权限设置为公共读，否则上传的图片在相册中无法显示。</p>
+<blockquote>
+<p>提示<br>APP内填写的存储区域是区域代码，不是实际中文名称。<br>请访问<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/31837.html">阿里云官方文档</a>或者参考下表查询代码。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>存储区域</th>
+<th>区域代码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>华东 1（杭州）</td>
+<td>oss-cn-hangzhou</td>
+</tr>
+<tr>
+<td>华东 2（上海）</td>
+<td>oss-cn-shanghai</td>
+</tr>
+<tr>
+<td>华东5（南京本地地域）</td>
+<td>oss-cn-nanjing</td>
+</tr>
+<tr>
+<td>华东6（福州本地地域）</td>
+<td>oss-cn-fuzhou</td>
+</tr>
+<tr>
+<td>华中1（武汉-本地地域）</td>
+<td>oss-cn-wuhan</td>
+</tr>
+<tr>
+<td>华北 1（青岛）</td>
+<td>oss-cn-qingdao</td>
+</tr>
+<tr>
+<td>华北 2（北京）</td>
+<td>oss-cn-beijing</td>
+</tr>
+<tr>
+<td>华北 3（张家口）</td>
+<td>oss-cn-zhangjiakou</td>
+</tr>
+<tr>
+<td>华北 5（呼和浩特）</td>
+<td>oss-cn-huhehaote</td>
+</tr>
+<tr>
+<td>华北 6（乌兰察布）</td>
+<td>oss-cn-wulanchabu</td>
+</tr>
+<tr>
+<td>华南 1（深圳）</td>
+<td>oss-cn-shenzhen</td>
+</tr>
+<tr>
+<td>华南 2（河源）</td>
+<td>oss-cn-heyuan</td>
+</tr>
+<tr>
+<td>华南 3（广州）</td>
+<td>oss-cn-guangzhou</td>
+</tr>
+<tr>
+<td>西南 1（成都）</td>
+<td>oss-cn-chengdu</td>
+</tr>
+<tr>
+<td>中国（香港）</td>
+<td>oss-cn-hongkong</td>
+</tr>
+<tr>
+<td>美国（硅谷）</td>
+<td>oss-us-west-1</td>
+</tr>
+<tr>
+<td>美国（弗吉尼亚）</td>
+<td>oss-us-east-1</td>
+</tr>
+<tr>
+<td>日本（东京）</td>
+<td>oss-ap-northeast-1</td>
+</tr>
+<tr>
+<td>韩国（首尔）</td>
+<td>oss-ap-northeast-2</td>
+</tr>
+<tr>
+<td>新加坡</td>
+<td>oss-ap-southeast-1</td>
+</tr>
+<tr>
+<td>澳大利亚（悉尼）</td>
+<td>oss-ap-southeast-2</td>
+</tr>
+<tr>
+<td>马来西亚（吉隆坡）</td>
+<td>oss-ap-southeast-3</td>
+</tr>
+<tr>
+<td>印度尼西亚（雅加达）</td>
+<td>oss-ap-southeast-5</td>
+</tr>
+<tr>
+<td>菲律宾（马尼拉）</td>
+<td>oss-ap-southeast-6</td>
+</tr>
+<tr>
+<td>泰国（曼谷）</td>
+<td>oss-ap-southeast-7</td>
+</tr>
+<tr>
+<td>印度（孟买）</td>
+<td>oss-ap-south-1</td>
+</tr>
+<tr>
+<td>德国（法兰克福）</td>
+<td>oss-eu-central-1</td>
+</tr>
+<tr>
+<td>英国（伦敦）</td>
+<td>oss-eu-west-1</td>
+</tr>
+<tr>
+<td>阿联酋（迪拜）</td>
+<td>oss-me-east-1</td>
+</tr>
+<tr>
+<td>无地域属性（中国内地）</td>
+<td>oss-rg-china-mainland</td>
+</tr>
+</tbody></table>
+<h4 id="path-存储路径"><a href="#path-存储路径" class="headerlink" title="path&#x2F;存储路径"></a>path&#x2F;存储路径</h4><p>存储路径为可选项，如果不填写，则默认存储在bucket的根目录下。<br>例如填写 <code>images/test/</code>，则文件将存储于对应的test目录下。</p>
+<h4 id="customUrl-自定义域名"><a href="#customUrl-自定义域名" class="headerlink" title="customUrl&#x2F;自定义域名"></a>customUrl&#x2F;自定义域名</h4><p>自定义域名为可选项，如果不填写，则在复制链接、预览图片等操作时，将使用阿里云的默认外网域名。<br>例如文件 <code>test.jpg</code>存储于目录 <code>images/test/</code>下，bucket名称为 <code>test-bucket</code>，存储区域为 <code>华东 1（杭州）</code>，则文件的外网访问地址为 <code>https://test-bucket.oss-cn-hangzhou.aliyuncs.com/images/test/test.jpg</code>。<br>而如果填写了自定义域名，则文件的外网访问地址为 <code>http://自定义域名/images/test/test.jpg</code>。<br>请注意包含 <code>http://</code>或 <code>https://</code>。</p>
+<h4 id="options-网站后缀"><a href="#options-网站后缀" class="headerlink" title="options&#x2F;网站后缀"></a>options&#x2F;网站后缀</h4><p>阿里云OSS提供了图片处理功能，一般用于图片的裁剪、缩放、旋转、水印等操作。<br>使用方法：在文件的外网访问地址后面加上网站后缀，例如 <code>https://test-bucket.oss-cn-hangzhou.aliyuncs.com/images/test/test.jpg?x-oss-process=image/resize,m_fill,h_100,w_100</code>。<br>详细的网站后缀使用请参考<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/101260.html">OSS新版图片处理指南</a>。<br>该功能的使用如果超出免费额度，会产生额外处理费用，具体费用请参考<a target="_blank" rel="noopener" href="https://help.aliyun.com/document_detail/173537.htm">OSS图片处理费用</a>。<br>网站后缀为可选项，如果不填写的话，会拷贝原始地址。</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><div class="post-copyright__author_img"><img class="post-copyright__author_img_front" src="/img/logo.png"></div><div class="post-copyright__author_name">LYZ</div><div class="post-copyright__author_desc"></div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div><div class="post-reward"><div class="reward-button" title="赞赏作者" onclick="AddRewardMask()"><i class="solitude fas fa-heart"></i>赞赏作者</div><div class="reward-main"><ul class="reward-all"><span class="reward-title">感谢您的赞赏</span><ul class="reward-group"><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/wechatpay.webp" alt="Wechatpay" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">Wechatpay</div></li><li class="reward-item"><a href="/"><img class="post-qr-code-img nolazyload" src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/alipay.webp" alt="Alipay" style="border-color: var(--efu-black)"></a><div class="post-qr-code-desc">Alipay</div></li></ul><a class="reward-main-btn" href="/about/"><div class="reward-text">赞赏名单</div><div class="reward-dec">由于您的支持，我才能够实现写作的价值。</div></a></ul></div></div><script>function RemoveRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "none";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "none";
+    }
+}
+
+function AddRewardMask() {
+    let rewardMainElements = document.querySelectorAll(".reward-main");
+    let quitBoxElement = document.querySelector("#quit-box");
+
+    rewardMainElements.forEach(element => {
+        element.style.display = "flex";
+    });
+
+    if (quitBoxElement) {
+        quitBoxElement.style.display = "flex";
+    }
+}</script></div></div><div class="social-share"><a class="social-share-ico icon-qq" target="_blank" rel="noopener" href="https://connect.qq.com/widget/shareqq/index.html?url=https%3A%2F%2Fwww.zsphere.top%2F2026%2F03%2F17%2Fobsidian%2FPiclist%2F&amp;title=Piclist&amp;desc=null&amp;summary=null&amp;site=Piclist&amp;pics=%2Fimg%2Fdefault.avif" title="分享到QQ"><i class="solitude fab fa-qq"></i></a><div class="social-share-ico icon-link" onclick="utils.copy(&quot;https://www.zsphere.top/2026/03/17/obsidian/Piclist/&quot;)" title="复制文章链接"><i class="solitude fas fa-link"></i></div><div class="social-share-ico icon-qrcode" title="使用手机扫码阅读这篇文章"><i class="solitude fas fa-qrcode"></i><div class="share-main"><div class="share-main-all"><div id="qrcode"></div><div class="reward-dec">使用手机扫码阅读这篇文章</div></div></div><script pjax>typeof QRCode === 'function' && new QRCode(document.getElementById("qrcode"), {
+    text: 'https://www.zsphere.top/2026/03/17/obsidian/Piclist/',
+    correctLevel : QRCode.CorrectLevel.L
+});
+window.addEventListener('DOMContentLoaded', () => {
+    new QRCode(document.getElementById("qrcode"), {
+        text: 'https://www.zsphere.top/2026/03/17/obsidian/Piclist/',
+        correctLevel : QRCode.CorrectLevel.L
+    });
+});
+</script></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本文是原创文章，采用<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0</a>协议，完整转载请注明来自<a href="/">哲哲折 - 分享技术与摄影艺术</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/03/18/electronic/network/LAN(%E5%B1%80%E5%9F%9F%E7%BD%91)/"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">LAN(局域网)</div></div></a></div><div class="next-post pull-right"><a href="/2026/03/16/electronic/tele/%E9%80%9A%E4%BF%A1%E8%B4%A8%E9%87%8F/"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">信号质量</div></div></a></div></nav><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fas fa-comment"></i><span> 评论</span><span class="count"> (<span class="waline-comment-count"><i class="solitude fas fa-spinner fa-spin"></i></span>)</span></div></div><div class="comment-wrap"><div id="waline-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="top-group"><div class="sayhi" id="sayhi" onclick="sco.changeWittyWord()"></div></div></div><div class="avatar"><img alt="头像" src="/img/logo.png"></div><div class="description"></div><div class="bottom-group"><span class="left"><div class="name">LYZ</div><div class="desc">只有迎风，风筝才能飞得更高。</div></span><div class="social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/zhesphere" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/356745391" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fas fa-bars"></i><span>文章目录</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8Obsidian%E4%B8%AD%E4%BD%BF%E7%94%A8"><span class="toc-text">如何在Obsidian中使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE"><span class="toc-text">图床设置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%BF%E9%87%8C%E4%BA%91OSS"><span class="toc-text">阿里云OSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%A1%B9"><span class="toc-text">配置项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#accessKeyId-accessKeySecret"><span class="toc-text">accessKeyId &amp; accessKeySecret</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bucket-area"><span class="toc-text">bucket &amp; area</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#path-%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84"><span class="toc-text">path&#x2F;存储路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#customUrl-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D"><span class="toc-text">customUrl&#x2F;自定义域名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#options-%E7%BD%91%E7%AB%99%E5%90%8E%E7%BC%80"><span class="toc-text">options&#x2F;网站后缀</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fas fa-map"></i><span>最近发布</span></div><div class="aside-list"><a class="aside-list-item" href="/2026/03/18/electronic/tele/CAN/" title="CAN"><div class="thumbnail"><img alt="CAN" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/18/electronic/tele/CAN/" title="CAN">CAN</span></div></a><a class="aside-list-item" href="/2026/03/18/electronic/network/LAN(%E5%B1%80%E5%9F%9F%E7%BD%91)/" title="LAN(局域网)"><div class="thumbnail"><img alt="LAN(局域网)" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/18/electronic/network/LAN(%E5%B1%80%E5%9F%9F%E7%BD%91)/" title="LAN(局域网)">LAN(局域网)</span></div></a><a class="aside-list-item" href="/2026/03/17/obsidian/Piclist/" title="Piclist"><div class="thumbnail"><img alt="Piclist" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/17/obsidian/Piclist/" title="Piclist">Piclist</span></div></a><a class="aside-list-item" href="/2026/03/16/electronic/tele/%E9%80%9A%E4%BF%A1%E8%B4%A8%E9%87%8F/" title="信号质量"><div class="thumbnail"><img alt="信号质量" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/16/electronic/tele/%E9%80%9A%E4%BF%A1%E8%B4%A8%E9%87%8F/" title="信号质量">信号质量</span></div></a><a class="aside-list-item" href="/2026/03/16/mac/" title="mac"><div class="thumbnail"><img alt="mac" src="/img/default.avif"></div><div class="content"><span class="title" href="/2026/03/16/mac/" title="mac">mac</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer_deal"><a class="deal_link" target="_blank" rel="noopener" href="https://github.com/zhesphere" title="Github"><i class="solitude  fab fa-github"></i></a><div><div class="nolazyload footer_mini_logo" id="footer_mini_logo" title="返回顶部" onclick="sco.toTop()"><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/author.webp" alt="返回顶部"></div></div><a class="deal_link" target="_blank" rel="noopener" href="https://space.bilibili.com/356745391" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div><div><div id="st-footer"><div class="footer-group"><h3 class="footer-title">导航</h3><div class="footer-links"><a class="footer-item" href="/archives/" title="Archives">Archives</a><a class="footer-item" href="/categories/" title="Categories">Categories</a><a class="footer-item" href="/tags/" title="Tags">Tags</a></div></div><div class="footer-group"><h3 class="footer-title">排列</h3><div class="footer-links"><a class="footer-item" href="/cookies/" title="Cookies">Cookies</a><a class="footer-item" href="/privacy/" title="Privacy">Privacy</a><a class="footer-item" href="/copyright/" title="Copyright">Copyright</a></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2025 - 2026 By<a class="footer-bar-link" href="/" title="LYZ">LYZ</a></div><div class="beian-group"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://hexo.io/" title="框架：Hexo">框架：Hexo</a><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" title="主题：Solitude">主题：Solitude</a></div></div><div><div class="footer-bar-right"><a class="footer-bar-link" href="/atom.xml" title="">RSS</a><a class="footer-bar-link" href="/" title=""><i class="solitude fas fa-copyright"></i><i class="solitude fab fa-creative-commons-by"></i><i class="solitude fab fa-creative-commons-nc"></i><i class="solitude fab fa-creative-commons-nd"></i></a><a class="footer-bar-link" href="/" title="">boringbay</a></div></div></div></div><div class="comment-barrage needEndHide"></div></footer></div><div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="solitude fas fa-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="solitude fas fa-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="solitude fas fa-arrows-rotate"></i></div><div class="rightMenu-item" id="menu-top"><i class="solitude fas fa-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="solitude fas fa-clone"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="solitude fas fa-clipboard"></i><span>粘贴文本</span></div><div class="rightMenu-item" id="menu-commenttext"><i class="solitude fas fa-comment-medical"></i><span>引用到评论</span></div><div class="rightMenu-item" id="menu-newwindow"><i class="solitude far fa-window-maximize"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="solitude fas fa-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="solitude fas fa-clone"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="solitude fas fa-cloud-arrow-down"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-search"><i class="solitude fas fa-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="solitude fas fa-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="solitude fas fa-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="solitude fas fa-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="solitude fas fa-clone"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-randomPost" onclick="toRandomPost()||rm.hideRightMenu()"><i class="solitude fas fa-tower-broadcast"></i><span>随机文章</span></div><div class="rightMenu-item" onclick="pjax.loadUrl('/tags/')||rm.hideRightMenu()"><i class="solitude fas fa-tags"></i><span>全部标签</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><div class="rightMenu-item" id="menu-darkmode" onclick="sco.switchDarkMode()"><i class="solitude fas fa-circle-half-stroke"></i></div><div class="rightMenu-item" id="menu-translate"><i class="solitude fas fa-language"></i><span>轉為繁體</span></div></div></div><div id="rightmenu-mask"></div></div><div><!-- Critical scripts loaded synchronously--><script src="/js/utils.js?v=3.0.21"></script><script src="/js/main.js?v=3.0.21"></script><!-- Non-critical scripts loaded asynchronously--><script async src="/js/third_party/waterfall.min.js?v=3.0.21"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><!-- Feature-specific scripts loaded asynchronously--><script async src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/typeit@8.8.7/dist/index.umd.min.js"></script><script defer src="/js/tw_cn.js?v=3.0.21"></script><!-- UI enhancement scripts--><script defer src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.36/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script><!-- Music player scripts--><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script defer src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><!-- Cover color processing scripts--><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!-- Search functionality--><script defer src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.75.7/dist/instantsearch.production.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/algoliasearch@5.19.0/dist/algoliasearch.umd.min.js"></script><!-- Right menu functionality--><script defer src="/js/right_menu.js?v=3.0.21"></script><script src="/schedule/schedule.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><div class="js-pjax"><script>(() => {
+    let walineInitFunction = window.walineFn || null
+
+    function initWaline(initFn) {
+        const walineOptions = {
+            el: '#waline-wrap',
+            serverURL: 'https://waline.zsphere.top/',
+            pageview: false,
+            dark: 'html[data-theme="dark"]',
+            path: window.location.pathname,
+            comment: true,
+            ...null
+        }
+        const walineInstance = initFn(walineOptions)
+        utils.addGlobalFn('pjax', () => walineInstance.destroy(), 'destroyWaline')
+        GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#comment .wl-content img:not(.wl-emoji)'))
+        sco.owoBig({
+            body: '.wl-emoji-popup',
+            item: '.wl-tab-wrapper button'
+        })
+    }
+
+    async function loadWaline() {
+        if (walineInitFunction) initWaline(walineInitFunction)
+        else {
+            await utils.getCSS('https://cdn.jsdelivr.net/npm/@waline/client@3.4.3/dist/waline.min.css')
+            const {init} = await import('https://cdn.jsdelivr.net/npm/@waline/client@3.4.3/dist/waline.min.js')
+            walineInitFunction = init || Waline.init
+            initWaline(walineInitFunction)
+            window.walineFn = walineInitFunction
+        }
+        false && barrageWaline()
+    }
+
+    if (true || true) {
+        if (true) utils.loadComment(document.getElementById('waline-wrap'), loadWaline)
+        else loadWaline()
+    } else window.loadTwoComment = loadWaline
+})()
+</script><script defer pjax src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script></div></div><!-- pjax--><script>let pjax = null;
+
+function initPjax() {
+    if (typeof Pjax === 'undefined') {
+        console.warn('Pjax is not loaded yet, retrying...');
+        setTimeout(initPjax, 100);
+        return;
+    }
+
+    pjax = new Pjax({
+        elements: 'a:not([target="_blank"])',
+        selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+        cacheBust: false,
+        analytics: false,
+        scrollRestoration: false
+    })
+
+    // 将 pjax 实例挂载到全局
+    window.pjax = pjax;
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    document.addEventListener('pjax:complete', () => {
+        window.refreshFn()
+
+        document.querySelectorAll('script[data-pjax]').forEach(item => {
+            const newScript = document.createElement('script')
+            const content = item.text || item.textContent || item.innerHTML || ""
+            Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+            newScript.appendChild(document.createTextNode(content))
+            item.parentNode.replaceChild(newScript, item)
+        })
+
+        GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+    })
+
+    document.addEventListener('pjax:error', (e) => {
+        if (e.request.status === 404) {
+            pjax.loadUrl('/404.html')
+        }
+    })
+}
+
+// 初始化 Pjax
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPjax);
+} else {
+    initPjax();
+}</script><!-- google adsense--><div id="algolia-search"><div class="search-dialog"><div class="algolia-navbar"><div class="search-dialog__title" id="algolia-search-title">搜索</div><div class="algolia-tips"><i class="solitude fab fa-algolia"></i><span class="algolia-tips-text">Algolia</span></div><span class="search-close-button"><i class="solitude fas fa-xmark"></i></span></div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><div id="search-results"><div id="algolia-hits"></div></div><div id="algolia-tips"><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div><div id="search-mask"></div></div><script src="/js/search/algolia.js?v=3.0.21"></script><div><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips"><i class="music-control-btn fas fa-backward-step" id="music-prev" onclick="sco.musicSkipBack()"></i><i class="music-control-btn fas fa-pause" id="music-pause" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-play" id="music-play" onclick="sco.musicToggle()"></i><i class="music-control-btn fas fa-forward-step" id="music-next" onclick="sco.musicSkipForward()"></i></div><meting-js id="5144842535" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></div></body></html>
+        <script>
+            const posts = ["2026/03/18/electronic/tele/CAN/","2026/03/18/electronic/network/LAN(局域网)/","2026/03/17/obsidian/Piclist/","2026/03/16/electronic/tele/通信质量/","2026/03/16/mac/","2026/03/15/质量管理/","2026/03/15/electronic/component/BJT/三极管/","2026/03/15/electronic/component/器件工程师/","2026/03/14/electronic/electronic test/EMC/","2026/03/13/electronic/Spectrum analyzer/Spectrum analyzer/","2026/03/11/electronic/电路原理/","2026/03/04/数学公式/","2026/03/04/electronic/高频电路设计/","2026/03/04/electronic/component/crystal/晶振/","2026/03/03/MindMap/","2026/02/28/electronic/component/NOR FLASH/NOR FLASH/","2026/02/28/electronic/component/mos/stockpile/","2026/02/27/工具/","2026/02/25/electronic/component/选型/","2026/02/25/electronic/图腾柱/","2026/02/24/electronic/阻抗匹配/","2026/02/12/electronic/tele/RS485/RS485/","2026/02/06/electronic/焊接/","2026/02/04/electronic/component/dc-dc/EN使能/","2026/02/03/electronic/tele/总线协议/","2026/02/03/electronic/Project/USB（TYPE-C）转串口（TTL）/","2026/01/26/electronic/Project/模数电案例/","2026/01/15/electronic/eda/cadence/Pspice/","2025/12/17/photo/双子座流星雨观看以及拍摄指南/","2025/12/17/electronic/component/led/LED/","2025/12/16/electronic/Project/反激开关电源/","2025/12/08/electronic/component/omp/运算放大器/","2025/11/11/edit/da Vinci/LUTS/","2025/11/05/edit/da Vinci/帧率/","2025/11/04/edit/da Vinci/秘传技/","2025/11/01/格式/","2025/11/01/electronic/电压符号/","2025/11/01/问题/","2025/11/01/electronic/electronic test/EMC&RF/","2025/11/01/electronic/eda/PCB封装/","2025/11/01/electronic/engineering drawing/图纸/","2025/11/01/electronic/wire/线束/","2025/11/01/electronic/eda/cadence/Cadence/","2025/10/29/ai/comfyui/ComfyUI/","2025/10/28/edit/da Vinci/媒体池/","2025/10/11/edit/da Vinci/调色/","2025/09/09/electronic/component/logic/逻辑器件/","2025/09/09/electronic/component/switch/开关/","2025/09/06/special/note提醒块/","2025/09/06/special/label标签块/","2025/09/06/electronic/component/capacitor/电容/","2025/09/06/electronic/component/SMT_DIP/捷优奇/","2025/09/06/electronic/component/connector/连接器/","2025/09/06/electronic/component/mos/场效应管/","2025/09/06/electronic/component/resistor/电阻/","2025/09/06/electronic/component/optical coupler/光耦/","2025/09/05/photo/lunar_eclipse/2025-09-07月全食/","2025/09/05/special/spoiler隐藏文字/","2025/09/05/special/emoji绘文字/","2025/09/05/special/effects文字特效/","2025/09/04/待办/","2025/09/04/更新日志/","2025/09/03/electronic/component/diode/力森工厂学习/","2025/09/02/electronic/名词解释/","2025/09/02/electronic/component/diode/二极管/","2025/09/01/学习/","2025/09/01/electronic/component/dc-dc/DC-DC/","2025/08/21/electronic/component/dc-dc/矽力杰/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
