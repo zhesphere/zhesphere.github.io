@@ -760,11 +760,11 @@
     
     
     <entry>
-      <title>格式</title>
-      <link href="/2025/11/01/%E6%A0%BC%E5%BC%8F/"/>
-      <url>/2025/11/01/%E6%A0%BC%E5%BC%8F/</url>
+      <title>问题</title>
+      <link href="/2025/11/01/%E9%97%AE%E9%A2%98/"/>
+      <url>/2025/11/01/%E9%97%AE%E9%A2%98/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>DXF(Drawing Exchange Fotmat)</p><blockquote><ul><li>开放的矢量图形数据交换格式，以文本形式储存图形信息，可以被多种CAD软件和图形软件读取和写入</li><li>文件相对简单，不支持某些高级功能，但更易于解析和编辑，适用只需要基本图形信息用户</li><li>安全性方面较低，更容易被共享和修改<br>DWG(Drawing)</li><li>AutoCAD软件的原生文件格式，以二进制形式存储图形数据，具有更高的存储效率和复杂性</li><li>支持更多的高级功能和复杂的图形对象，如三维模型、自定义对象等。可以包含更多的元数据和特定于AutoCAD的设置</li><li>更容易受到版权保护和加密限制</li></ul></blockquote></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>电容充放电原理和时刻<br>芯片EN控制电路<br>EN-RC延迟电路只有电阻没有电容<br>有刷电机带反电动势检测芯片<br>焊盘 width&amp;height<br>Via for thermal pad<br>封装中添加EPAD焊盘编号不自动加一<br>热风焊盘<br>石英晶体谐振器和振荡器<br>MCU起振电路<br>谐振电路(电容……)<br>MCSG43Z100M典型值大于最大值</p>]]></content>
       
       
       
@@ -773,11 +773,11 @@
     
     
     <entry>
-      <title>问题</title>
-      <link href="/2025/11/01/%E9%97%AE%E9%A2%98/"/>
-      <url>/2025/11/01/%E9%97%AE%E9%A2%98/</url>
+      <title>格式</title>
+      <link href="/2025/11/01/%E6%A0%BC%E5%BC%8F/"/>
+      <url>/2025/11/01/%E6%A0%BC%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<p>电容充放电原理和时刻<br>芯片EN控制电路<br>EN-RC延迟电路只有电阻没有电容<br>有刷电机带反电动势检测芯片<br>焊盘 width&amp;height<br>Via for thermal pad<br>封装中添加EPAD焊盘编号不自动加一<br>热风焊盘<br>石英晶体谐振器和振荡器<br>MCU起振电路<br>谐振电路(电容……)<br>MCSG43Z100M典型值大于最大值</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>DXF(Drawing Exchange Fotmat)</p><blockquote><ul><li>开放的矢量图形数据交换格式，以文本形式储存图形信息，可以被多种CAD软件和图形软件读取和写入</li><li>文件相对简单，不支持某些高级功能，但更易于解析和编辑，适用只需要基本图形信息用户</li><li>安全性方面较低，更容易被共享和修改<br>DWG(Drawing)</li><li>AutoCAD软件的原生文件格式，以二进制形式存储图形数据，具有更高的存储效率和复杂性</li><li>支持更多的高级功能和复杂的图形对象，如三维模型、自定义对象等。可以包含更多的元数据和特定于AutoCAD的设置</li><li>更容易受到版权保护和加密限制</li></ul></blockquote></blockquote>]]></content>
       
       
       
@@ -855,31 +855,6 @@
     
     
     <entry>
-      <title>图纸</title>
-      <link href="/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/"/>
-      <url>/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/</url>
-      
-        <content type="html"><![CDATA[<h1>符号</h1><p>2-Φ6–制图中共有两个直径为6毫米的孔（圆）</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电子 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 工程制图 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>线束</title>
       <link href="/2025/11/01/electronic/wire/%E7%BA%BF%E6%9D%9F/"/>
       <url>/2025/11/01/electronic/wire/%E7%BA%BF%E6%9D%9F/</url>
@@ -897,6 +872,31 @@
         <tags>
             
             <tag> 线束 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>图纸</title>
+      <link href="/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/"/>
+      <url>/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/</url>
+      
+        <content type="html"><![CDATA[<h1>符号</h1><p>2-Φ6–制图中共有两个直径为6毫米的孔（圆）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工程制图 </tag>
             
         </tags>
       
@@ -1081,33 +1081,6 @@
     
     
     <entry>
-      <title>捷优奇</title>
-      <link href="/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/"/>
-      <url>/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>捷优信达和昌奇合办捷优奇</p></blockquote><h1>SMT</h1><ul><li>放PCB</li><li>印刷，印锡膏</li><li>SPI检查，体积高度</li><li>贴元器件</li><li>AOI检查，有没有缺件，错件，有的工厂没有这步</li><li>回流焊，235-250</li><li>炉后AOI，有没有少锡，上锡状况，器件间距</li><li>收板</li><li>有BGA的产品，要照，X- RAY，首片</li></ul><h1>DIP</h1><ul><li>插件</li><li>波峰焊，引脚焊接</li><li>修整</li><li>UV胶</li><li>FCP功能测试</li><li>点黑胶，灯上面，线束</li><li>灌胶，AB一比一，灌胶房，机器自动抽，一片40s，万一设备坏了，一个灌胶机</li><li>装壳</li><li>电压阻抗测试</li></ul><p>线束<br>半自动剥线器</p><p>剥线管<br>胶包玻璃纤维</p><p>点胶房<br>检验pin针上有没有胶</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电子 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 器件 </tag>
-            
-            <tag> SMT/DIP </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>电容</title>
       <link href="/2025/09/06/electronic/component/capacitor/%E7%94%B5%E5%AE%B9/"/>
       <url>/2025/09/06/electronic/component/capacitor/%E7%94%B5%E5%AE%B9/</url>
@@ -1158,11 +1131,11 @@
     
     
     <entry>
-      <title>场效应管</title>
-      <link href="/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/"/>
-      <url>/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/</url>
+      <title>捷优奇</title>
+      <link href="/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/"/>
+      <url>/2025/09/06/electronic/component/SMT_DIP/%E6%8D%B7%E4%BC%98%E5%A5%87/</url>
       
-        <content type="html"><![CDATA[<p>电压驱动型器件<br>常用于信号开关、功率开关、电平转换等各种用途</p><h1>类型与应用</h1><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251010100155.webp" alt="Pasted image 20251010100155"><br>NMOS管：<br>- 电路符号：箭头往里，箭头方向代表电子走向<br>- 电子开关：控制信号G极为高电平时导通，低电平时断开<br>- 导通电阻小，导通功耗小<br>- [低边开关]{.label .danger}应用首选，驱动方便，选型灵活<br>- N沟道MOSFET驱动比较复杂，一般需要额外电源或[自举驱动]{.label .danger}<br>- MOS管==体二极管==的负极作为电源输入端<br>PMOS管：<br>- 电路符号：箭头往外，箭头方向代表电子走向<br>- 电子开关：控制信号G极为低电平时导通，高电平时断开<br>- 导通电阻大(制造工艺?)，导通功耗大<br>- [高边开关]{.label .danger}应用，用P沟道MOSFET驱动比较简单，但导通电阻相对较大，!!价格相对较高!!<br>- MOS管==体二极管==的负极作为电源输入端<br><strong>体二极管</strong>：MOS管不可避免的寄生二极管<br>影响：<br>- 正向压降较高会增加开关损耗，导致MOS管发热<br>- 在高频开关应用中，反向恢复时间和电流会影响效率和产生电磁干扰<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1.webp" alt="体二极管"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MOS%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF.webp" alt="MOS驱动电路"></p><h1>关键参数</h1><h2 id="阈值电压（Gate-source-threshold-voltage-，VGS-th-）">阈值电压（Gate-source threshold voltage ，VGS(th)）</h2><p><a href="https://toshiba-semicon-storage.com/cn/semiconductor/knowledge/faq/mosfet/electrical-characteristics-of-mosfetsstatic-characteristics-vth.html">MOSFET的电气特性（静态特性Vth） | 东芝半导体&amp;存储产品中国官网</a></p><ul><li>定义：使 MOS 导通的最小栅源电压，是 MOS 管从截止态进入导通态的临界电压（NMOS 正，PMOS 负）。</li><li>工作原理：当栅源电压 VGS&lt;∣Vth∣时，漏源之间无导电沟道，管子截止；当 VGS≥∣Vth∣时，电场会吸引漏源区的载流子，在栅极下方的衬底表面形成导电沟道，漏源之间可以导通电流。</li><li>特性：N 沟道 MOS 管 Vth一般为 1~4V，P 沟道 MOS 管 Vth 一般为 -1~-4V。温度升高时，Vth会线性下降。</li><li>实操：栅极驱动电压必须大于 Vth且留有足够裕量，否则 MOS 管无法完全导通，会导致导通损耗剧增。</li><li>测试：测量当源极与漏极之间有指定电流时的栅极电压。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Vth%E6%B5%8B%E9%87%8F.webp" alt="Vth测量"><br>栅极－源极电压（VGS）升高，直至漏极电流（ID）达到指定值。一旦达到该值，立即测量VGS。</li></ul><table><thead><tr><th>特性</th><th>符号</th><th>测试条件</th><th style="text-align:center">最小值</th><th style="text-align:center">典型值</th><th style="text-align:center">最大值</th><th>单位</th></tr></thead><tbody><tr><td>栅极阈值电压</td><td>Vth</td><td>VDS＝10V，ID＝1.0mA</td><td style="text-align:center">1.4</td><td style="text-align:center">—</td><td style="text-align:center">2.4</td><td>V</td></tr></tbody></table><h2 id="导通电阻（Drain-Source-On-State-Resistance-，RDS-on">导通电阻（Drain-Source On-State Resistance ，RDS(on)</h2><p><a href="https://www.zhxckj.com.cn/newsinfo/8281748.html">MOSFET 导通电阻（RDSON）参数解读-西安中昊芯测科技有限公司</a><br><a href="https://www.rohm.com.cn/electronics-basics/transistors/tr_what9">导通电阻_电子小百科_罗姆半导体集团(ROHM Semiconductor)</a></p><ul><li>定义：MOS 管完全导通（工作在线性区）时，漏极与源极之间的等效电阻，是 MOS 管导通状态下的核心损耗来源。（越小越好）</li><li>工作原理：当 VGS≫Vth时，MOS 管形成低阻导电沟道，Rds(on)由沟道的材料电阻率、沟道长度和宽度决定，芯片厂商通过增大沟道宽度（W）、减小沟道长度（L）来降低Rds(on)。</li><li>特性：VGS越大，Rds(on)越小，温度升高时，Rds(on)会显著增大。这是导致大电流下 MOS 管发热的主要原因。</li><li>实操：<br>MOSFET消耗的功率PD用MOSFET自身具有的导通电阻乘以漏极电流（ID)的平方表示（功率PD）＝（导通电阻RDS(ON) ） x （漏极电流ID）2。<br>Rds（on）越小，导通损耗（P=I²R）越低，大电流场景选低于几十毫欧的 MOS 管，降低大电流下的发热。</li><li>测试：<ol><li>施加栅源电压 VGS=10V（一般情况下），使器件处于完全导通状态。</li><li>逐渐施加漏源电压VDS，当流经MOSFET的漏极电流IDS达到特定值时（IDS 一般取器件最大连续漏极电流的一半），根据欧姆定律计算导通电阻RDSON=VDS/IDS</li></ol></li></ul><h2 id="漏极最大电流-Id-max">漏极最大电流 Id (max)</h2><ul><li>定义：MOS 管在安全工作区内，能够持续承受的最大直流漏极电流，部分手册还会给出脉冲最大漏极电流 Id（pules）（短时间内可承受的峰值电流）。<br>​- 工作原理：<br>特性：良好的散热条件可提升实际可承受的电流值，散热不良时，即使Id未达Id(max)，也可能因过热损坏。脉冲宽度越窄、占空比越小Id(pulse)越大。<br>实操：留 30% 裕量（5A 负载选 Id≥7.5A），配合散热评估。<br>例：电机启动、堵转时的峰值电流远大于额定电流，需保证峰值电流小于 Id(pulse)，持续工作电流小于Id(max)。</li></ul><h2 id="漏源击穿电压-Vds-max">漏源击穿电压 Vds (max)</h2><ul><li>定义：MOS管截止时，漏极与源极之间能够承受的最大反向电压，超过该值会导致MOS管雪崩击穿，永久损坏。</li><li>工作原理：MOS管截止时，漏源之间的PN结承受反向电压。当 Vds&gt;Vds(max)时，耗尽层内电场强度超过临界值，会引发雪崩击穿，漏极电流急剧增大，瞬间产生的高热量烧毁器件。</li><li>特性：温度升高时，Vds(max)会略有上升，实际应用中，需考虑电压波动和尖峰电压。</li><li>实操：电机驱动电路的母线电压峰值必须小于Vds(max)，留20%裕量。</li></ul><h2 id="体二极管参数（Is-Is-pulse-Vsd）">体二极管参数（Is/Is (pulse)/Vsd）</h2><p>定义：持续电流 / 脉冲电流 / 导通电压<br>MOS 管的寄生体二极管（又称续流二极管）是由器件结构决定（N 沟道 MOS 管的体区为 P 型，漏、源区为 N 型，形成 PN 结）。<br>工作原理：MOS 管截止时，若漏源电压极性反转，体二极管会自动导通，为感性负载提供续流回路，避免 MOS 管因尖峰电压击穿。<br>特性：正向电流增大而增大，随温度升高而减小，体二极管的反向恢复时间较长，高频续流时会产生较大的反向恢复损耗。<br>实操：仅用于续流，避免长期导通（如 BUCK 死区）</p><h1>测试</h1><p>MOS替代料测试验证流程：</p><ol><li>前期准备</li></ol><ul><li><strong>样品生产</strong>：使用新的MOS材料制作多个测试样品，以便进行反复测试。</li><li><strong>设备校准</strong>：确保所有测量和测试设备已准确校准，包括半导体参数分析仪、示波器等。</li></ul><ol start="2"><li>电气性能测试</li></ol><ul><li><strong>阈值电压</strong>：测量MOSFET的开启与关闭所需的栅极电压。</li><li><strong>导通电阻</strong>：测量器件在开启状态下的电阻，以确保功耗和热损失在可接受范围内。</li><li><strong>漏电流</strong>：检查在关闭状态下的漏电流，从而评估器件的关断能力。</li></ul><ol start="3"><li>功能验证</li></ol><ul><li><strong>开关速度</strong>：利用示波器测量器件的开通和关断时间，以确保其满足响应速度要求。</li><li><strong>控制信号</strong>：测试栅极驱动电压和电流，确保信号完整性。</li></ul><ol start="4"><li>热特性测试</li></ol><ul><li><strong>温度测试</strong>：在工作条件下运行电路，通过热成像监测热分布，确保温度在器件和电路板的额定范围内。</li><li><strong>热循环测试</strong>：通过多次高低温循环来验证器件的热稳定性。</li></ul><ol start="5"><li>稳定性和环境测试</li></ol><ul><li><strong>可靠性</strong>：进行长时间的开关循环测试，观察器件故障或性能退化情况。</li><li><strong>环境测试</strong>：在不同温湿度条件下运行测试，以评估其环境适应性。</li></ul><ol start="6"><li>信号完整性测试</li></ol><ul><li><strong>信号传输</strong>：使用示波器测量USART接口传输信号的波形，确保无波形扭曲或失真。</li><li><strong>数据完整性</strong>：通过发送和接收数据包来验证传输信号的完整性和误码率。</li></ul><ol start="7"><li>故障分析</li></ol><ul><li><strong>失效分析</strong>：若测试中发现异常，利用断层扫描或显微镜分析MOSFET内部结构。</li><li><strong>问题排查</strong>：调查异常信号路径或热噪声源以确定原因。</li></ul><ol start="8"><li>比较和数据分析</li></ol><ul><li><strong>性能比较</strong>：将新材料的测试结果与标准材料进行对比，查看两者在性能、效率和稳定性方面的差异。</li><li><strong>数据处理</strong>：分析测试数据，绘制I-V、热特性等图表，以便直观呈现差异和优势。</li></ul><ol start="9"><li>报告和决策</li></ol><ul><li><strong>报告撰写</strong>：整理测试结果，编制报告并提供改进建议或业务决策支持。</li><li><strong>评审和决策</strong>：根据测试结果和报告，决定新的MOS材料在产品中的应用与否。</li></ul><h1>实际电路</h1><h2 id="UART-接口的双向电平转换电路">UART 接口的双向电平转换电路</h2><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MB_UART.webp" alt="MB_UART"><br>UART 接口的双向电平转换电路，通过 DTS3402-MOS，配合两侧电源与上拉电阻，实现 MCU 侧和外部设备侧的信号电平匹配，同时提供静电防护。<br>发送通道（MCU→外部设备：MC_COM_TXD → OD_UART_RX）<br>接收通道（外部设备→MCU：OD_UART_TX → MC_COM_RXD）</p><h2 id="MCU-的-DEBUG-调试接口电路">MCU 的 DEBUG 调试接口电路</h2><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MB_DEBUG.webp" alt="MB_DEBUG"><br>核心功能是实现外部调试工具与 MCU 之间的 UART 通信，这个电路里的 MOS 管是 “动态导通”的 —— 仅在两侧信号有电平差时，Vgs才会达到Vth并导通传输信号，不会一直处于开启状态。<br>作用是实现双向电平转换 / 信号缓冲元件 。<br>当调试工具发高电平（3.3V）：<br>Q11 引脚 3 的电压≈3.3V，与引脚 1 的参考电压（VCC_3V3_MCU，也是 3.3V）一致，此时 MOS 管的Vgs≈0，MOS 关断；但引脚 2 被R154上拉到 3.3V，因此MCU_DEBUG_RXD收到高电平。<br>当调试工具发低电平（0V）：<br>Q11 引脚 3 的电压≈0V，与引脚 1 的参考电压（3.3V）形成Vgs=3.3V-0V=3.3V（大于 MOS 的开启电压Vth），MOS 导通；引脚 2 的电压被 MOS 拉低到 0V，因此MCU_DEBUG_RXD收到低电平。</p><h2 id="按键触发-自锁保持的大电流电源开关电路">按键触发 + 自锁保持的大电流电源开关电路</h2><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MB_BUTTON.webp" alt="MB_BUTTON"><br>并联 PMOS 管的作用，PMOS 管的 “导通内阻” 会随电流增大而发热，而负载是VCC_21V_MOT，并联 PMOS 可以降低总导通内阻、提升载流能力，同时减少单管的发热风险。<br>核心逻辑：按键触发→PMOS 导通→自锁保持（按键松开维持供电）</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>捷优信达和昌奇合办捷优奇</p></blockquote><h1>SMT</h1><ul><li>放PCB</li><li>印刷，印锡膏</li><li>SPI检查，体积高度</li><li>贴元器件</li><li>AOI检查，有没有缺件，错件，有的工厂没有这步</li><li>回流焊，235-250</li><li>炉后AOI，有没有少锡，上锡状况，器件间距</li><li>收板</li><li>有BGA的产品，要照，X- RAY，首片</li></ul><h1>DIP</h1><ul><li>插件</li><li>波峰焊，引脚焊接</li><li>修整</li><li>UV胶</li><li>FCP功能测试</li><li>点黑胶，灯上面，线束</li><li>灌胶，AB一比一，灌胶房，机器自动抽，一片40s，万一设备坏了，一个灌胶机</li><li>装壳</li><li>电压阻抗测试</li></ul><p>线束<br>半自动剥线器</p><p>剥线管<br>胶包玻璃纤维</p><p>点胶房<br>检验pin针上有没有胶</p>]]></content>
       
       
       <categories>
@@ -1175,6 +1148,8 @@
         <tags>
             
             <tag> 器件 </tag>
+            
+            <tag> SMT/DIP </tag>
             
         </tags>
       
@@ -1213,6 +1188,31 @@
       <url>/2025/09/06/electronic/component/resistor/%E7%94%B5%E9%98%BB/</url>
       
         <content type="html"><![CDATA[<p>三星网站有单独规格书<br><strong>电阻阻值精度字母代码：</strong><br>L=±0.01%<br>P=±0.02%<br>W=±0.05%<br>B=±0.1%<br>C=±0.25%<br>D=±0.5%<br>==F=±1%==<br>G=±2%<br>H=±3%<br>==J=±5%==<br>==K=±10%==<br>==M=±20%==<br>N=±30%<br>电阻1%覆盖5%</p><h2 id="0Ω电阻-Jumper">0Ω电阻(Jumper)</h2><h3 id="定义">定义</h3><p>0欧姆电阻的阻值不完全是0，只有超导体才具有阻值完全为零的特性。<br>0欧姆电阻又称为跨接电阻器，是一种特殊用途的电阻，其电阻值非常非常小，接近于零，理论上，0欧姆电阻的电阻值可视为0，是属于完全导体的存在。<br>由于电阻器件的存在，电流在通过电路时将遇到一定的阻碍，而0欧姆电阻的电阻值可忽略不计，因此电流能够自由通过该电阻器件，实现电路中的短路。</p><h3 id="用法">用法</h3><ul><li>方便调试或兼容设计<br>在设计PCB板的时候，需要考虑到兼容性的问题。例如：芯片的某个引脚拥有两项功能，可以驱动蜂鸣器，也可以驱动LED灯，但这两项功能不能同时工作，为了在同一块电路板上实现可以选择驱动哪个模块，此时可以在连接蜂鸣器和LED的线路上加上0欧姆电阻，想驱动蜂鸣器就焊接蜂鸣器通路上的0欧姆电阻，想驱动LED灯就焊接LED灯通路上的0欧姆电阻。</li><li>用作跳线<br>0欧姆电阻可以在电路板上的特定位置设计做跳线使用，能够方便的断开或连接部分线路，同时还是灵活设计，不贴电阻空着焊盘也不受后期影响。</li><li>跨接线路<br>在PCB布局布线的阶段，有时候会遇到布线走不通的情况，尤其是在电路板面积小，连线多，可能会遇到某一个连线需要绕很大一圈才能连通，这个时候可以连接一个0欧姆电阻，就可以跳过前面的导线。例如这两个白色的焊点，如果不直接连通就需要绕很多路线才能最终连通，如果是单层的PCB板也无法从下面打孔，用0欧姆电阻连通起来，可以减少多层PCB板的采购成本。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/0R%E7%94%B5%E9%98%BB%E8%B7%A8%E6%8E%A5%E7%BA%BF%E8%B7%AF.webp" alt="0R电阻跨接线路"></li><li>匹配电路参数不确定的时候，用0欧姆电阻代替<br>在匹配电路参数的时候参数无法确定，在实物测试的时候需要拿掉一个电阻或者需要更换不同的阻值，从而获得一个最佳的方案，这个时候通常就会用到0欧姆电阻。用0欧姆电阻代替，等实际调试后确定参数，再以具体数值的元器件代替。</li><li>测量电路功耗<br>设计电路时通常对电流有一定的要求，调试时测某部分电路的电流时，往往会非常麻烦，需要将原有PCB断开在进行测量，可以再待测区域放置一颗0欧电阻，测量时去掉0欧电阻，接上电流表，这样方便测耗电流。</li><li>充当电容或者电感<br>在高频信号下，零欧电阻与外部电路特性匹配情况下可以充当一个小的电容或者电感，可以很好地解决EMC问题，例如地与地，电源与芯片引脚之间。</li><li>用作保险丝，保护过流<br>由于PCB上走线的熔断电流比较大，如果发生短路过流等故障，很难熔断，可能会带来更大的事故。但0欧姆电阻电流承受能力比较弱，过流的时候会先把0欧姆电阻熔断了，这样就可以将电路断开，防止更大事故的发生。</li><li>模拟地和数字地单点接地<br>只要是地，最终都要接到一起，然后入大地。如果不接在一起就是&quot;浮地&quot;，存在压差，容易积累电荷，造成静电。<br>地是参考0电位，所有电压都是参考地得出的，地的标准要一致，故各种地应短接在一起。<br>人们认为大地能够吸收所有电荷，始终维持稳定，是最终的地参考点。虽然有些板子没有接大地，但发电厂是接大地的，板子上的电源最终还是会返回发电厂入地。<br>如果把模拟地和数字地大面积直接相连，会导致互相干扰。不短接又不妥，理由如上，有四种方法解决此问题：<br>(1)用磁珠连接;<br>(2)用电容连接;<br>(3)用电感连接;<br>(4)用0欧姆电阻连接。<br>0欧电阻相当于很窄的电流通路，能够有效地限制环路电流，使噪声得到抑制。电阻在所有频带上都有衰减作用(0欧电阻也有阻抗)，这点比磁珠强。</li><li>跨接时用于电流回路<br>当分割电地平面后，造成信号最短回流路径断裂，此时，信号回路不得不绕道，形成很大的环路面积，电场和磁场的影响就变强了，容易干扰/被干扰。在分割区上跨接0欧姆电阻，可以提供较短的回流路径，减小干扰。<br>如下图：两个信号在通信的时候处于不同的地平面，因此在这两个信号之间加0欧姆电阻，信号就会走最近路径。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E8%B7%A8%E6%8E%A5%E6%97%B6%E7%94%A8%E4%BA%8E%E7%94%B5%E6%B5%81%E5%9B%9E%E8%B7%AF.webp" alt="跨接时用于电流回路"></li><li>配置电路<br>一般产品上不要出现跳线和拨码开关。有时用户会乱动设置，易引起误会，为了减少维护费用，应用0欧电阻代替跳线等焊在板子上。空置跳线在高频时相当于天线，用贴片电阻效果好。如下图所示。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E9%85%8D%E7%BD%AE%E7%94%B5%E8%B7%AF.webp" alt="配置电路"></li><li>噪声抑制<br>由于0欧姆电阻本身的特性，能够有效抑制环路电流，从而使噪声得到抑制。实际上零欧电阻不是真的是没有阻抗，只有超导体才能够真的做到零阻抗。所以，0欧姆电阻在所有频带上其实都起到衰减的作用。</li></ul><h1>直插式电阻</h1><blockquote><p>直插式无源器件的体积一般比芯片式大，而且直接插入式器件在制作PCB时需要打孔，焊接技术和芯片式也有差异，比较麻烦，相对来说直接插入式电阻多用于大功率电路。<br>直插式电阻封装为<strong>AXIAL-xx</strong>形式(如AXIAL-0.3,AXIAL-0.4)，后边的xx代表焊盘中心间距为xx英寸。这一尺寸肯定比电阻本身稍大一些，常见的固定(色环)电阻如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/14f4aaae54a29f1a9dfceba8d3dfac22_%E5%9B%BE%E7%89%87%E6%B8%85%E6%99%B0%E5%8C%96.webp" alt="14f4aaae54a29f1a9dfceba8d3dfac22_图片清晰化"><br>普通包装：AXIAL-0.3,AXIAL-0.4,AXIAL-0.5,AXIAL-0.6,AXIAL-0.7,AXIAL-0.8,AXIAL-0.9,AXIAL-1.0。尺寸大小如下图(AXIAL-0.3，默认焊盘直径62mil，焊孔直径32mil)：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/v2-5af2f92ba19794ba567df0c12a4ad051_1440w_%E5%9B%BE%E7%89%87%E6%B8%85%E6%99%B0%E5%8C%96.webp" alt="v2-5af2f92ba19794ba567df0c12a4ad051_1440w_图片清晰化"><br>直插式电阻功率和封装尺寸：<br>1/8W-AXIAL-0.3<br>1/4W-AXIAL-0.4或者AXIAL-0.3(如果弯曲在电阻根附近)<br>1/2W-AXIAL-0.5或AXIAL-0.4(如果弯曲在电阻根附近)<br>1W-AXIAL-0.6或AXIAL-0.5(如果弯曲在电阻根附近)<br>2W-AXIAL-0.8(AXIAL-0.9的尺寸适合实际测量)<br>3W-AXIAL-1.0<br>5W-AXIAL-1.2</p></blockquote><h1>合金电阻</h1><p>一种采用金属合金材料制作的电阻器，其阻值随温度的变化相对较小。合金电阻的主要成分包括金属材料、贵金属以及一些特殊的功能材料。由于合金材料的多样性，合金电阻可以满足各种不同的性能需求，如低温度系数、高稳定性、高功率等。</p><h2 id="原理">原理</h2><p>一种利用合金材料电阻率与温度的关系来调节电阻值的电阻器件。通常使用的合金材料有镍铬合金、铜镍合金、镍铁合金等。这些合金材料具有较高的电阻率和较小的温度系数，可以在较宽的温度范围内保持较高的精度和稳定性。<br>合金电阻的电阻值与温度之间的关系可以通过以下公式表示：<br>Rt = R0 (1 + αt)<br>其中，Rt为温度为t时的电阻值，R0为参考温度下的电阻值，α为合金电阻的温度系数。<br>合金电阻的温度系数通常在百万分之几的范围内，而且可以根据不同的应用要求进行选择。例如，在高精度电路中，需要选用温度系数较小的合金电阻，以保证电路的稳定性和精度。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E9%87%91%E5%B1%9E%E7%9A%84%E7%94%B5%E9%98%BB%E7%8E%87.webp" alt="金属的电阻率"></p><h2 id="选型">选型</h2><p>合金电阻的选型需要考虑以下几个方面的因素：</p><ol><li>电阻值：根据电路的要求确定所需的电阻值范围。</li><li>精度：根据电路的要求确定所需的电阻精度，通常有±0.1%、±0.5%、±1%等级。</li><li>温度系数：根据电路的工作温度范围选择合适的温度系数。通常有±10ppm/℃、±25ppm/℃、±50ppm/℃等级。</li><li>功率：根据电路的要求确定所需的功率范围。</li><li>尺寸：根据电路的要求确定所需的尺寸。<br>在选型时，需要综合考虑以上因素，并根据实际应用情况进行选择。</li></ol><h2 id="设计要点">设计要点</h2><ol><li>电阻值的测量和校准：在实际应用中，合金电阻的电阻值可能会受到环境温度等因素的影响，因此需要定期进行测量和校准。通常采用<strong>四线法</strong>进行测量，以减小电源电阻对测量结果的影响。</li><li>温度的控制和补偿：在高精度电路中，需要对合金电阻的温度进行控制和补偿，以保证电路的稳定性和精度。通常采用温度传感器等设备对温度进行监测和控制，并通过软件算法对合金电阻的温度影响进行补偿。</li><li>功率的匹配：在多个合金电阻并联时，需要对各个电阻的功率进行匹配，以避免某个电阻工作过载而导致整个电路失效。通常采用串联电阻等方式对功率进行匹配。</li><li>尺寸的设计：在实际应用中，需要根据电路的要求选择合适的尺寸。如果空间允许，可以选择较大尺寸的合金电阻，以提高功率容量和散热性能。但是，尺寸过大也会影响电路的布局和组装。因此，在设计中需要综合考虑尺寸和功率容量等因素。</li><li>焊接和连接方式：在实际应用中，需要考虑合金电阻的焊接和连接方式。通常采用表面贴装、插件式等方式进行连接。为了保证焊接质量和可靠性，还需要选择合适的焊接工艺和焊接材料。</li></ol><h2 id="应用">应用</h2><p>合金电阻广泛应用于各种电子设备中，例如电源、放大器、传感器、稳压器、振荡器等。以下是几个典型的应用场景：</p><ol><li>电源稳压：合金电阻可以作为电源稳压电路中的电流限制器和调节器，在保证输出电压稳定性和精度的同时，提高电路的负载能力和可靠性。</li><li>放大器：合金电阻可以用于放大器电路中的反馈网络和负载电阻等部分，以调节放大器的增益和频率响应等性能。</li><li>传感器：合金电阻可以用于传感器电路中的温度补偿和校准等部分，以提高传感器的精度和稳定性。</li><li>振荡器：合金电阻可以用于振荡器电路中的反馈网络和调谐电路等部分，以提高振荡器的频率稳定性和精度。</li><li>电流检测与采样<br>电源适配器的恒流控制、负载监控依赖精准的电流采样数据，合金电阻因阻值精度高（可达 0.001%）、TCR 低（最低 1ppm/℃），成为电流采样的核心元件。<br><strong>应用原理</strong>： 将合金电阻串联在适配器的主电路或支路中，根据欧姆定律 (U=IR)，通过检测电阻两端的微小电压降，间接计算出回路电流值，反馈至控制芯片（如 PWM 控制器）实现电流闭环调节。<br><strong>核心优势</strong>：相较于普通电阻，合金电阻的低寄生电感（＜3nH）可减少高频信号干扰，确保采样信号的真实性；长期稳定性优异，避免因阻值漂移导致电流检测误差，保障适配器输出电流的一致性。</li><li>限流保护与过载防护<br>电源适配器在短路、负载异常等场景下，需快速限制电流峰值，防止电路烧毁，合金电阻的高功率承载能力与稳定限流特性可精准满足该需求。<br><strong>应用原理</strong>：根据适配器的额定电流，选用合适阻值与功率的合金电阻（计算公式：），当回路电流超过额定值时，电阻两端电压降增大，触发保护电路切断电源或降低输出功率，实现过载、短路防护。<br><strong>核心优势</strong>：毫欧电子合金电阻的额定功率覆盖 0.1W-36W（贴片系列）、0.5-20W（插件型），可耐受数倍于额定电流的脉冲冲击；采用 T2 紫铜、锰铜、卡玛等优质合金材料，散热性能优异，避免保护动作时自身烧毁。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E9%99%90%E6%B5%81%E4%BF%9D%E6%8A%A4%E5%8E%9F%E7%90%86.webp" alt="限流保护原理"></li><li>电压分压与信号调节<br>电源适配器的反馈回路中，需通过分压电阻稳定输出电压，避免因电网电压波动或负载变化导致输出电压漂移。<br><strong>应用原理</strong>：合金电阻与其他元件组成分压电路，利用其精准阻值分配电压信号，为控制芯片提供稳定的反馈电压，进而动态调整输出电压，确保适配器输出精度（通常误差≤±5%）。<br><strong>核心优势</strong>：合金电阻的允许误差低至 0.001%，可精准控制分压比例；温度系数低，在适配器工作温升（通常 40-80℃）范围内阻值变化小，保障分压信号的稳定性，避免输出电压波动。</li></ol><h2 id="特点和优势">特点和优势</h2><p>合金电阻相比于其他电阻器件，具有以下几个特点和优势：</p><ol><li>高精度：合金电阻的精度通常在±0.1%~±1%之间，可以满足高精度电路的要求。</li><li>高稳定性：合金电阻具有较小的温度系数和长期稳定性，可以在较宽的温度范围内保持稳定的电阻值。</li><li>高温度特性：合金电阻可以在较高的温度下正常工作，并且其电阻值与温度之间的关系比较线性。</li><li>高功率容量：合金电阻具有较高的功率容量，可以在较大的负载下正常工作。</li><li>耐腐蚀性好：合金电阻的材料具有较好的耐腐蚀性，可以在恶劣的环境下使用。</li></ol><h2 id="缺点">缺点</h2><p>合金电阻相比于其他电阻器件，也存在一些缺点和局限：</p><ol><li>价格较高：由于合金电阻的制造成本较高，因此其价格也比其他电阻器件要贵。</li><li>尺寸较大：由于合金电阻需要具有较高的功率容量和散热性能，因此其尺寸比其他电阻器件要大。</li><li>焊接和连接方式受限：由于合金电阻的材料比较特殊，因此在焊接和连接方面需要特殊的工艺和材料，增加了制造和使用的难度。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 器件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>场效应管</title>
+      <link href="/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/"/>
+      <url>/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/</url>
+      
+        <content type="html"><![CDATA[<p>电压驱动型器件<br>常用于信号开关、功率开关、电平转换等各种用途</p><h1>类型与应用</h1><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251010100155.webp" alt="Pasted image 20251010100155"><br>NMOS管：<br>- 电路符号：箭头往里，箭头方向代表电子走向<br>- 电子开关：控制信号G极为高电平时导通，低电平时断开<br>- 导通电阻小，导通功耗小<br>- [低边开关]{.label .danger}应用首选，驱动方便，选型灵活<br>- N沟道MOSFET驱动比较复杂，一般需要额外电源或[自举驱动]{.label .danger}<br>- MOS管==体二极管==的负极作为电源输入端<br>PMOS管：<br>- 电路符号：箭头往外，箭头方向代表电子走向<br>- 电子开关：控制信号G极为低电平时导通，高电平时断开<br>- 导通电阻大(制造工艺?)，导通功耗大<br>- [高边开关]{.label .danger}应用，用P沟道MOSFET驱动比较简单，但导通电阻相对较大，!!价格相对较高!!<br>- MOS管==体二极管==的负极作为电源输入端<br><strong>体二极管</strong>：MOS管不可避免的寄生二极管<br>影响：<br>- 正向压降较高会增加开关损耗，导致MOS管发热<br>- 在高频开关应用中，反向恢复时间和电流会影响效率和产生电磁干扰<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E4%BD%93%E4%BA%8C%E6%9E%81%E7%AE%A1.webp" alt="体二极管"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MOS%E9%A9%B1%E5%8A%A8%E7%94%B5%E8%B7%AF.webp" alt="MOS驱动电路"></p><h1>关键参数</h1><h2 id="阈值电压（Gate-source-threshold-voltage-，VGS-th-）">阈值电压（Gate-source threshold voltage ，VGS(th)）</h2><p><a href="https://toshiba-semicon-storage.com/cn/semiconductor/knowledge/faq/mosfet/electrical-characteristics-of-mosfetsstatic-characteristics-vth.html">MOSFET的电气特性（静态特性Vth） | 东芝半导体&amp;存储产品中国官网</a></p><ul><li>定义：使 MOS 导通的最小栅源电压，是 MOS 管从截止态进入导通态的临界电压（NMOS 正，PMOS 负）。</li><li>工作原理：当栅源电压 VGS&lt;∣Vth∣时，漏源之间无导电沟道，管子截止；当 VGS≥∣Vth∣时，电场会吸引漏源区的载流子，在栅极下方的衬底表面形成导电沟道，漏源之间可以导通电流。</li><li>特性：N 沟道 MOS 管 Vth一般为 1~4V，P 沟道 MOS 管 Vth 一般为 -1~-4V。温度升高时，Vth会线性下降。</li><li>实操：栅极驱动电压必须大于 Vth且留有足够裕量，否则 MOS 管无法完全导通，会导致导通损耗剧增。</li><li>测试：测量当源极与漏极之间有指定电流时的栅极电压。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Vth%E6%B5%8B%E9%87%8F.webp" alt="Vth测量"><br>栅极－源极电压（VGS）升高，直至漏极电流（ID）达到指定值。一旦达到该值，立即测量VGS。</li></ul><table><thead><tr><th>特性</th><th>符号</th><th>测试条件</th><th style="text-align:center">最小值</th><th style="text-align:center">典型值</th><th style="text-align:center">最大值</th><th>单位</th></tr></thead><tbody><tr><td>栅极阈值电压</td><td>Vth</td><td>VDS＝10V，ID＝1.0mA</td><td style="text-align:center">1.4</td><td style="text-align:center">—</td><td style="text-align:center">2.4</td><td>V</td></tr></tbody></table><h2 id="导通电阻（Drain-Source-On-State-Resistance-，RDS-on">导通电阻（Drain-Source On-State Resistance ，RDS(on)</h2><p><a href="https://www.zhxckj.com.cn/newsinfo/8281748.html">MOSFET 导通电阻（RDSON）参数解读-西安中昊芯测科技有限公司</a><br><a href="https://www.rohm.com.cn/electronics-basics/transistors/tr_what9">导通电阻_电子小百科_罗姆半导体集团(ROHM Semiconductor)</a></p><ul><li>定义：MOS 管完全导通（工作在线性区）时，漏极与源极之间的等效电阻，是 MOS 管导通状态下的核心损耗来源。（越小越好）</li><li>工作原理：当 VGS≫Vth时，MOS 管形成低阻导电沟道，Rds(on)由沟道的材料电阻率、沟道长度和宽度决定，芯片厂商通过增大沟道宽度（W）、减小沟道长度（L）来降低Rds(on)。</li><li>特性：VGS越大，Rds(on)越小，温度升高时，Rds(on)会显著增大。这是导致大电流下 MOS 管发热的主要原因。</li><li>实操：<br>MOSFET消耗的功率PD用MOSFET自身具有的导通电阻乘以漏极电流（ID)的平方表示（功率PD）＝（导通电阻RDS(ON) ） x （漏极电流ID）2。<br>Rds（on）越小，导通损耗（P=I²R）越低，大电流场景选低于几十毫欧的 MOS 管，降低大电流下的发热。</li><li>测试：<ol><li>施加栅源电压 VGS=10V（一般情况下），使器件处于完全导通状态。</li><li>逐渐施加漏源电压VDS，当流经MOSFET的漏极电流IDS达到特定值时（IDS 一般取器件最大连续漏极电流的一半），根据欧姆定律计算导通电阻RDSON=VDS/IDS</li></ol></li></ul><h2 id="漏极最大电流-Id-max">漏极最大电流 Id (max)</h2><ul><li>定义：MOS 管在安全工作区内，能够持续承受的最大直流漏极电流，部分手册还会给出脉冲最大漏极电流 Id（pules）（短时间内可承受的峰值电流）。<br>​- 工作原理：<br>特性：良好的散热条件可提升实际可承受的电流值，散热不良时，即使Id未达Id(max)，也可能因过热损坏。脉冲宽度越窄、占空比越小Id(pulse)越大。<br>实操：留 30% 裕量（5A 负载选 Id≥7.5A），配合散热评估。<br>例：电机启动、堵转时的峰值电流远大于额定电流，需保证峰值电流小于 Id(pulse)，持续工作电流小于Id(max)。</li></ul><h2 id="漏源击穿电压-Vds-max">漏源击穿电压 Vds (max)</h2><ul><li>定义：MOS管截止时，漏极与源极之间能够承受的最大反向电压，超过该值会导致MOS管雪崩击穿，永久损坏。</li><li>工作原理：MOS管截止时，漏源之间的PN结承受反向电压。当 Vds&gt;Vds(max)时，耗尽层内电场强度超过临界值，会引发雪崩击穿，漏极电流急剧增大，瞬间产生的高热量烧毁器件。</li><li>特性：温度升高时，Vds(max)会略有上升，实际应用中，需考虑电压波动和尖峰电压。</li><li>实操：电机驱动电路的母线电压峰值必须小于Vds(max)，留20%裕量。</li></ul><h2 id="体二极管参数（Is-Is-pulse-Vsd）">体二极管参数（Is/Is (pulse)/Vsd）</h2><p>定义：持续电流 / 脉冲电流 / 导通电压<br>MOS 管的寄生体二极管（又称续流二极管）是由器件结构决定（N 沟道 MOS 管的体区为 P 型，漏、源区为 N 型，形成 PN 结）。<br>工作原理：MOS 管截止时，若漏源电压极性反转，体二极管会自动导通，为感性负载提供续流回路，避免 MOS 管因尖峰电压击穿。<br>特性：正向电流增大而增大，随温度升高而减小，体二极管的反向恢复时间较长，高频续流时会产生较大的反向恢复损耗。<br>实操：仅用于续流，避免长期导通（如 BUCK 死区）</p><h1>测试</h1><p>MOS替代料测试验证流程：</p><ol><li>前期准备</li></ol><ul><li><strong>样品生产</strong>：使用新的MOS材料制作多个测试样品，以便进行反复测试。</li><li><strong>设备校准</strong>：确保所有测量和测试设备已准确校准，包括半导体参数分析仪、示波器等。</li></ul><ol start="2"><li>电气性能测试</li></ol><ul><li><strong>阈值电压</strong>：测量MOSFET的开启与关闭所需的栅极电压。</li><li><strong>导通电阻</strong>：测量器件在开启状态下的电阻，以确保功耗和热损失在可接受范围内。</li><li><strong>漏电流</strong>：检查在关闭状态下的漏电流，从而评估器件的关断能力。</li></ul><ol start="3"><li>功能验证</li></ol><ul><li><strong>开关速度</strong>：利用示波器测量器件的开通和关断时间，以确保其满足响应速度要求。</li><li><strong>控制信号</strong>：测试栅极驱动电压和电流，确保信号完整性。</li></ul><ol start="4"><li>热特性测试</li></ol><ul><li><strong>温度测试</strong>：在工作条件下运行电路，通过热成像监测热分布，确保温度在器件和电路板的额定范围内。</li><li><strong>热循环测试</strong>：通过多次高低温循环来验证器件的热稳定性。</li></ul><ol start="5"><li>稳定性和环境测试</li></ol><ul><li><strong>可靠性</strong>：进行长时间的开关循环测试，观察器件故障或性能退化情况。</li><li><strong>环境测试</strong>：在不同温湿度条件下运行测试，以评估其环境适应性。</li></ul><ol start="6"><li>信号完整性测试</li></ol><ul><li><strong>信号传输</strong>：使用示波器测量USART接口传输信号的波形，确保无波形扭曲或失真。</li><li><strong>数据完整性</strong>：通过发送和接收数据包来验证传输信号的完整性和误码率。</li></ul><ol start="7"><li>故障分析</li></ol><ul><li><strong>失效分析</strong>：若测试中发现异常，利用断层扫描或显微镜分析MOSFET内部结构。</li><li><strong>问题排查</strong>：调查异常信号路径或热噪声源以确定原因。</li></ul><ol start="8"><li>比较和数据分析</li></ol><ul><li><strong>性能比较</strong>：将新材料的测试结果与标准材料进行对比，查看两者在性能、效率和稳定性方面的差异。</li><li><strong>数据处理</strong>：分析测试数据，绘制I-V、热特性等图表，以便直观呈现差异和优势。</li></ul><ol start="9"><li>报告和决策</li></ol><ul><li><strong>报告撰写</strong>：整理测试结果，编制报告并提供改进建议或业务决策支持。</li><li><strong>评审和决策</strong>：根据测试结果和报告，决定新的MOS材料在产品中的应用与否。</li></ul><h1>实际电路</h1><h2 id="UART-接口的双向电平转换电路">UART 接口的双向电平转换电路</h2><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MB_UART.webp" alt="MB_UART"><br>UART 接口的双向电平转换电路，通过 DTS3402-MOS，配合两侧电源与上拉电阻，实现 MCU 侧和外部设备侧的信号电平匹配，同时提供静电防护。<br>发送通道（MCU→外部设备：MC_COM_TXD → OD_UART_RX）<br>接收通道（外部设备→MCU：OD_UART_TX → MC_COM_RXD）</p><h2 id="MCU-的-DEBUG-调试接口电路">MCU 的 DEBUG 调试接口电路</h2><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MB_DEBUG.webp" alt="MB_DEBUG"><br>核心功能是实现外部调试工具与 MCU 之间的 UART 通信，这个电路里的 MOS 管是 “动态导通”的 —— 仅在两侧信号有电平差时，Vgs才会达到Vth并导通传输信号，不会一直处于开启状态。<br>作用是实现双向电平转换 / 信号缓冲元件 。<br>当调试工具发高电平（3.3V）：<br>Q11 引脚 3 的电压≈3.3V，与引脚 1 的参考电压（VCC_3V3_MCU，也是 3.3V）一致，此时 MOS 管的Vgs≈0，MOS 关断；但引脚 2 被R154上拉到 3.3V，因此MCU_DEBUG_RXD收到高电平。<br>当调试工具发低电平（0V）：<br>Q11 引脚 3 的电压≈0V，与引脚 1 的参考电压（3.3V）形成Vgs=3.3V-0V=3.3V（大于 MOS 的开启电压Vth），MOS 导通；引脚 2 的电压被 MOS 拉低到 0V，因此MCU_DEBUG_RXD收到低电平。</p><h2 id="按键触发-自锁保持的大电流电源开关电路">按键触发 + 自锁保持的大电流电源开关电路</h2><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/MB_BUTTON.webp" alt="MB_BUTTON"><br>并联 PMOS 管的作用，PMOS 管的 “导通内阻” 会随电流增大而发热，而负载是VCC_21V_MOT，并联 PMOS 可以降低总导通内阻、提升载流能力，同时减少单管的发热风险。<br>核心逻辑：按键触发→PMOS 导通→自锁保持（按键松开维持供电）</p>]]></content>
       
       
       <categories>
