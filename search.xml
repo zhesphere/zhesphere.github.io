@@ -44,12 +44,24 @@
     
     <entry>
       <title>磁珠</title>
-      <link href="/2026/07/02/new/%E7%A3%81%E7%8F%A0/"/>
-      <url>/2026/07/02/new/%E7%A3%81%E7%8F%A0/</url>
+      <link href="/2026/07/02/electronic/component/bead/%E7%A3%81%E7%8F%A0/"/>
+      <url>/2026/07/02/electronic/component/bead/%E7%A3%81%E7%8F%A0/</url>
       
         <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/689025906">(33 封私信 / 80 条消息) 一分钟了解磁珠基础知识 - 知乎</a></p><h1>简介</h1><p>磁珠是一种被动器件，<strong>主要用来抑制高频噪声和尖峰干扰</strong>。<br>磁珠也称为磁环、EMI滤波器、铁芯等，主要材料为铁氧体，具有高电阻率和磁导率，<strong>利用高频电流产生的热耗散来抑制高频噪声</strong>，其结构如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%A3%81%E7%8F%A0%E7%BB%93%E6%9E%84%E5%9B%BE.webp" alt="磁珠结构图.png"></p><h1>工作原理</h1><p>磁珠的滤波是将流过它的干扰信号以热能的形式消耗掉。如下图所示<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%A3%81%E7%8F%A0%E6%BB%A4%E6%B3%A2.webp" alt="磁珠滤波.png"><br>磁珠的等效电路和频率阻抗曲线如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%A3%81%E7%8F%A0%E7%AD%89%E6%95%88%E7%94%B5%E8%B7%AF.webp" alt="磁珠等效电路.png"></p><h1>典型应用电路</h1><p>磁珠用来吸收高频干扰，一般用在电源之间或者信号线上。如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%A3%81%E7%8F%A0%E7%94%B5%E6%BA%90%E7%BA%BF.webp" alt="磁珠电源线.png"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%A3%81%E7%8F%A0%E4%BF%A1%E5%8F%B7%E7%BA%BF.webp" alt="磁珠信号线.png"></p>]]></content>
       
       
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 磁珠 </tag>
+            
+        </tags>
       
     </entry>
     
