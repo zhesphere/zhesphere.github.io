@@ -8,7 +8,7 @@
       <link href="/2026/07/13/new/%E5%A4%A9%E7%BA%BF/"/>
       <url>/2026/07/13/new/%E5%A4%A9%E7%BA%BF/</url>
       
-        <content type="html"><![CDATA[<p>天线是无线智能设备核心收发部件，当下WiFi、蓝牙等无线设备普及，天线性能直接决定使用体验，选型需兼顾性能与成本综合考量。</p><h1>分类</h1><h2 id="PCB板载天线">PCB板载天线</h2><p>这种天线成本低，但性能会稍微差一点。PCB板载天线也有几种形式。</p><h3 id="平面倒F型天线-PIFA">平面倒F型天线(PIFA)</h3><p>The Planar Inverted-F Antenna (PIFA) is a compact, low-profile antenna widely used in mobile devices, featuring a flat radiating element above a ground plane with a shorting pin to achieve quarter-wavelength resonance.</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/581724526">(33 封私信 / 80 条消息) 各种PCB板载天线以及PCB设计要点 - 知乎</a></p><p>天线是无线智能设备核心收发部件，当下WiFi、蓝牙等无线设备普及，天线性能直接决定使用体验，选型需兼顾性能与成本综合考量。</p><h1>分类</h1><h2 id="PCB板载天线">PCB板载天线</h2><p>这种天线成本低，但性能会稍微差一点。PCB板载天线也有几种形式。</p><h3 id="倒F型天线-PIFA">倒F型天线(PIFA)</h3><p>The Planar Inverted-F Antenna (PIFA) is a compact, low-profile antenna widely used in mobile devices, featuring a flat radiating element above a ground plane with a shorting pin to achieve quarter-wavelength resonance.<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92F%E7%9A%84PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF.webp" alt="倒F的PCB板载天线.png"></p><p>下面这个是上面平面倒F的PCB板载天线的变种，由于空间不够，扭曲一下。<br><strong>此倒F天线PCB设计都有哪些需要注意的问题？</strong><br>我们首先要知道这个射频知识，对于射频，任何铜箔，导线都不能看成是简单的导线，他是由很多阻容电路组成的一种等效电路，你看到短路的，对于射频就不是短路。以这个思路我们看看这个倒F天线的PCB设计。<br>如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92F%E7%9A%84PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF%E7%9A%84%E5%8F%98%E7%A7%8D.webp" alt="倒F的PCB板载天线的变种.png"><br>这里有六点要注意：</p><blockquote><p>1、这个倒F天线，不是随便画的，网上有专门的这种天线的库，拿过来，按要求放上去就好。如果空间不够，那就是自己通过仿真自己制作了自己专用的天线了<br>2、RF馈点这里引出来的线阻抗必须做到50ohm<br>3、接地馈点必须接地牢靠<br>4、地平面必须要多打地过孔，如上图所示，这个过孔间距多少合适的话，大家找一下可以看看<br>5、天线这里所有层铜箔必须净空<br>6、天线必须放在PCB板的角落里，最好三面都是空的，如图所示，上面三面都是空的</p></blockquote><p>手机上的天线叫平面倒F天线，原理上是用一个平面接上一个接地平面馈点，与RF馈点组成，如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%B9%B3%E9%9D%A2%E5%80%92F%E5%A4%A9%E7%BA%BF.webp" alt="平面倒F天线.png"><br>上图从左下方RF馈点这个箭头看过去，就是一个倒F。同样是倒F结构，但手机中的天线采用的是平面结构，这个倒F天线就比PCB板载天线性能就会好很多，这样空间又比较少，成本又低，对于手机天线是最好的选择。<br>实际的天线如下图5所示<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%AE%9E%E9%99%85%E7%9A%84%E6%89%8B%E6%9C%BA%E5%A4%A9%E7%BA%BF.webp" alt="实际的手机天线.png"><br>实际上这个平面对于不同手机有很多种形状，原理就是平面倒F结构，在这个平面上一个是接RF，一个是接地馈点就组成了平面倒F天线。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E4%B8%8D%E5%90%8C%E6%89%8B%E6%9C%BA%E5%A4%A9%E7%BA%BF.webp" alt="不同手机天线.png"><br>上图就是不同手机天线。他们的原理都是平面倒F天线</p><h3 id="倒L形天线">倒L形天线</h3><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92L%E5%BD%A2PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF.webp" alt="倒L形PCB板载天线.png"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92L%E5%BD%A2PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF1.webp" alt="倒L形PCB板载天线1.png"><br>此倒L形的需要注意的问题跟前面的差不多，倒L型天线没有倒F型天线效果好，因为倒F天线有一个接地馈点，能有效调节频点。</p><p>市面上有不少PCB板载天线，主要是上面两种，还有一些如下面的图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92L%E5%BD%A2PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF2.webp" alt="倒L形PCB板载天线2.png"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92L%E5%BD%A2PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF3.webp" alt="倒L形PCB板载天线3.png"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%80%92L%E5%BD%A2PCB%E6%9D%BF%E8%BD%BD%E5%A4%A9%E7%BA%BF4.webp" alt="倒L形PCB板载天线4.png"></p><h2 id="贴片陶瓷天线">贴片陶瓷天线</h2><p>这种天线做成了贴片元件，如下图所示<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E8%B4%B4%E7%89%87%E5%A4%A9%E7%BA%BF.webp" alt="贴片天线.png"><br>这种天线一端是接RF，一端是接地。陶瓷天线原理，就是通过一根叫做“天线”的电极将天线与地之间形成的高频电场变成电磁波，从而能发射出去并传波到远方。</p><p>PCB最好的布局布线方式就是以下方式<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E8%B4%B4%E7%89%87%E5%A4%A9%E7%BA%BF%E5%B8%83%E7%BA%BF%E6%96%B9%E5%BC%8F.webp" alt="贴片天线布线方式.png"><br>把陶瓷贴片天线放板边，一边接地，一边连RF信号，下面所有层铜箔都掏空（白色框所示区域）这样四个方向，至少2个方向都是空的，对天线的效果很好，不要忘记接地铜箔都要打上接地过孔，打多一点。</p><h2 id="棒状天线">棒状天线</h2><p>此种天线如下图所示，这种天线效果最好，它是置身于空间，辐射效果最好，但成本也是贵一点，占用的空间也大，只能是露在机壳外面。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E6%A3%92%E7%8A%B6%E5%A4%A9%E7%BA%BF.webp" alt="棒状天线.png"><br><strong>这种天线在PCB设计时要注意的问题</strong></p><blockquote><p>1、如果RF引线短，RF信号线下面所有层都要净空，如图所示，如果引出线比较长，那还要控制一下这根引出线的阻抗，多层板的话，需要把他下面的第二层净空，其它层铺完整铜，然后隔层参考地做阻抗，（<strong>为什么要隔层参考？</strong>）阻抗控制在50ohm.如图所示。<br>2、附近的接地铜箔必须接地牢靠，也就是要多打地孔。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E6%A3%92%E7%8A%B6%E5%A4%A9%E7%BA%BFPCB.webp" alt="棒状天线PCB.png"></p></blockquote><h1>电路</h1><p>这两个电路是两种完全不同定位的射频天线前端设计，核心差异来自<strong>天线形态、应用场景和设计目标</strong>，下面分别解析并对比说明。 ### 一、两个电路的各自功能与结构 #### 1. 第一个电路：外接天线的射频通路 这是<strong>外置天线的连接与防护电路</strong>，用于对接外部独立天线。 - <strong>核心链路</strong>：射频芯片引脚 <code>ANT_MAIN</code> → 0Ω电阻 <code>R2410</code> → 射频座 <code>SP2400</code>（外接天线接口）。 - <strong>关键器件作用</strong>： - <code>R2410（0Ω）</code>：预留的串联调试位，可更换为电阻/电感用于阻抗微调；默认0Ω相当于直连，不影响信号传输。 - <code>D2401（PTUC0521NC）</code>：ESD/TVS静电保护器件，并联在信号线上泄放静电、浪涌电压，保护后端射频芯片。 - <code>C2418 / C2419（NC/10pF）</code>：预留的对地匹配电容，默认不焊接（NC=Not Connect），仅在天线阻抗偏离50Ω时，选配对应容值做匹配调试。 - <code>SP2400</code>：射频连接器（通常是IPEX/UF.L座），用于外接天线（棒状天线、FPC天线等）。 - <strong>设计目标</strong>：在50Ω标准阻抗的基础上，提供外置天线的物理接口，同时解决外露接口的静电防护问题，预留调试位适配不同外接天线。 #### 2. 第二个电路：板载天线的阻抗匹配电路 这是<strong>板载天线的LC阻抗匹配网络</strong>，直接连接PCB上的天线辐射体。 - <strong>核心拓扑</strong>：板载天线 <code>E1</code> → 对地电容 <code>C10（1.8pF）</code> → 串联电感 <code>L3（1.8nH）</code> → 对地电容 <code>C11（1.8pF）</code> → 射频芯片 <code>ANT</code> 引脚，属于典型的<strong>π型LC匹配网络</strong>。 - <strong>关键器件作用</strong>： - <code>E1</code>：板载天线辐射体（PCB天线、陶瓷天线等，直接做在电路板上）。 - π型LC网络：核心作用是<strong>阻抗变换</strong>——板载天线受PCB布局、周边器件、产品结构影响，阻抗通常偏离标准50Ω，通过电容+电感的组合，把天线阻抗匹配到射频芯片要求的50Ω，实现最大功率传输；同时兼具低通滤波作用，抑制高频杂散。 - <strong>设计目标</strong>：针对板载天线的非标准阻抗做精准匹配，最大化射频收发性能；因天线在产品内部，无外露接触点，故省略ESD防护。 ### 二、核心区别对比 | 对比维度 | 第一个电路（外接天线通路） | 第二个电路（板载天线匹配） | | :— | :— | :— | | <strong>天线形态</strong> | 外置独立天线，通过连接器连接 | 板载天线，辐射体集成在PCB上 | | <strong>电路核心功能</strong> | 信号通路+静电防护+预留匹配 | 精准阻抗匹配+滤波 | | <strong>拓扑结构</strong> | 串联0Ω电阻 + 并联ESD器件 + 预留电容 | π型LC网络（串电感+双并电容） | | <strong>ESD防护</strong> | 有专用TVS/ESD保护器件 | 无专用防护器件 | | <strong>匹配设计</strong> | 预留NC器件位，默认直连，按需调试 | 固定参数LC网络，主动做阻抗变换 | | <strong>物理接口</strong> | 带射频连接器，可插拔天线 | 无连接器，天线与主板一体 | ### 三、为什么设计不一样 两者的差异本质是<strong>应用场景与设计优先级不同</strong>： 1. <strong>风险与可靠性需求不同</strong> 外接天线有外露的接口和线缆，插拔、人体接触会带来很高的静电（ESD）损坏风险，因此必须加入ESD防护器件；板载天线封闭在产品内部，没有人体直接接触的路径，ESD风险极低，省略防护器件可以降低成本、减少布线损耗。 2. <strong>阻抗匹配的需求强度不同</strong> 外置天线（标准棒状天线、IPEX天线模组）出厂时通常已经调试到标准50Ω，因此通路默认0Ω直连，只预留匹配位做少量微调； 板载天线的阻抗受PCB材质、走线、周边金属器件、产品外壳影响极大，几乎不可能天然匹配50Ω，必须通过LC匹配网络做精准的阻抗变换，才能保证发射效率和接收灵敏度。 3. <strong>产品结构与定位不同</strong> 外接天线方案多用于金属外壳、屏蔽环境、对信号强度要求高的设备，需要把天线伸出到信号好的位置； 板载天线方案主打小型化、一体化、无外露部件，多用于消费级内置天线产品，依靠匹配电路来弥补板载天线的性能局限。</p>]]></content>
       
       
       
@@ -1529,56 +1529,6 @@
     
     
     <entry>
-      <title>图纸</title>
-      <link href="/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/"/>
-      <url>/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/</url>
-      
-        <content type="html"><![CDATA[<h1>符号</h1><p>2-Φ6–制图中共有两个直径为6毫米的孔（圆）</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电子 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 工程制图 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>EMC&amp;RF</title>
-      <link href="/2025/11/01/electronic/electronic%20test/EMC&amp;RF/"/>
-      <url>/2025/11/01/electronic/electronic%20test/EMC&amp;RF/</url>
-      
-        <content type="html"><![CDATA[<h1>EMC Test Procedure</h1><p>辐射测试<br>切点到参考点距离3米，天线后移<br>3米和10米有差异以10米为准<br>国内3米留余量，国外10米测<br>10米偏差基本在1-1.5db<br>10米标准要求±4db</p><p>传导(AAN)</p><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251106103453.webp" alt="Pasted image 20251106103453"></p><p>锂电池产品<br>风险：充满变成绿灯，再加干扰变成红灯，过充风险；已经充满但是灯被干扰</p><p>屏幕<br>风险：加干扰触摸失效，卡住(用手试试)</p><h1>RED</h1><p>Radio Equipment(无线产品)</p><ul><li>无线电传输</li><li>无线电侦测</li><li>无线接收机</li></ul><p>频率范围0-3000HZ<br>红外遥控器超过3000HZ，波长比较短</p><p>Essential Requirements of RED<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251106104503.webp" alt="Pasted image 20251106104503"><br>整机不能说符合RED同时符合EMC？</p><p>RED Cyber Security<br>wifi/4G要有，欧盟海关</p><p>Conformity assessment procedures of RED<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251106105049.webp" alt="Pasted image 20251106105049"></p><p>说明书</p><ul><li>使用的无线技术的频率范围</li><li>使用的无线技术的额定最大发射功率</li></ul><h1>EMC三要素</h1><p>Source–Reduce EMC source<br>Path–Cut off the transmission path<br>Object–Strengthen the immunity ability<br>思路：干扰尽量从地线走掉<br>电机正转反转干扰程度不一样<br>锂电池包电压降到百分之二三十，功能打开？干扰会非常大</p><h2 id="影响辐射发射的因素">影响辐射发射的因素</h2><ul><li>天线极化方向：一般垂直会更差，但也有例外</li><li>输入电压、电流不同：一般大电流辐射更差</li><li>不同的工作模式，辐射结果不同</li><li>不同厂家的EMC关键元器件，辐射结果不同，比如电机、电源等等</li><li>产品的测试布置</li></ul><h2 id="影响传导发射的因素">影响传导发射的因素</h2><ul><li>电源质量：AC/DC,DC/DC</li><li>工作模式</li><li>测试布置</li></ul><h1>RF测试</h1><ul><li>发射功率和功率谱密度是通过传导法测试，EUT需要把天线割断并焊出带sma接口的线缆；通过定频发射测试，设定值需要确定并提前摸底</li><li>自适应测试需要EUT与辅助设备(CMW或者路由器)链接并跑量，一般通过Iperf软件跑量；EUT需要刷固件以满足以上测试条件</li><li>杂散测试是辐射法，天线需保留，模块需要通过整机供电，其余功能可关闭</li></ul><h1>研发前期</h1><ul><li>研发初期，layout布板要有EMC的考量，对于可能得干扰源要预留后期整改的位置：比如晶振输出线上预留0欧姆电阻，AC/DC或者DC/DC输入输出线上预留滤波电路的位置等等</li><li>高风险项目在正式认证开始前摸底：比如辐射发射、传导发射、辐射杂散等</li><li>电动工具这类产品，电机的影响较大，带不带地线对传导也有很大影响</li><li>RF测试需要提供定频软件及定频软件的操作说明；软件的设定值有明确数值；自适应测试值最好可以通过Iperf跑流，如果无法实现，占空比数值会比较低，需要申明</li><li>辐射测试的布置问题</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电子 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 电子测试 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>PCB封装</title>
       <link href="/2025/11/01/electronic/eda/PCB%E5%B0%81%E8%A3%85/"/>
       <url>/2025/11/01/electronic/eda/PCB%E5%B0%81%E8%A3%85/</url>
@@ -1604,6 +1554,31 @@
     
     
     <entry>
+      <title>图纸</title>
+      <link href="/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/"/>
+      <url>/2025/11/01/electronic/engineering%20drawing/%E5%9B%BE%E7%BA%B8/</url>
+      
+        <content type="html"><![CDATA[<h1>符号</h1><p>2-Φ6–制图中共有两个直径为6毫米的孔（圆）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 工程制图 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>线束</title>
       <link href="/2025/11/01/electronic/wire/%E7%BA%BF%E6%9D%9F/"/>
       <url>/2025/11/01/electronic/wire/%E7%BA%BF%E6%9D%9F/</url>
@@ -1621,6 +1596,31 @@
         <tags>
             
             <tag> 线束 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>EMC&amp;RF</title>
+      <link href="/2025/11/01/electronic/electronic%20test/EMC&amp;RF/"/>
+      <url>/2025/11/01/electronic/electronic%20test/EMC&amp;RF/</url>
+      
+        <content type="html"><![CDATA[<h1>EMC Test Procedure</h1><p>辐射测试<br>切点到参考点距离3米，天线后移<br>3米和10米有差异以10米为准<br>国内3米留余量，国外10米测<br>10米偏差基本在1-1.5db<br>10米标准要求±4db</p><p>传导(AAN)</p><p><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251106103453.webp" alt="Pasted image 20251106103453"></p><p>锂电池产品<br>风险：充满变成绿灯，再加干扰变成红灯，过充风险；已经充满但是灯被干扰</p><p>屏幕<br>风险：加干扰触摸失效，卡住(用手试试)</p><h1>RED</h1><p>Radio Equipment(无线产品)</p><ul><li>无线电传输</li><li>无线电侦测</li><li>无线接收机</li></ul><p>频率范围0-3000HZ<br>红外遥控器超过3000HZ，波长比较短</p><p>Essential Requirements of RED<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251106104503.webp" alt="Pasted image 20251106104503"><br>整机不能说符合RED同时符合EMC？</p><p>RED Cyber Security<br>wifi/4G要有，欧盟海关</p><p>Conformity assessment procedures of RED<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/Pasted%20image%2020251106105049.webp" alt="Pasted image 20251106105049"></p><p>说明书</p><ul><li>使用的无线技术的频率范围</li><li>使用的无线技术的额定最大发射功率</li></ul><h1>EMC三要素</h1><p>Source–Reduce EMC source<br>Path–Cut off the transmission path<br>Object–Strengthen the immunity ability<br>思路：干扰尽量从地线走掉<br>电机正转反转干扰程度不一样<br>锂电池包电压降到百分之二三十，功能打开？干扰会非常大</p><h2 id="影响辐射发射的因素">影响辐射发射的因素</h2><ul><li>天线极化方向：一般垂直会更差，但也有例外</li><li>输入电压、电流不同：一般大电流辐射更差</li><li>不同的工作模式，辐射结果不同</li><li>不同厂家的EMC关键元器件，辐射结果不同，比如电机、电源等等</li><li>产品的测试布置</li></ul><h2 id="影响传导发射的因素">影响传导发射的因素</h2><ul><li>电源质量：AC/DC,DC/DC</li><li>工作模式</li><li>测试布置</li></ul><h1>RF测试</h1><ul><li>发射功率和功率谱密度是通过传导法测试，EUT需要把天线割断并焊出带sma接口的线缆；通过定频发射测试，设定值需要确定并提前摸底</li><li>自适应测试需要EUT与辅助设备(CMW或者路由器)链接并跑量，一般通过Iperf软件跑量；EUT需要刷固件以满足以上测试条件</li><li>杂散测试是辐射法，天线需保留，模块需要通过整机供电，其余功能可关闭</li></ul><h1>研发前期</h1><ul><li>研发初期，layout布板要有EMC的考量，对于可能得干扰源要预留后期整改的位置：比如晶振输出线上预留0欧姆电阻，AC/DC或者DC/DC输入输出线上预留滤波电路的位置等等</li><li>高风险项目在正式认证开始前摸底：比如辐射发射、传导发射、辐射杂散等</li><li>电动工具这类产品，电机的影响较大，带不带地线对传导也有很大影响</li><li>RF测试需要提供定频软件及定频软件的操作说明；软件的设定值有明确数值；自适应测试值最好可以通过Iperf跑流，如果无法实现，占空比数值会比较低，需要申明</li><li>辐射测试的布置问题</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 电子测试 </tag>
             
         </tags>
       
@@ -1882,31 +1882,6 @@
     
     
     <entry>
-      <title>光耦</title>
-      <link href="/2025/09/06/electronic/component/optical%20coupler/%E5%85%89%E8%80%A6/"/>
-      <url>/2025/09/06/electronic/component/optical%20coupler/%E5%85%89%E8%80%A6/</url>
-      
-        <content type="html"><![CDATA[<h1>是什么</h1><h2 id="介绍">介绍</h2><p>实现信号隔离的元器件，通常用于各部分电路之间，使其不互相受到影响<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%85%89%E8%80%A6%E5%AE%9E%E7%89%A9%E5%9B%BE.webp" alt="光耦实物图"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%85%89%E8%80%A6%E5%8E%9F%E7%90%86%E5%9B%BE.webp" alt="光耦原理图"></p><h2 id="内部结构及其使用原理">内部结构及其使用原理</h2><p>由一个发光二极管和一个光敏三极管封装而成<br>使用原理：当发光二极管有信号输入时，会被点亮，此时光敏三极管导通，从而使得右边电路可以正常工作</p><h2 id="基本电路应用">基本电路应用</h2><p>常见的光耦电路结构：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%85%89%E8%80%A6%E7%94%B5%E8%B7%AF.webp" alt="光耦电路"><br>光耦的两边各有两个引脚分别连接MCU与外围电路，并且两边信号没有直接联系。上图右边为MCU部分，左边为外围电路，<strong>倘若左边电路因电流过大而被烧毁，也不会影响右边MCU正常工作</strong>，这就是光耦在实际电路中的作用<br><strong>R1的作用</strong>：光耦的1引脚为电源输入端，发光二极管的耐压值有限，所以要添加电阻进行限流，否则会烧毁。阻值一般选择1K-10K，将电流控制在100uA左右。电流越大，三极管导通速度越快，具体选值要根据手册来计算<br><strong>C1的作用</strong>：C1电容与R1电阻搭配来使用，对输入信号进行滤波，由于不知道现场的干扰频率，所以这里的电容普遍选值为10nF或者100nF<br>理想信号：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%90%86%E6%83%B3%E4%BF%A1%E5%8F%B7.webp" alt="理想信号"><br>实际信号会受到现场噪声影响，有许多小毛刺，不够平滑<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%AE%9E%E9%99%85%E4%BF%A1%E5%8F%B7.webp" alt="实际信号"><br>加了电容之后，这些小毛刺都会被吸收掉，使得信号更加平滑<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E6%BB%A4%E6%B3%A2%E4%BF%A1%E5%8F%B7.webp" alt="滤波信号"><br><strong>R2的作用</strong>：当光耦的1引脚没有信号进来时，此时引脚的状态为浮空，我们应该避免引脚处于浮空，所以在这里接个电阻使得引脚接地，为0V、低电平。这样就可以确保二极管百分百不会发光<br><strong>R3的作用</strong>：与R2同理，使得引脚处于固定电平，避免因浮空状态而造成电路工作混乱<br><strong>D1的作用</strong>：D1是一个稳压二极管，用来保护发光二极管。人的手在碰到电路板时，可能会有静电产生，人体静电可达几千伏甚至几万伏，此时稳压二极管会瞬间被击穿，并吸收电能后将其释放，从而起到保护作用</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 电子 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 器件 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>场效应管</title>
       <link href="/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/"/>
       <url>/2025/09/06/electronic/component/mos/%E5%9C%BA%E6%95%88%E5%BA%94%E7%AE%A1/</url>
@@ -1937,6 +1912,31 @@
       <url>/2025/09/06/electronic/component/resistor/%E7%94%B5%E9%98%BB/</url>
       
         <content type="html"><![CDATA[<p>三星网站有单独规格书<br><strong>电阻阻值精度字母代码：</strong><br>L=±0.01%<br>P=±0.02%<br>W=±0.05%<br>B=±0.1%<br>C=±0.25%<br>D=±0.5%<br>==F=±1%==<br>G=±2%<br>H=±3%<br>==J=±5%==<br>==K=±10%==<br>==M=±20%==<br>N=±30%<br>电阻1%覆盖5%</p><h2 id="0Ω电阻-Jumper">0Ω电阻(Jumper)</h2><h3 id="定义">定义</h3><p>0欧姆电阻的阻值不完全是0，只有超导体才具有阻值完全为零的特性。<br>0欧姆电阻又称为跨接电阻器，是一种特殊用途的电阻，其电阻值非常非常小，接近于零，理论上，0欧姆电阻的电阻值可视为0，是属于完全导体的存在。<br>由于电阻器件的存在，电流在通过电路时将遇到一定的阻碍，而0欧姆电阻的电阻值可忽略不计，因此电流能够自由通过该电阻器件，实现电路中的短路。</p><h3 id="用法">用法</h3><ul><li>方便调试或兼容设计<br>在设计PCB板的时候，需要考虑到兼容性的问题。例如：芯片的某个引脚拥有两项功能，可以驱动蜂鸣器，也可以驱动LED灯，但这两项功能不能同时工作，为了在同一块电路板上实现可以选择驱动哪个模块，此时可以在连接蜂鸣器和LED的线路上加上0欧姆电阻，想驱动蜂鸣器就焊接蜂鸣器通路上的0欧姆电阻，想驱动LED灯就焊接LED灯通路上的0欧姆电阻。</li><li>用作跳线<br>0欧姆电阻可以在电路板上的特定位置设计做跳线使用，能够方便的断开或连接部分线路，同时还是灵活设计，不贴电阻空着焊盘也不受后期影响。</li><li>跨接线路<br>在PCB布局布线的阶段，有时候会遇到布线走不通的情况，尤其是在电路板面积小，连线多，可能会遇到某一个连线需要绕很大一圈才能连通，这个时候可以连接一个0欧姆电阻，就可以跳过前面的导线。例如这两个白色的焊点，如果不直接连通就需要绕很多路线才能最终连通，如果是单层的PCB板也无法从下面打孔，用0欧姆电阻连通起来，可以减少多层PCB板的采购成本。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/0R%E7%94%B5%E9%98%BB%E8%B7%A8%E6%8E%A5%E7%BA%BF%E8%B7%AF.webp" alt="0R电阻跨接线路"></li><li>匹配电路参数不确定的时候，用0欧姆电阻代替<br>在匹配电路参数的时候参数无法确定，在实物测试的时候需要拿掉一个电阻或者需要更换不同的阻值，从而获得一个最佳的方案，这个时候通常就会用到0欧姆电阻。用0欧姆电阻代替，等实际调试后确定参数，再以具体数值的元器件代替。</li><li>测量电路功耗<br>设计电路时通常对电流有一定的要求，调试时测某部分电路的电流时，往往会非常麻烦，需要将原有PCB断开在进行测量，可以再待测区域放置一颗0欧电阻，测量时去掉0欧电阻，接上电流表，这样方便测耗电流。</li><li>充当电容或者电感<br>在高频信号下，零欧电阻与外部电路特性匹配情况下可以充当一个小的电容或者电感，可以很好地解决EMC问题，例如地与地，电源与芯片引脚之间。</li><li>用作保险丝，保护过流<br>由于PCB上走线的熔断电流比较大，如果发生短路过流等故障，很难熔断，可能会带来更大的事故。但0欧姆电阻电流承受能力比较弱，过流的时候会先把0欧姆电阻熔断了，这样就可以将电路断开，防止更大事故的发生。</li><li>模拟地和数字地单点接地<br>只要是地，最终都要接到一起，然后入大地。如果不接在一起就是&quot;浮地&quot;，存在压差，容易积累电荷，造成静电。<br>地是参考0电位，所有电压都是参考地得出的，地的标准要一致，故各种地应短接在一起。<br>人们认为大地能够吸收所有电荷，始终维持稳定，是最终的地参考点。虽然有些板子没有接大地，但发电厂是接大地的，板子上的电源最终还是会返回发电厂入地。<br>如果把模拟地和数字地大面积直接相连，会导致互相干扰。不短接又不妥，理由如上，有四种方法解决此问题：<br>(1)用磁珠连接;<br>(2)用电容连接;<br>(3)用电感连接;<br>(4)用0欧姆电阻连接。<br>0欧电阻相当于很窄的电流通路，能够有效地限制环路电流，使噪声得到抑制。电阻在所有频带上都有衰减作用(0欧电阻也有阻抗)，这点比磁珠强。</li><li>跨接时用于电流回路<br>当分割电地平面后，造成信号最短回流路径断裂，此时，信号回路不得不绕道，形成很大的环路面积，电场和磁场的影响就变强了，容易干扰/被干扰。在分割区上跨接0欧姆电阻，可以提供较短的回流路径，减小干扰。<br>如下图：两个信号在通信的时候处于不同的地平面，因此在这两个信号之间加0欧姆电阻，信号就会走最近路径。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E8%B7%A8%E6%8E%A5%E6%97%B6%E7%94%A8%E4%BA%8E%E7%94%B5%E6%B5%81%E5%9B%9E%E8%B7%AF.webp" alt="跨接时用于电流回路"></li><li>配置电路<br>一般产品上不要出现跳线和拨码开关。有时用户会乱动设置，易引起误会，为了减少维护费用，应用0欧电阻代替跳线等焊在板子上。空置跳线在高频时相当于天线，用贴片电阻效果好。如下图所示。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E9%85%8D%E7%BD%AE%E7%94%B5%E8%B7%AF.webp" alt="配置电路"></li><li>噪声抑制<br>由于0欧姆电阻本身的特性，能够有效抑制环路电流，从而使噪声得到抑制。实际上零欧电阻不是真的是没有阻抗，只有超导体才能够真的做到零阻抗。所以，0欧姆电阻在所有频带上其实都起到衰减的作用。</li></ul><h1>直插式电阻</h1><blockquote><p>直插式无源器件的体积一般比芯片式大，而且直接插入式器件在制作PCB时需要打孔，焊接技术和芯片式也有差异，比较麻烦，相对来说直接插入式电阻多用于大功率电路。<br>直插式电阻封装为<strong>AXIAL-xx</strong>形式(如AXIAL-0.3,AXIAL-0.4)，后边的xx代表焊盘中心间距为xx英寸。这一尺寸肯定比电阻本身稍大一些，常见的固定(色环)电阻如下图所示：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/14f4aaae54a29f1a9dfceba8d3dfac22_%E5%9B%BE%E7%89%87%E6%B8%85%E6%99%B0%E5%8C%96.webp" alt="14f4aaae54a29f1a9dfceba8d3dfac22_图片清晰化"><br>普通包装：AXIAL-0.3,AXIAL-0.4,AXIAL-0.5,AXIAL-0.6,AXIAL-0.7,AXIAL-0.8,AXIAL-0.9,AXIAL-1.0。尺寸大小如下图(AXIAL-0.3，默认焊盘直径62mil，焊孔直径32mil)：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/v2-5af2f92ba19794ba567df0c12a4ad051_1440w_%E5%9B%BE%E7%89%87%E6%B8%85%E6%99%B0%E5%8C%96.webp" alt="v2-5af2f92ba19794ba567df0c12a4ad051_1440w_图片清晰化"><br>直插式电阻功率和封装尺寸：<br>1/8W-AXIAL-0.3<br>1/4W-AXIAL-0.4或者AXIAL-0.3(如果弯曲在电阻根附近)<br>1/2W-AXIAL-0.5或AXIAL-0.4(如果弯曲在电阻根附近)<br>1W-AXIAL-0.6或AXIAL-0.5(如果弯曲在电阻根附近)<br>2W-AXIAL-0.8(AXIAL-0.9的尺寸适合实际测量)<br>3W-AXIAL-1.0<br>5W-AXIAL-1.2</p></blockquote><h1>合金电阻</h1><p>一种采用金属合金材料制作的电阻器，其阻值随温度的变化相对较小。合金电阻的主要成分包括金属材料、贵金属以及一些特殊的功能材料。由于合金材料的多样性，合金电阻可以满足各种不同的性能需求，如低温度系数、高稳定性、高功率等。</p><h2 id="原理">原理</h2><p>一种利用合金材料电阻率与温度的关系来调节电阻值的电阻器件。通常使用的合金材料有镍铬合金、铜镍合金、镍铁合金等。这些合金材料具有较高的电阻率和较小的温度系数，可以在较宽的温度范围内保持较高的精度和稳定性。<br>合金电阻的电阻值与温度之间的关系可以通过以下公式表示：<br>Rt = R0 (1 + αt)<br>其中，Rt为温度为t时的电阻值，R0为参考温度下的电阻值，α为合金电阻的温度系数。<br>合金电阻的温度系数通常在百万分之几的范围内，而且可以根据不同的应用要求进行选择。例如，在高精度电路中，需要选用温度系数较小的合金电阻，以保证电路的稳定性和精度。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E9%87%91%E5%B1%9E%E7%9A%84%E7%94%B5%E9%98%BB%E7%8E%87.webp" alt="金属的电阻率"></p><h2 id="选型">选型</h2><p>合金电阻的选型需要考虑以下几个方面的因素：</p><ol><li>电阻值：根据电路的要求确定所需的电阻值范围。</li><li>精度：根据电路的要求确定所需的电阻精度，通常有±0.1%、±0.5%、±1%等级。</li><li>温度系数：根据电路的工作温度范围选择合适的温度系数。通常有±10ppm/℃、±25ppm/℃、±50ppm/℃等级。</li><li>功率：根据电路的要求确定所需的功率范围。</li><li>尺寸：根据电路的要求确定所需的尺寸。<br>在选型时，需要综合考虑以上因素，并根据实际应用情况进行选择。</li></ol><h2 id="设计要点">设计要点</h2><ol><li>电阻值的测量和校准：在实际应用中，合金电阻的电阻值可能会受到环境温度等因素的影响，因此需要定期进行测量和校准。通常采用<strong>四线法</strong>进行测量，以减小电源电阻对测量结果的影响。</li><li>温度的控制和补偿：在高精度电路中，需要对合金电阻的温度进行控制和补偿，以保证电路的稳定性和精度。通常采用温度传感器等设备对温度进行监测和控制，并通过软件算法对合金电阻的温度影响进行补偿。</li><li>功率的匹配：在多个合金电阻并联时，需要对各个电阻的功率进行匹配，以避免某个电阻工作过载而导致整个电路失效。通常采用串联电阻等方式对功率进行匹配。</li><li>尺寸的设计：在实际应用中，需要根据电路的要求选择合适的尺寸。如果空间允许，可以选择较大尺寸的合金电阻，以提高功率容量和散热性能。但是，尺寸过大也会影响电路的布局和组装。因此，在设计中需要综合考虑尺寸和功率容量等因素。</li><li>焊接和连接方式：在实际应用中，需要考虑合金电阻的焊接和连接方式。通常采用表面贴装、插件式等方式进行连接。为了保证焊接质量和可靠性，还需要选择合适的焊接工艺和焊接材料。</li></ol><h2 id="应用">应用</h2><p>合金电阻广泛应用于各种电子设备中，例如电源、放大器、传感器、稳压器、振荡器等。以下是几个典型的应用场景：</p><ol><li>电源稳压：合金电阻可以作为电源稳压电路中的电流限制器和调节器，在保证输出电压稳定性和精度的同时，提高电路的负载能力和可靠性。</li><li>放大器：合金电阻可以用于放大器电路中的反馈网络和负载电阻等部分，以调节放大器的增益和频率响应等性能。</li><li>传感器：合金电阻可以用于传感器电路中的温度补偿和校准等部分，以提高传感器的精度和稳定性。</li><li>振荡器：合金电阻可以用于振荡器电路中的反馈网络和调谐电路等部分，以提高振荡器的频率稳定性和精度。</li><li>电流检测与采样<br>电源适配器的恒流控制、负载监控依赖精准的电流采样数据，合金电阻因阻值精度高（可达 0.001%）、TCR 低（最低 1ppm/℃），成为电流采样的核心元件。<br><strong>应用原理</strong>： 将合金电阻串联在适配器的主电路或支路中，根据欧姆定律 (U=IR)，通过检测电阻两端的微小电压降，间接计算出回路电流值，反馈至控制芯片（如 PWM 控制器）实现电流闭环调节。<br><strong>核心优势</strong>：相较于普通电阻，合金电阻的低寄生电感（＜3nH）可减少高频信号干扰，确保采样信号的真实性；长期稳定性优异，避免因阻值漂移导致电流检测误差，保障适配器输出电流的一致性。</li><li>限流保护与过载防护<br>电源适配器在短路、负载异常等场景下，需快速限制电流峰值，防止电路烧毁，合金电阻的高功率承载能力与稳定限流特性可精准满足该需求。<br><strong>应用原理</strong>：根据适配器的额定电流，选用合适阻值与功率的合金电阻（计算公式：），当回路电流超过额定值时，电阻两端电压降增大，触发保护电路切断电源或降低输出功率，实现过载、短路防护。<br><strong>核心优势</strong>：毫欧电子合金电阻的额定功率覆盖 0.1W-36W（贴片系列）、0.5-20W（插件型），可耐受数倍于额定电流的脉冲冲击；采用 T2 紫铜、锰铜、卡玛等优质合金材料，散热性能优异，避免保护动作时自身烧毁。<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E9%99%90%E6%B5%81%E4%BF%9D%E6%8A%A4%E5%8E%9F%E7%90%86.webp" alt="限流保护原理"></li><li>电压分压与信号调节<br>电源适配器的反馈回路中，需通过分压电阻稳定输出电压，避免因电网电压波动或负载变化导致输出电压漂移。<br><strong>应用原理</strong>：合金电阻与其他元件组成分压电路，利用其精准阻值分配电压信号，为控制芯片提供稳定的反馈电压，进而动态调整输出电压，确保适配器输出精度（通常误差≤±5%）。<br><strong>核心优势</strong>：合金电阻的允许误差低至 0.001%，可精准控制分压比例；温度系数低，在适配器工作温升（通常 40-80℃）范围内阻值变化小，保障分压信号的稳定性，避免输出电压波动。</li></ol><h2 id="特点和优势">特点和优势</h2><p>合金电阻相比于其他电阻器件，具有以下几个特点和优势：</p><ol><li>高精度：合金电阻的精度通常在±0.1%~±1%之间，可以满足高精度电路的要求。</li><li>高稳定性：合金电阻具有较小的温度系数和长期稳定性，可以在较宽的温度范围内保持稳定的电阻值。</li><li>高温度特性：合金电阻可以在较高的温度下正常工作，并且其电阻值与温度之间的关系比较线性。</li><li>高功率容量：合金电阻具有较高的功率容量，可以在较大的负载下正常工作。</li><li>耐腐蚀性好：合金电阻的材料具有较好的耐腐蚀性，可以在恶劣的环境下使用。</li></ol><h2 id="缺点">缺点</h2><p>合金电阻相比于其他电阻器件，也存在一些缺点和局限：</p><ol><li>价格较高：由于合金电阻的制造成本较高，因此其价格也比其他电阻器件要贵。</li><li>尺寸较大：由于合金电阻需要具有较高的功率容量和散热性能，因此其尺寸比其他电阻器件要大。</li><li>焊接和连接方式受限：由于合金电阻的材料比较特殊，因此在焊接和连接方面需要特殊的工艺和材料，增加了制造和使用的难度。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 电子 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 器件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>光耦</title>
+      <link href="/2025/09/06/electronic/component/optical%20coupler/%E5%85%89%E8%80%A6/"/>
+      <url>/2025/09/06/electronic/component/optical%20coupler/%E5%85%89%E8%80%A6/</url>
+      
+        <content type="html"><![CDATA[<h1>是什么</h1><h2 id="介绍">介绍</h2><p>实现信号隔离的元器件，通常用于各部分电路之间，使其不互相受到影响<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%85%89%E8%80%A6%E5%AE%9E%E7%89%A9%E5%9B%BE.webp" alt="光耦实物图"><br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%85%89%E8%80%A6%E5%8E%9F%E7%90%86%E5%9B%BE.webp" alt="光耦原理图"></p><h2 id="内部结构及其使用原理">内部结构及其使用原理</h2><p>由一个发光二极管和一个光敏三极管封装而成<br>使用原理：当发光二极管有信号输入时，会被点亮，此时光敏三极管导通，从而使得右边电路可以正常工作</p><h2 id="基本电路应用">基本电路应用</h2><p>常见的光耦电路结构：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%85%89%E8%80%A6%E7%94%B5%E8%B7%AF.webp" alt="光耦电路"><br>光耦的两边各有两个引脚分别连接MCU与外围电路，并且两边信号没有直接联系。上图右边为MCU部分，左边为外围电路，<strong>倘若左边电路因电流过大而被烧毁，也不会影响右边MCU正常工作</strong>，这就是光耦在实际电路中的作用<br><strong>R1的作用</strong>：光耦的1引脚为电源输入端，发光二极管的耐压值有限，所以要添加电阻进行限流，否则会烧毁。阻值一般选择1K-10K，将电流控制在100uA左右。电流越大，三极管导通速度越快，具体选值要根据手册来计算<br><strong>C1的作用</strong>：C1电容与R1电阻搭配来使用，对输入信号进行滤波，由于不知道现场的干扰频率，所以这里的电容普遍选值为10nF或者100nF<br>理想信号：<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E7%90%86%E6%83%B3%E4%BF%A1%E5%8F%B7.webp" alt="理想信号"><br>实际信号会受到现场噪声影响，有许多小毛刺，不够平滑<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E5%AE%9E%E9%99%85%E4%BF%A1%E5%8F%B7.webp" alt="实际信号"><br>加了电容之后，这些小毛刺都会被吸收掉，使得信号更加平滑<br><img src="https://zsstoposs.oss-cn-hangzhou.aliyuncs.com/images/%E6%BB%A4%E6%B3%A2%E4%BF%A1%E5%8F%B7.webp" alt="滤波信号"><br><strong>R2的作用</strong>：当光耦的1引脚没有信号进来时，此时引脚的状态为浮空，我们应该避免引脚处于浮空，所以在这里接个电阻使得引脚接地，为0V、低电平。这样就可以确保二极管百分百不会发光<br><strong>R3的作用</strong>：与R2同理，使得引脚处于固定电平，避免因浮空状态而造成电路工作混乱<br><strong>D1的作用</strong>：D1是一个稳压二极管，用来保护发光二极管。人的手在碰到电路板时，可能会有静电产生，人体静电可达几千伏甚至几万伏，此时稳压二极管会瞬间被击穿，并吸收电能后将其释放，从而起到保护作用</p>]]></content>
       
       
       <categories>
@@ -2040,11 +2040,17 @@
     
     <entry>
       <title>待办</title>
-      <link href="/2025/09/04/%E5%BE%85%E5%8A%9E/"/>
-      <url>/2025/09/04/%E5%BE%85%E5%8A%9E/</url>
+      <link href="/2025/09/04/obsidian/%E5%BE%85%E5%8A%9E/"/>
+      <url>/2025/09/04/obsidian/%E5%BE%85%E5%8A%9E/</url>
       
         <content type="html"><![CDATA[<ul><li>outtime文章失效</li><li>播放按钮播放前后变化</li><li>首页轮播图下滑到底</li><li>移除顶部模糊(<a href="https://liuxiaohanhanzi.top/blog-construction/ShokaX%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97/">https://liuxiaohanhanzi.top/blog-construction/ShokaX功能模块/</a>)</li><li>添加可动立牌</li><li>鼠标放到字句上出现提示框，提示框内容可编辑</li></ul>]]></content>
       
+      
+      <categories>
+          
+          <category> obsidian </category>
+          
+      </categories>
       
       
     </entry>
@@ -2053,11 +2059,17 @@
     
     <entry>
       <title>更新日志</title>
-      <link href="/2025/09/04/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
-      <url>/2025/09/04/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
+      <link href="/2025/09/04/obsidian/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"/>
+      <url>/2025/09/04/obsidian/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/</url>
       
         <content type="html"><![CDATA[<ol><li><p>添加小黄花飘落物<br>2025-09-04<br><a href="https://lyrashore.com/computer-science/hexo/enhance/2025-3-2/">https://lyrashore.com/computer-science/hexo/enhance/2025-3-2/</a></p></li><li><p>改变鼠标点击特效，烟花——爱心<br>2025-09-04<br><a href="https://blog.minz.li/shokaX/ShokaX%E6%8F%92%E4%BB%B6-%E9%BB%9E%E6%93%8A%E6%84%9B%E5%BF%83%E6%95%88%E6%9E%9C/">https://blog.minz.li/shokaX/ShokaX插件-點擊愛心效果/</a></p></li><li><p>打开BGM播放开关<br>2025-09-04</p></li><li><p>effects文字特效<br>2025-09-05</p></li><li><p>emoji绘文字<br>2025-09-05</p></li><li><p>spoiler隐藏文字<br>2025-09-05</p></li><li><p>collapse折叠块<br>2025-09-06</p></li><li><p>label标签块<br>2025-09-06</p></li><li><p>note提醒块<br>2025-09-06</p></li><li><p>2026-03-18<br>数学公式<br>笔记图片全部上传</p></li></ol>]]></content>
       
+      
+      <categories>
+          
+          <category> obsidian </category>
+          
+      </categories>
       
       
     </entry>
@@ -2136,12 +2148,18 @@
     
     
     <entry>
-      <title>学习</title>
-      <link href="/2025/09/01/%E5%AD%A6%E4%B9%A0/"/>
-      <url>/2025/09/01/%E5%AD%A6%E4%B9%A0/</url>
+      <title>基础操作</title>
+      <link href="/2025/09/01/obsidian/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/"/>
+      <url>/2025/09/01/obsidian/%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
       
         <content type="html"><![CDATA[<h1>学习</h1><p><em>斜体</em></p><p><strong>粗体</strong></p><blockquote><p>这是一个引用</p></blockquote><p>[这是zz的主页]（<a href="https://zhesphere.github.io">https://zhesphere.github.io</a>）</p><p>*无序列表1</p><ul><li><p>无序列表2</p><ul><li>无序列表2.1</li></ul></li></ul><ul><li>无序列表3</li></ul><ol><li>有序列表1<br>2. 有序列表1.1</li><li>有序列表2</li><li>有序列表3</li></ol><hr><hr><p><s>这是要被删除的文字</s></p><p><u>这行文字已被添加下划线</u></p><p><code>Hello world</code></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python</span><br><span class="line">python</span><br></pre></td></tr></table></figure><table><thead><tr><th>项目</th><th>供应商</th><th>数量</th></tr></thead><tbody><tr><td>dad</td><td>dads</td><td>dada</td></tr><tr><td></td><td></td><td></td></tr></tbody></table><p>|:----|:--------:|------:|<br>|锁片|德利|1PCS|<br>|端子林鑫|2Pcs|</p><p>dsad</p><p>使用Markdown<a href="Markdown%E6%98%AF%E4%B8%80%E7%A7%8D%E7%BA%AF%E6%96%87%E6%9C%AC%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80">^1</a>可以效率的书写文档，直接转换成HTML[^2]，你可以使用Typora[^T]编辑器进行书写</p><p>\</p><p>*</p><p>-</p><p>+</p><p>.</p><ul><li><p>[ ] 未完成</p></li><li><p>[x] 已完成</p></li></ul><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p><table>    <tr>        <th rowspan="2">值班人员</th>        <th>星期一</th>        <th>星期二</th>        <th>星期三</th>    </tr>    <tr>        <td>李强</td>        <td>张明</td>        <td>王平</td>    </tr></table><p><font face="楷体" color=#00ffff size=5>改变文字格式</font></p><p>[^2]: HyperText Mrakup Language 超文本标记语言<br>[^T]: NEW WAY TO READ &amp; WRITE MARKDOWN</p>]]></content>
       
+      
+      <categories>
+          
+          <category> obsidian </category>
+          
+      </categories>
       
       
         <tags>
